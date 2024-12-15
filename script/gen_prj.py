@@ -50,7 +50,7 @@ for t in target_boards:
 			subprocess.run( c, shell = True )
 
 commands	= []
-commands	= [ "zip -r apps_for_importing.zip " + " ".join( library_folders ) + " " + " ".join( template_folders ) + " " + " ".join( app_folders ) ]
+commands	= [ "zip -r apps_for_importing.zip " + " ".join( library_folders ) + " " + " ".join( template_folders ) + " " + " ".join( app_folders ) + "> /dev/null" ]
 
 for c in commands:
 	print( "    executing command: " + c )
