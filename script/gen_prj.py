@@ -3,6 +3,7 @@
 import	os
 import	subprocess
 
+output_zip_name		= "apps_for_importing.zip"
 source_folder_name	= "source_files"
 target_boards		= [ "FRDM_MCXA153", "FRDM_MCXA156", "FRDM_MCXN236", "FRDM_MCXN947" ]
 
@@ -49,8 +50,9 @@ for t in target_boards:
 			print( "    executing command: " + c )
 			subprocess.run( c, shell = True )
 
-commands	= []
-commands	= [ "zip -r apps_for_importing.zip " + " ".join( library_folders ) + " " + " ".join( template_folders ) + " " + " ".join( app_folders ) + "> /dev/null" ]
+commands	 = []
+commands	+= [ "rm -rf " + output_zip_name ]
+commands	+= [ "zip -r " + output_zip_name + " " + " ".join( library_folders ) + " " + " ".join( template_folders ) + " " + " ".join( app_folders ) + "> /dev/null" ]
 
 for c in commands:
 	print( "    executing command: " + c )
