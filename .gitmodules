@@ -1,0 +1,12 @@
+[submodule "_r01lib_frdm_mcxa153/source"]
+	path = _r01lib_frdm_mcxa153/source
+	url = https://github.com/teddokano/r01lib.git
+[submodule "_r01lib_frdm_mcxa156/source"]
+	path = _r01lib_frdm_mcxa156/source
+	url = https://github.com/teddokano/r01lib.git
+[submodule "_r01lib_frdm_mcxn236/source"]
+	path = _r01lib_frdm_mcxn236/source
+	url = https://github.com/teddokano/r01lib.git
+[submodule "_r01lib_frdm_mcxn947/source"]
+	path = _r01lib_frdm_mcxn947/source
+	url = https://github.com/teddokano/r01lib.git
