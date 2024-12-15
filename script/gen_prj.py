@@ -57,7 +57,7 @@ def main():
 			app_folders	+= [ new_prj ]
 			
 			commands	+= [ "cp -r " + lib_and_template + "/" + template + "/ " + new_prj + "/" ]	#	copy template
-			commands	+= [ "cp -r " + source_folder_name + "/" + p + "/ " + new_prj + "/source/" ]	#	copy source files
+			commands	+= [ "cp -r " + source_folder_path + "/" + p + "/ " + new_prj + "/source/" ]	#	copy source files
 			commands	+= [ "rm -rf " + " ".join( [ new_prj + "/" + i + "/" for i in build_configs ] ) ]		#	delete built folders
 			commands	+= [ "sed -i -e s/'<name>" + template + "'/'<name>" + new_prj + "'/ " + new_prj + "/.project" ]
 			
