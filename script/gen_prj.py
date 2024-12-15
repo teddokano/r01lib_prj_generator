@@ -6,11 +6,11 @@ import	argparse
 
 suppported_boards	= [ "FRDM_MCXA153", "FRDM_MCXA156", "FRDM_MCXN236", "FRDM_MCXN947" ]
 
-exec				= False
-
 library_folders		= [ "_r01lib_frdm_mcxa153", "_r01lib_frdm_mcxa156", "_r01lib_frdm_mcxn236", "_r01lib_frdm_mcxn947" ]
 app_template_prj	= "app_template_"
 build_configs		= [ "Debug", "Release" ]
+
+lib_and_template	= "library_and_template_projects"
 
 def main():
 	base_dir	= os.getcwd() + "/"
@@ -56,7 +56,7 @@ def main():
 			print( "    generating project: " + new_prj )
 			app_folders	+= [ new_prj ]
 			
-			commands	+= [ "cp -r " + template + "/ " + new_prj + "/" ]	#	copy template
+			commands	+= [ "cp -r " + lib_and_template + "/" + template + "/ " + new_prj + "/" ]	#	copy template
 			commands	+= [ "cp -r " + source_folder_name + "/" + p + "/ " + new_prj + "/source/" ]	#	copy source files
 			commands	+= [ "rm -rf " + " ".join( [ new_prj + "/" + i + "/" for i in build_configs ] ) ]		#	delete built folders
 			commands	+= [ "sed -i -e s/'<name>" + template + "'/'<name>" + new_prj + "'/ " + new_prj + "/.project" ]
@@ -69,15 +69,38 @@ def main():
 
 	### zipping
 
+	try:
+		os.chdir( base_dir + lib_and_template )
+	except:
+		print( "  !!!!!!!!!!  error: couldn't 'cd' to 'library_and_template_projects/'" )
+	else:
+		commands	 = []
+		commands	+= [ "rm -rf ../" + output_zip_name ]
+#		commands	+= [ "zip -r ../" + output_zip_name + " " + " ".join( library_folders ) + " " + " ".join( template_folders ) + "> /dev/null" ]
+		commands	+= [ "zip -r ../" + output_zip_name + " " + " ".join( library_folders ) + " " + " ".join( template_folders ) ]
+
+		for c in commands:
+			print( "    executing command: " + c )
+
+			if not args.no_exec:
+				subprocess.run( c, shell = True )
+
+	try:
+		os.chdir( base_dir )
+	except:
+		pass
+
 	commands	 = []
-	commands	+= [ "rm -rf " + output_zip_name ]
-	commands	+= [ "zip -r " + output_zip_name + " " + " ".join( library_folders ) + " " + " ".join( template_folders ) + " " + " ".join( app_folders ) + "> /dev/null" ]
+	commands	+= [ "zip -r " + output_zip_name + " " + " ".join( app_folders ) + "> /dev/null" ]
+#	commands	+= [ "zip -r " + output_zip_name + " " + " ".join( app_folders ) ]
 
 	for c in commands:
 		print( "    executing command: " + c )
 
 		if not args.no_exec:
 			subprocess.run( c, shell = True )
+	"""
+	"""
 
 	### deleting projects after zipping
 
