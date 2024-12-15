@@ -7,6 +7,10 @@
 
 #include	"r01lib.h"
 
+#ifdef	TARGET_N236
+#error	"r01lib on N236 is not supporting I3C"
+#endif
+
 I3C		i3c( I3C_SDA, I3C_SCL );	//	SDA, SCL
 
 constexpr	uint8_t	static_address	= 0x48;
