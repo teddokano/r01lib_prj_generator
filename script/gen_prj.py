@@ -15,7 +15,7 @@ lib_and_template	= "library_and_template_projects"
 def main():
 	base_dir	= os.getcwd() + "/"
 
-	source_folder_path	= os.path.dirname( args.input_folder )
+	source_folder_path	= os.path.dirname( args.input_folder + "/" )
 	source_folder_name	= os.path.basename( source_folder_path )
 
 	if args.target:
@@ -61,11 +61,7 @@ def main():
 			commands	+= [ "rm -rf " + " ".join( [ new_prj + "/" + i + "/" for i in build_configs ] ) ]		#	delete built folders
 			commands	+= [ "sed -i -e s/'<name>" + template + "'/'<name>" + new_prj + "'/ " + new_prj + "/.project" ]
 			
-			for c in commands:
-				print( "    executing command: " + c )
-				
-				if not args.no_exec and not args.delete:
-					subprocess.run( c, shell = True )
+			comm_exec( commands, not args.no_exec and not args.delete )
 
 	### zipping
 
@@ -76,31 +72,19 @@ def main():
 	else:
 		commands	 = []
 		commands	+= [ "rm -rf ../" + output_zip_name ]
-#		commands	+= [ "zip -r ../" + output_zip_name + " " + " ".join( library_folders ) + " " + " ".join( template_folders ) + "> /dev/null" ]
-		commands	+= [ "zip -r ../" + output_zip_name + " " + " ".join( library_folders ) + " " + " ".join( template_folders ) ]
+		commands	+= [ "zip -r ../" + output_zip_name + " " + " ".join( library_folders ) + " " + " ".join( template_folders ) + "> /dev/null" ]
 
-		for c in commands:
-			print( "    executing command: " + c )
-
-			if not args.no_exec:
-				subprocess.run( c, shell = True )
+		comm_exec( commands, not args.no_exec )
 
 	try:
 		os.chdir( base_dir )
 	except:
-		pass
+		print( "  !!!!!!!!!!  error: couldn't 'cd' to base directory" )
 
 	commands	 = []
 	commands	+= [ "zip -r " + output_zip_name + " " + " ".join( app_folders ) + "> /dev/null" ]
-#	commands	+= [ "zip -r " + output_zip_name + " " + " ".join( app_folders ) ]
 
-	for c in commands:
-		print( "    executing command: " + c )
-
-		if not args.no_exec:
-			subprocess.run( c, shell = True )
-	"""
-	"""
+	comm_exec( commands, not args.no_exec )
 
 	### deleting projects after zipping
 
@@ -108,11 +92,14 @@ def main():
 		commands	 = []
 		commands	+= [ "rm -rf " + " ".join( app_folders ) ]
 
-		for c in commands:
-			print( "    executing command: " + c )
+		comm_exec( commands, not args.no_exec )
 
-			if not args.no_exec:
-				subprocess.run( c, shell = True )
+def comm_exec( commands, exe_flag ):
+	for c in commands:
+		print( "    executing command: " + c )
+
+		if exe_flag:
+			subprocess.run( c, shell = True )
 
 
 def command_line_handling():
