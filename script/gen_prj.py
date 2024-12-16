@@ -5,12 +5,15 @@ import	subprocess
 import	argparse
 
 suppported_boards	= [ "FRDM_MCXA153", "FRDM_MCXA156", "FRDM_MCXN236", "FRDM_MCXN947" ]
+libraries			= [ "_r01lib_frdm_mcxa153", "_r01lib_frdm_mcxa156", "_r01lib_frdm_mcxn236", "_r01lib_frdm_mcxn947" ]
+lib_dict			= dict( zip( suppported_boards, libraries ) )
 
-library_folders		= [ "_r01lib_frdm_mcxa153", "_r01lib_frdm_mcxa156", "_r01lib_frdm_mcxn236", "_r01lib_frdm_mcxn947" ]
 app_template_prj	= "app_template_"
 build_configs		= [ "Debug", "Release" ]
 
 lib_and_template	= "library_and_template_projects"
+
+ide					= "/Applications/MCUXpressoIDE_24.9.25/ide/MCUXpressoIDE.app/Contents/MacOS/mcuxpressoide"
 
 def main():
 	base_dir	= os.getcwd() + "/"
@@ -22,10 +25,12 @@ def main():
 		args.target		= args.target.strip( "'" )
 		target_boards	= []
 		for n in suppported_boards:
-			if args.target in n:
+			if args.target.lower() in n.lower():
 				target_boards	+= [ n ]
 	else:
 		target_boards	= suppported_boards
+	
+	library_folders		= [ lib_dict[ i ] for i in target_boards if i in target_boards ]
 
 	if args.zipfile:
 		output_zip_name		= args.zipfile
@@ -44,6 +49,10 @@ def main():
 	template_folders	= []
 	app_folders			= []
 	
+	###
+	### copying projects for each targets
+	###
+	
 	for t in target_boards:
 		template	= app_template_prj + t
 		print( "using template : " + template )
@@ -56,23 +65,41 @@ def main():
 			print( "    generating project: " + new_prj )
 			app_folders	+= [ new_prj ]
 			
-			commands	+= [ "cp -r " + lib_and_template + "/" + template + "/ " + new_prj + "/" ]	#	copy template
-			commands	+= [ "cp -r " + source_folder_path + "/" + p + "/ " + new_prj + "/source/" ]	#	copy source files
+			commands	+= [ f"cp -r {lib_and_template}/{template}/ {new_prj}/" ]	#	copy template
+			commands	+= [ f"cp -r {source_folder_path}/{p}/ {new_prj}/source/" ]	#	copy source files
 			commands	+= [ "rm -rf " + " ".join( [ new_prj + "/" + i + "/" for i in build_configs ] ) ]		#	delete built folders
-			commands	+= [ "sed -i -e s/'<name>" + template + "'/'<name>" + new_prj + "'/ " + new_prj + "/.project" ]
+			commands	+= [ f"sed -i -e s/'<name>{template}'/'<name>{new_prj}'/ {new_prj}/.project" ]
 			
 			comm_exec( commands, not args.no_exec and not args.delete )
 
-	### zipping
+	"""
+	###
+	### build --- This could not been done. It should be done in active workspace
+	###
+	
+	### ### 
+	
+	commands	 = []
+	
+	for lib in library_folders:
+		commands	+= [ f"cp -r {lib_and_template}/{lib}/ ./{lib}/" ]	#	copy template
+		commands	+= [ f"{ide} -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data '{base_dir}' -cleanBuild {lib}" ]
 
+	comm_exec( commands, not args.no_exec )	
+	"""	
+	
+	###
+	### zipping
+	###
+	
 	try:
 		os.chdir( base_dir + lib_and_template )
 	except:
 		print( "  !!!!!!!!!!  error: couldn't 'cd' to 'library_and_template_projects/'" )
 	else:
 		commands	 = []
-		commands	+= [ "rm -rf ../" + output_zip_name ]
-		commands	+= [ "zip -r ../" + output_zip_name + " " + " ".join( library_folders ) + " " + " ".join( template_folders ) + "> /dev/null" ]
+		commands	+= [ f"rm -rf ../{output_zip_name}" ]
+		commands	+= [ f"zip -r ../{output_zip_name} " + " ".join( library_folders ) + " " + " ".join( template_folders ) + "> /dev/null" ]
 
 		comm_exec( commands, not args.no_exec )
 
@@ -82,7 +109,7 @@ def main():
 		print( "  !!!!!!!!!!  error: couldn't 'cd' to base directory" )
 
 	commands	 = []
-	commands	+= [ "zip -r " + output_zip_name + " " + " ".join( app_folders ) + "> /dev/null" ]
+	commands	+= [ f"zip -r {output_zip_name} " + " ".join( app_folders ) + "> /dev/null" ]
 
 	comm_exec( commands, not args.no_exec )
 
