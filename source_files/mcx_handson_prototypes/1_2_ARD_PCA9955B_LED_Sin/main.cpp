@@ -1,8 +1,8 @@
-/*
- * Copyright 2024 NXP
+/** test code for r01lib
  *
- * SPDX-License-Identifier: BSD-3-Clause
+ *  @author Tedd OKANO
  *
+ *  Released under the MIT license
  */
 
 #include	"r01lib.h"
