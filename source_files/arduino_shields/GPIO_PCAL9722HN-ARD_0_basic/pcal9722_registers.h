@@ -1,3 +1,9 @@
+/*
+ *  @author Tedd OKANO
+ *
+ *  Released under the MIT license License
+ */
+
 enum reg_num {
 		Input_Port_0, Input_Port_1, Input_Port_2, reserved0,
 		Output_Port_0, Output_Port_1, Output_Port_2, reserved1,
