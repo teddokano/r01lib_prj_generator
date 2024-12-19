@@ -56,7 +56,7 @@ int main( void )
 	rtc.timestamp( 4, PCF2131::LAST, PCF2131::INT_B );
 
 	rtc.periodic_interrupt_enable( PCF2131::EVERY_SECOND, PCF2131::INT_A );
-	rtc.alarm(PCF2131::SECOND, 37, PCF2131::INT_B );
+	rtc.alarm( PCF2131::SECOND, 37, PCF2131::INT_B );
 	
 	while ( true )
 	{
@@ -74,8 +74,8 @@ int main( void )
 			}
 
 			uint8_t status[3];
-			rtc.int_clear(status);
-			int_cause_monitor(status);
+			rtc.int_clear( status );
+			int_cause_monitor( status );
 		}
 	}
 }
@@ -91,7 +91,7 @@ void int_cause_monitor( uint8_t* status )
 
 	if ( status[0] & 0x80 )
 	{
-		time_t current_time = rtc.time(NULL);
+		time_t current_time = rtc.time( NULL );
 		printf( "INT:every min/sec, time:%lu %s", (unsigned long)current_time, ctime( &current_time ) );
 	}
 	if ( status[0] & 0x40 )
