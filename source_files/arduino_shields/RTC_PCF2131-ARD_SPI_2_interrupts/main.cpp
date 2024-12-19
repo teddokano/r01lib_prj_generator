@@ -24,8 +24,8 @@ PCF2131		rtc( interface );
 InterruptIn	intA( D8 );
 InterruptIn	intB( D9 );
 
-bool int_flagA	= false;
-bool int_flagB	= false;
+volatile bool int_flagA	= false;
+volatile bool int_flagB	= false;
 
 void	int_cause_monitor( uint8_t* status );
 void	pin_int_callbackA( void );

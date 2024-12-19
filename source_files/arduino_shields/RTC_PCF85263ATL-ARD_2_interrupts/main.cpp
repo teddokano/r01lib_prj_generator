@@ -13,9 +13,10 @@ I2C			i2c( I2C_SDA, I2C_SCL );	//	SDA, SCL
 PCF85263A	rtc( i2c );
 
 InterruptIn	intA( D2 );
+InterruptIn	intB( D3 );
 
-bool int_flagA	= false;
-bool int_flagB	= false;
+volatile bool int_flagA	= false;
+volatile bool int_flagB	= false;
 
 void	int_cause_monitor( uint8_t status );
 void	pin_int_callbackA( void );
@@ -24,7 +25,7 @@ void	set_time( void );
 
 int main( void )
 {
-	printf( "***** Hello, PCF85263A! (I2C interface) *****\r\n" );
+	printf( "***** Hello, PCF85263A! *****\r\n" );
 
 	if ( rtc.oscillator_stop() )
 	{
@@ -36,21 +37,14 @@ int main( void )
 		printf( "---- RTC has beeing kept running! :) ----\r\n" );
 	}
 
-	rtc.pin_congfig( PCF85263A::INTA_INTTERRUPT, PCF85263A::INTB_INPUT_MODE );
-	rtc.ts_congfig( PCF85263A::TSL_ACTIVE_LOW | PCF85263A::TSIM_MECHANICAL );
+	rtc.pin_congfig( PCF85263A::INTA_INTTERRUPT, PCF85263A::INTB_INTTERRUPT );
 
-	//  TSR_mode setting:
-	//  Even if it is set to capture "First TS pin event", this sketch will show the timestamp as Last event.
-	//  Because when the interrupt happened, the monitoring routine clears the timestamp flag.
-	//  The event after clearing the flag, it will be recorded as first event.
-	//  See section 7.7, datasheet
-	rtc.reg_w(PCF85263A::TSR_mode, (0x2 << 6) | (0x5 << 2) | 0x1);  // TSR3M:LB, TSR2M:LE, TSR0M:FE
-	
 	rtc.int_clear();
 	intA.fall( pin_int_callbackA );
+	intB.fall( pin_int_callbackB );
 
 	rtc.periodic_interrupt_enable( PCF85263A::EVERY_SECOND, PCF85263A::INT_A );
-	rtc.alarm( PCF85263A::SECOND, 37, PCF85263A::INT_A );
+	rtc.alarm( PCF85263A::SECOND, 37, PCF85263A::INT_B );
 	
 	while ( true )
 	{
@@ -99,31 +93,17 @@ void int_cause_monitor( uint8_t status )
 	{
 		printf( "INT:battery switch\r\n" );
 	}
-	if ( status & 0x07 )
+	if ( status & 0x04 )
 	{
-		if ( status & 0x04 )
-		{
-			printf( "INT:Timestamp_Register_3_event " );
-		}
-		if ( status & 0x02 )
-		{
-			printf( "INT:Timestamp_Register_2_event " );
-		}
-		if ( status & 0x01 )
-		{
-			printf( "INT:Timestamp_Register_1_event " );
-		}
-
-		time_t	ts;
-		
-		printf( "\r\n" );
-		
-		for ( int i = 0; i < 3; i++ )
-		{
-			ts	= rtc.timestamp( i );
-			printf( "  TIMESTAMP%d: %s", i + 1, ctime( &ts ) );
-		}
-
+		printf( "INT:Timestamp_Register_3_event\r\n" );
+	}
+	if ( status & 0x02 )
+	{
+		printf( "INT:Timestamp_Register_2_event\r\n" );
+	}
+	if ( status & 0x01 )
+	{
+		printf( "INT:Timestamp_Register_1_event\r\n" );
 	}
 }
 

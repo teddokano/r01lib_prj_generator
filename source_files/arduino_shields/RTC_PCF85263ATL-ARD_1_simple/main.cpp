@@ -5,18 +5,18 @@
  */
 
 #include	"r01lib.h"
-#include	"rtc/PCF85263A.h"
+#include	"rtc/PCF85063A.h"
 #include	"rtc/tzcode/strptime.h"
 #include	<time.h>
 
 I2C			i2c( I2C_SDA, I2C_SCL );	//	SDA, SCL
-PCF85263A	rtc( i2c );
+PCF85063A	rtc( i2c );
 
 void	set_time( void );
 
 int main( void )
 {
-	printf( "***** Hello, PCF85263A! (I2C interface) *****\r\n" );
+	printf( "***** Hello, PCF85063A! *****\r\n" );
 
 	if ( rtc.oscillator_stop() )
 	{
