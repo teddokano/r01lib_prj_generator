@@ -10,13 +10,13 @@
 #include	"accelerometer/FXLS89xx_Arduino.h"
 #include	<math.h>
 
-//
 //	Since the FRDM-MCXN236 I2C on A4/A5 and MB_SDA/MB_SCL are using same peripheral unit.
 //	However, the IO pins are assigned to different ones and those cannot be routed in parallel.
-//	So, when this demo is being tried, the MB_SDA/MB_SCL on FRDM board should be connected to A4/A5 on PCA9955BDP-ARD.
-//	Also, it requires 5V/GND supply and D8 pin on ARD board need to be tied to GND.
-//
-I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
+//	So, when this demo is being tried, connect following pins
+//		1. PCA9955BTW-ARD J89 pin4 -- FRDM-MCXN236 J8 pin4
+//		2. PCA9955BTW-ARD J89 pin2 -- FRDM-MCXN236 J8 pin3
+
+I2C			i2c( A4, A5 );	//	SDA, SCL
 PCA9955B	drv(    i2c );
 FXLS89xx	sensor( i2c );
 
@@ -30,9 +30,9 @@ int main( void )
 
 	sensor.init();
 
-	sensor.wake_odr = FXLS89xx::_6_25HZ;
-	sensor.wake_pm  = FXLS89xx::_HPM;
-	sensor.sensor_range = FXLS89xx::_2G;
+	sensor.wake_odr		= FXLS89xx::_100HZ;
+	sensor.wake_pm		= FXLS89xx::_HPM;
+	sensor.sensor_range	= FXLS89xx::_2G;
 	sensor.run();
 
 	float	sensor_data[ 3 ];
@@ -45,7 +45,6 @@ int main( void )
 		theta	= atan2( sensor_data[ 0 ], sensor_data[ 1 ] );
 
 //		printf( "%f\r\n", theta / M_PI * 100 );
-
 
 		a	= sin( theta + (2.0 * M_PI) * (0.0 / 3.0) );
 		b	= sin( theta + (2.0 * M_PI) * (1.0 / 3.0) );
@@ -63,6 +62,6 @@ int main( void )
 		drv.pwm( 1, b * b );
 		drv.pwm( 2, c * c );
 #endif
-		wait( 0.01 );
+		wait( 0.05 );
 	}
 }

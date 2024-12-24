@@ -20,9 +20,9 @@ int main( void )
 
 	sensor.init();
 
-	sensor.wake_odr = FXLS89xx::_6_25HZ;
-	sensor.wake_pm  = FXLS89xx::_HPM;
-	sensor.sensor_range = FXLS89xx::_2G;
+	sensor.wake_odr		= FXLS89xx::_6_25HZ;
+	sensor.wake_pm		= FXLS89xx::_HPM;
+	sensor.sensor_range	= FXLS89xx::_2G;
 	sensor.run();
 
 	float	sensor_data[ 3 ];
@@ -34,7 +34,7 @@ int main( void )
 
 		theta	= atan2( sensor_data[ 0 ], sensor_data[ 1 ] );
 
-		printf( "%f\r\n", theta / M_PI * 100 );
+		printf( "%f\r\n", theta / M_PI * 180.0 );
 		wait( 0.2 );
 	}
 }
