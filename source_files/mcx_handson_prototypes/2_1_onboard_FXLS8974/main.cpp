@@ -7,6 +7,7 @@
 
 #include	"r01lib.h"
 #include	"accelerometer/FXLS89xx_Arduino.h"
+#include	<math.h>
 
 I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
 FXLS89xx	sensor( i2c );
@@ -14,6 +15,7 @@ FXLS89xx	sensor( i2c );
 int main( void )
 {
 	printf( "***** Hello, FXLS89xx! *****\r\n" );
+	printf( "Shows direction of tilt\r\n" );
 	i2c.scan();
 
 	sensor.init();
@@ -24,11 +26,15 @@ int main( void )
 	sensor.run();
 
 	float	sensor_data[ 3 ];
+	float	theta;
 	
 	while ( true )
 	{
 		sensor.read_XYZ( sensor_data );
-		printf( "%f, %f, %f\r\n", sensor_data[ 0 ], sensor_data[ 1 ], sensor_data[ 2 ] );
+
+		theta	= atan2( sensor_data[ 0 ], sensor_data[ 1 ] );
+
+		printf( "%f\r\n", theta / M_PI * 100 );
 		wait( 0.2 );
 	}
 }
