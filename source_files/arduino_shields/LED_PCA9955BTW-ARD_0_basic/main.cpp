@@ -6,8 +6,6 @@
 
 #include	"r01lib.h"
 #include	"led/PCA9955B.h"
-#include	"led/LED.h"
-#include	<math.h>
 
 constexpr	int	cycle	= 100;
 
@@ -27,8 +25,8 @@ int main( void )
 	printf( "  PCA9955B::IREFALL = 0x%02X\r\n", PCA9955B::IREFALL );
 	printf( "  PCA9955B::PWM0    = 0x%02X\r\n", PCA9955B::PWM0    );
 
-	I2C_device::scan( i2c, 124 ); //  Scan stop at 124
-
+	I2C_device::scan( i2c );
+	
 	uint8_t	init[]	= { 0xAA, 0xAA, 0xAA, 0xAA };
 
 	i2c.reg_write( i2c_address, 0x80 | PCA9955B::LEDOUT0, init, sizeof( init ) );

@@ -54,7 +54,7 @@ int main(void)
 
 			gpio.read_port( INT_STATUS, status );
 
-			printf( "[INT] status 0~4:" );
+			printf( "[INT] status 0~%d:", gpio.n_ports - 1 );
 
 			for ( int i = 0; i < gpio.n_ports; i++ )
 				GPIO_base::print_bin( status[i] );
