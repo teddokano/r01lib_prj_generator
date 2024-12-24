@@ -6,8 +6,6 @@
 
 #include	"r01lib.h"
 #include	"led/PCA9955B.h"
-#include	"led/LED.h"
-#include	<math.h>
 
 constexpr	int	cycle	= 100;
 

@@ -5,14 +5,14 @@
  */
 
 #include	"r01lib.h"
-#include	"led/PCA9955B.h"
+#include	"led/PCA9957.h"
 #include	"led/LED.h"
 #include	<math.h>
 
 constexpr	double	cycle	= 100;
 
-I2C			i2c( I2C_SDA, I2C_SCL );
-PCA9955B	ledd( i2c );
+SPI		spi( D11, D12, D13, D10 );	//	MOSI, MISO, SCLK, CS
+PCA9957	ledd( spi );
 
 LED		leds[]	= {
 		LED( ledd,  0 ), LED( ledd,  1 ), LED( ledd,  2 ), LED( ledd,  3 ),
@@ -25,9 +25,9 @@ LED		leds[]	= {
 
 int main( void )
 {
-	printf("***** Hello, PCA9955B! *****\r\n");
+	printf("***** Hello, PCA9957! *****\r\n");
 
-	ledd.begin( 1.0, PCA9955B::ARDUINO_SHIELD );
+	ledd.begin( 1.0, PCA9957::ARDUINO_SHIELD );
 
 	double	sin0, sin1, sin2, white = 0, cycle_pi;
 	cycle_pi	= M_PI / cycle;
