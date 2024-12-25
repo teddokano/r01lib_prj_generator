@@ -10,13 +10,12 @@
 
 I3C		i3c( D18, D19 );	//	SDA, SCL
 
-const uint8_t	static_address_list[]	= { 0x48, 0x4A, 0x4C };
 const uint8_t	dynamic_address_list[]	= { 0x1A, 0x2B, 0x3C };
 
 P3T1755	sensor[]	= {
-						P3T1755( i3c, static_address_list[ 0 ] ),
-						P3T1755( i3c, static_address_list[ 1 ] ),
-						P3T1755( i3c, static_address_list[ 2 ] )
+						P3T1755( i3c ),
+						P3T1755( i3c ),
+						P3T1755( i3c )
 				  };
 
 LM75B	lm75b( i3c, 0x4F );
