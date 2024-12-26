@@ -15,8 +15,8 @@
  */
 
 #include	"r01lib.h"
-#include	"eeprom/M24C02.h"
 #include	"ldo/PCA9617ADP_ARD_LDO.h"
+#include	"misc/eeprom/M24C02.h"
 
 I2C					i2c( I2C_SDA, I2C_SCL );
 M24C02				eeprom( i2c );
