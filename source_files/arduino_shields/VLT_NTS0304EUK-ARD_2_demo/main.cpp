@@ -1,6 +1,9 @@
 #include	"r01lib.h"
 #include	"ldo/NTS0304EUK_ARD_LDO.h"
 #include	"misc/potentiometer/AD5161.h"
+extern "C" {
+#include	"fsl_debug_console.h"
+}
 
 #define	I2C_SETTING
 
@@ -33,8 +36,6 @@ int main( void )
 	
 	while ( true )
 	{
-		printf( "Voltage :   A-side[V]   B-side[V] (%s operation mode)\r\n", STR );
-
 		for ( int v1 = 0; v1 < Nts0304euk_Ard_LDO::v1_variation; v1++ )
 		{
 			for ( int v2 = 0; v2 < Nts0304euk_Ard_LDO::v2_variation; v2++ )
@@ -48,13 +49,13 @@ int main( void )
 				ldo1 = v1;
 				ldo2 = v2;
 
-				printf( "              %4.2f        %4.2f\r\n", va, vb );
 				wait( 0.8 );  // wait voltages settle
-
 
 				for ( int i = 0; i < 256; i++ )
 				{
 					potentiometer	= i;
+					printf( "operation = %s, A = %4.2fV, B = %4.2fV, written/read = 0x%02X/0x%02X\r\n", STR, va, vb, i, (uint8_t)potentiometer );
+
 					wait( 0.01 );
 				}
 			}
