@@ -1,4 +1,4 @@
-#include <M24C02.h>
+#include	"eeprom/M24C02.h"
 
 M24C02::M24C02( I2C& wire, uint8_t i2c_address ) : I2C_device( wire, i2c_address )
 {
@@ -88,10 +88,3 @@ int M24C02::read( int byte_adr, uint8_t *dp, int length )
 	
 	return read_done;
 }
-
-bool M24C02::ping( void )
-{
-	uint8_t	dummy	= 0;
-	return i2c.write( i2c_addr, &dummy, 0 );
-}
-

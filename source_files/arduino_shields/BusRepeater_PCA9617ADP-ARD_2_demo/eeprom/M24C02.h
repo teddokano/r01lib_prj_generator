@@ -59,9 +59,6 @@ public:
 	 */
 	uint8_t read( int byte_adr );	
 	int read( int byte_adr, uint8_t *dp, int length );
-	
-private:
-	bool ping( void );
 };
 
 #endif //	ARDUINO_M24C02_H

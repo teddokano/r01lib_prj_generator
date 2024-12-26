@@ -15,8 +15,8 @@
  */
 
 #include	"r01lib.h"
-#include	"M24C02.h"
-#include	"PCA9617ADP_ARD_LDO.h"
+#include	"eeprom/M24C02.h"
+#include	"ldo/PCA9617ADP_ARD_LDO.h"
 
 I2C					i2c( I2C_SDA, I2C_SCL );
 M24C02				eeprom( i2c );
@@ -31,8 +31,8 @@ int main( void )
 {
 	printf("***** Hello, PCA9617A! *****\r\n");
 	i2c.scan();
-	
-	i2c.err_callback( NULL );	//	suppressing error message from I2C because M24C02 uses NACK as a part of protocol
+
+	i2c.err_callback( NULL );	//	suppressing error message from I2C because M24C02 uses NACK as a protocol
 
 	char test_str[] = "EEPROM is responding - Hello, PCA9617A Arduino shield evaluation board test program";
 
