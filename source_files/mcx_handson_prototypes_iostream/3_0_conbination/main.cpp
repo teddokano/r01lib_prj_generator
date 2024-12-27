@@ -1,14 +1,9 @@
-/** test code for r01lib
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"led/PCA9955B.h"
 #include	"accelerometer/FXLS89xx_Arduino.h"
 #include	<math.h>
+
 using namespace	std;
 
 //	Since the FRDM-MCXN236 I2C on A4/A5 and MB_SDA/MB_SCL are using same peripheral unit.

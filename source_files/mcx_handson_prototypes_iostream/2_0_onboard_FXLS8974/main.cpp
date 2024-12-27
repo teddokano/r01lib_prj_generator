@@ -1,12 +1,7 @@
-/** test code for r01lib
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"accelerometer/FXLS89xx_Arduino.h"
+
 using namespace	std;
 
 I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL

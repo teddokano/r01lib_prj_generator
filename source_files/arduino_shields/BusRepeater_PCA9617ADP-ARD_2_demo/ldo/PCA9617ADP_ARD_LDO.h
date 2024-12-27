@@ -1,10 +1,4 @@
-/** I2C multiplexer and switch operation library for Arduino
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license License
- */
-
+//FILEHEAD
 #ifndef ARDUINO_PCA9617ADP_ARD_LDO_H
 #define ARDUINO_PCA9617ADP_ARD_LDO_H
 

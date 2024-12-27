@@ -1,15 +1,9 @@
-/** test code for r01lib
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"led/PCA9955B.h"
 #include	<math.h>
-using namespace	std;
 
+using namespace	std;
 
 I2C			i2c( A4, A5 );	//	SDA, SCL
 PCA9955B	drv( i2c );
@@ -25,7 +19,6 @@ int main( void )
 	drv.begin( 1.0, PCA9955B::ARDUINO_SHIELD );
 
 	float	a, b, c, d, x, y, z;
-
 
 	while ( true )
 	{

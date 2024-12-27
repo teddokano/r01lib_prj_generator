@@ -1,11 +1,6 @@
-/** test code for r01lib
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
+
 using namespace	std;
 
 DigitalOut	led( BLUE );

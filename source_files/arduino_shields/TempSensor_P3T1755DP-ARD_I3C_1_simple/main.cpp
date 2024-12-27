@@ -1,9 +1,4 @@
-/*
- * Copyright 2024 NXP
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
- 
+//FILEHEAD
 #include	"r01lib.h"
 #include	"temp_sensor/P3T1755.h"
 

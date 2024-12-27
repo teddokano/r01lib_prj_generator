@@ -1,15 +1,9 @@
-/** test code for r01lib
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"led/PCA9955B.h"
 #include	<math.h>
-using namespace	std;
 
+using namespace	std;
 
 I2C			i2c( A4, A5 );	//	SDA, SCL
 PCA9955B	drv( i2c );

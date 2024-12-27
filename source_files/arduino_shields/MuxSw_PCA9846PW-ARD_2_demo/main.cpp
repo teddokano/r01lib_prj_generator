@@ -1,10 +1,5 @@
+//FILEHEAD
 /** PCA9846 operation sample
- *
- *  Simple sample
- *
- *  @author  Tedd OKANO
- *
- *  Released under the MIT license License
  *
  *  About PCA9846:
  *    https://www.nxp.com/products/interfaces/ic-spi-i3c-interface-devices/ic-multiplexers-switches/four-channel-ultra-low-voltage-fm-plus-ic-bus-switch-with-reset:PCA9846

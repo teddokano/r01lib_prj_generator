@@ -1,10 +1,4 @@
-/** TempSensor operation library for Arduino
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license License
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 
 I2C		i2c( D18, D19 );	//	SDA, SCL

@@ -1,3 +1,4 @@
+//FILEHEAD
 #include	"ldo/NTS0304EUK_ARD_LDO.h"
 
 Nts0304euk_Ard_LDO::Nts0304euk_Ard_LDO(	int ldo_number, int pin0, int pin1, int pin2, float *v_v ) 

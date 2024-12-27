@@ -1,10 +1,4 @@
-/** BusInOut library for Arduino
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license License
- */
-
+//FILEHEAD
 #ifndef ARDUINO_NTS0304EUK_ARD_LDO_H
 #define ARDUINO_NTS0304EUK_ARD_LDO_H
 

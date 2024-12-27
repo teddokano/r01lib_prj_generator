@@ -1,9 +1,4 @@
-/*
- *  @author Tedd OKANO
- *
- *  Released under the MIT license License
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"gpio/PCAL6416A.h"
 

@@ -1,10 +1,4 @@
-/** test code for r01lib
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"led/PCA9955B.h"
 #include	<math.h>
@@ -23,7 +17,6 @@ int main( void )
 	drv.begin( 1.0, PCA9955B::ARDUINO_SHIELD );
 
 	float	a, b, c;
-
 
 	FILE	*fp;
 	if ( NULL == (fp	= fopen( "test.csv", "w" )) )

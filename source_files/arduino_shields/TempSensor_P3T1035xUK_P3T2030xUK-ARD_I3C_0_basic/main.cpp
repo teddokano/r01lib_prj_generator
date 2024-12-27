@@ -1,9 +1,4 @@
-/*
- * Copyright 2024 NXP
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
- 
+//FILEHEAD
 #include	"r01lib.h"
 
 I3C		i3c( D18, D19 );	//	SDA, SCL

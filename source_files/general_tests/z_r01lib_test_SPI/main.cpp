@@ -1,10 +1,4 @@
-/** test code for r01lib
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 
 SPI			spi( D11, D12, D13, D10 );	//	MOSI, MISO, SCLK, CS

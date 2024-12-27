@@ -1,9 +1,4 @@
-/*
- * Copyright 2024 NXP
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
- 
+//FILEHEAD
 #include	"r01lib.h"
 #include	"pin_control.h"
 

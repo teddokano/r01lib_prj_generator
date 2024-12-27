@@ -1,14 +1,9 @@
-/** test code for r01lib
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"led/PCA9955B.h"
 #include	<math.h>
 #include	<fstream>
+
 using namespace	std;
 
 

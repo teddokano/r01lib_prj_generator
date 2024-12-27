@@ -1,9 +1,4 @@
-/*
- *  @author Tedd OKANO
- *
- *  Released under the MIT license License
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"rtc/PCF85053A.h"
 #include	"rtc/tzcode/strptime.h"
