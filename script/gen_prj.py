@@ -13,6 +13,8 @@ build_configs		= [ "Debug", "Release" ]
 
 lib_and_template	= "library_and_template_projects"
 
+filehead_text		= "FILEHEAD.txt"
+
 ide					= "/Applications/MCUXpressoIDE_24.9.25/ide/MCUXpressoIDE.app/Contents/MacOS/mcuxpressoide"
 
 def main():
@@ -42,6 +44,7 @@ def main():
 	source_path.sort()
 
 	prj_name	= [ os.path.basename( i ) for i in source_path ]
+	prj_name	= [ i for i in prj_name if i != filehead_text ]
 
 	print( "======= process started for .. =======" )
 	print( "project sources:\n    " + "\n    ".join( prj_name ) )
@@ -71,6 +74,29 @@ def main():
 			commands	+= [ f"sed -i -e s/'<name>{template}'/'<name>{new_prj}'/ {new_prj}/.project" ]
 			
 			comm_exec( commands, not args.no_exec and not args.delete )
+
+	###
+	### filehead replacing
+	###
+	
+	commands	= []
+	
+	for a in app_folders:
+		filehead	= f"{source_folder_path}/FILEHEAD.txt"
+		src_files	= []
+
+		for pathname, dirnames, filenames in os.walk( f"{a}" ):
+			for f in filenames:
+				src_files	+= [ f"{pathname}/{f}" ]
+		
+		src_files	= [ s for s in src_files if "/." not in s ]
+		
+		rep_comm	= "awk 'NR==FNR{a=a $0 ORS; next} {gsub(/\/\/FILEHEAD/, a)}1'"
+		
+		for src in src_files:
+			commands	+= [ f"{rep_comm} {filehead} {src} > tmp && mv tmp {src}" ]
+	
+	comm_exec( commands, not args.no_exec and not args.delete )
 
 	"""
 	###
