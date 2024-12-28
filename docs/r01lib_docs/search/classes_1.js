@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['busin_0',['BusIn',['../class_bus_in.html',1,'']]],
-  ['businout_1',['BusInOut',['../class_bus_in_out.html',1,'']]],
-  ['busout_2',['BusOut',['../class_bus_out.html',1,'']]]
+  ['ad5161_5fbase_0',['AD5161_base',['../class_a_d5161__base.html',1,'']]],
+  ['ad5161_5fi2c_1',['AD5161_I2C',['../class_a_d5161___i2_c.html',1,'']]],
+  ['ad5161_5fspi_2',['AD5161_SPI',['../class_a_d5161___s_p_i.html',1,'']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['digitalin_0',['DigitalIn',['../class_digital_in.html',1,'']]],
-  ['digitalinout_1',['DigitalInOut',['../class_digital_in_out.html',1,'']]],
-  ['digitalout_2',['DigitalOut',['../class_digital_out.html',1,'']]]
+  ['busin_0',['BusIn',['../class_bus_in.html',1,'']]],
+  ['businout_1',['BusInOut',['../class_bus_in_out.html',1,'']]],
+  ['busout_2',['BusOut',['../class_bus_out.html',1,'']]]
 ];
