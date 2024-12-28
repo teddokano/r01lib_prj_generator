@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.33.7</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.34.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -149,6 +149,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae831a93328bf76ab7c52ccf918a5c2e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f4376fa19581280c5048b2fd2f1dd68" id="r_a6f4376fa19581280c5048b2fd2f1dd68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="#a8596716906d59632dc0d21359050d74f">err_cb_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f4376fa19581280c5048b2fd2f1dd68">err_callback</a> (<a class="el" href="#a8596716906d59632dc0d21359050d74f">err_cb_ptr</a>)</td></tr>
 <tr class="separator:a6f4376fa19581280c5048b2fd2f1dd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb2a2b583e99807f3aae37c754fc20a1" id="r_afb2a2b583e99807f3aae37c754fc20a1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb2a2b583e99807f3aae37c754fc20a1">ping</a> (uint8_t addr)</td></tr>
+<tr class="separator:afb2a2b583e99807f3aae37c754fc20a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9249f4b2ec4b06383109e5f97166402" id="r_ab9249f4b2ec4b06383109e5f97166402"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9249f4b2ec4b06383109e5f97166402">scan</a> (uint8_t start, uint8_t last, bool *result)</td></tr>
 <tr class="separator:ab9249f4b2ec4b06383109e5f97166402"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a068fcc71387ac49b3bfd59a6b8b4eea6" id="r_a068fcc71387ac49b3bfd59a6b8b4eea6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a068fcc71387ac49b3bfd59a6b8b4eea6">scan</a> (uint8_t start, uint8_t last)</td></tr>
@@ -299,7 +301,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00040">40</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00223">_scl</a>, <a class="el" href="i2c_8h_source.html#l00222">_sda</a>, <a class="el" href="i2c_8cpp_source.html#l00286">err_callback()</a>, <a class="el" href="i2c_8cpp_source.html#l00294">err_handling()</a>, <a class="el" href="i2c_8h_source.html#l00220">masterConfig</a>, <a class="el" href="mcu_8cpp_source.html#l00190">panic()</a>, <a class="el" href="io_8cpp_source.html#l00479">DigitalInOut::pin_mux()</a>, and <a class="el" href="i2c_8h_source.html#l00221">unit_base</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00231">_scl</a>, <a class="el" href="i2c_8h_source.html#l00230">_sda</a>, <a class="el" href="i2c_8cpp_source.html#l00286">err_callback()</a>, <a class="el" href="i2c_8cpp_source.html#l00294">err_handling()</a>, <a class="el" href="i2c_8h_source.html#l00228">masterConfig</a>, <a class="el" href="mcu_8cpp_source.html#l00190">panic()</a>, <a class="el" href="io_8cpp_source.html#l00479">DigitalInOut::pin_mux()</a>, and <a class="el" href="i2c_8h_source.html#l00229">unit_base</a>.</p>
 
 </div>
 </div>
@@ -329,7 +331,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00132">132</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00221">unit_base</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00229">unit_base</a>.</p>
 
 </div>
 </div>
@@ -383,7 +385,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i3_c.html#a5e40f8c52e13535e7dbaeac917006d55">I3C</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00344">344</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00347">347</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 </div>
 </div>
@@ -430,7 +432,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i3_c.html#a783b33fe035ca9adab5a1b9ca267d44b">I3C</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00339">339</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00342">342</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 </div>
 </div>
@@ -466,7 +468,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00286">286</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00224">err_cb</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00232">err_cb</a>.</p>
 
 </div>
 </div>
@@ -541,7 +543,46 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00137">137</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00137">frequency()</a>, and <a class="el" href="i2c_8h_source.html#l00221">unit_base</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00137">frequency()</a>, and <a class="el" href="i2c_8h_source.html#l00229">unit_base</a>.</p>
+
+</div>
+</div>
+<a id="afb2a2b583e99807f3aae37c754fc20a1" name="afb2a2b583e99807f3aae37c754fc20a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb2a2b583e99807f3aae37c754fc20a1">&#9670;&#160;</a></span>ping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool I2C::ping </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>addr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ping check device returns ACK</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>target address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if ACKs </dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_i3_c.html#afb2a2b583e99807f3aae37c754fc20a1">I3C</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00302">302</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00172">write_core()</a>.</p>
 
 </div>
 </div>
@@ -577,7 +618,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00142">142</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00223">_scl</a>, <a class="el" href="i2c_8h_source.html#l00222">_sda</a>, <a class="el" href="io_8cpp_source.html#l00484">DigitalInOut::mode()</a>, <a class="el" href="io_8h_source.html#l00660">DigitalInOut::PullNone</a>, and <a class="el" href="io_8h_source.html#l00661">DigitalInOut::PullUp</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00231">_scl</a>, <a class="el" href="i2c_8h_source.html#l00230">_sda</a>, <a class="el" href="io_8cpp_source.html#l00484">DigitalInOut::mode()</a>, <a class="el" href="io_8h_source.html#l00660">DigitalInOut::PullNone</a>, and <a class="el" href="io_8h_source.html#l00661">DigitalInOut::PullUp</a>.</p>
 
 </div>
 </div>
@@ -633,7 +674,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00161">161</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00224">err_cb</a>, and <a class="el" href="i2c_8cpp_source.html#l00209">read_core()</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00232">err_cb</a>, and <a class="el" href="i2c_8cpp_source.html#l00209">read_core()</a>.</p>
 
 </div>
 </div>
@@ -675,7 +716,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00277">277</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00213">last_status</a>, and <a class="el" href="i2c_8cpp_source.html#l00161">read()</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00221">last_status</a>, and <a class="el" href="i2c_8cpp_source.html#l00161">read()</a>.</p>
 
 </div>
 </div>
@@ -718,7 +759,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00209">209</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00221">unit_base</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00229">unit_base</a>.</p>
 
 </div>
 </div>
@@ -760,7 +801,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00266">266</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00213">last_status</a>, <a class="el" href="i2c_8h_source.html#l00035">NO_STOP</a>, <a class="el" href="i2c_8cpp_source.html#l00161">read()</a>, and <a class="el" href="i2c_8cpp_source.html#l00150">write()</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00221">last_status</a>, <a class="el" href="i2c_8h_source.html#l00035">NO_STOP</a>, <a class="el" href="i2c_8cpp_source.html#l00161">read()</a>, and <a class="el" href="i2c_8cpp_source.html#l00150">write()</a>.</p>
 
 </div>
 </div>
@@ -814,7 +855,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00256">256</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00213">last_status</a>, <a class="el" href="i2c_8h_source.html#l00035">NO_STOP</a>, <a class="el" href="i2c_8cpp_source.html#l00161">read()</a>, and <a class="el" href="i2c_8cpp_source.html#l00150">write()</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00221">last_status</a>, <a class="el" href="i2c_8h_source.html#l00035">NO_STOP</a>, <a class="el" href="i2c_8cpp_source.html#l00161">read()</a>, and <a class="el" href="i2c_8cpp_source.html#l00150">write()</a>.</p>
 
 </div>
 </div>
@@ -868,7 +909,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00234">234</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00213">last_status</a>, <a class="el" href="i2c_8h_source.html#l00022">REG_RW_BUFFER_SIZE</a>, and <a class="el" href="i2c_8cpp_source.html#l00150">write()</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00221">last_status</a>, <a class="el" href="i2c_8h_source.html#l00022">REG_RW_BUFFER_SIZE</a>, and <a class="el" href="i2c_8cpp_source.html#l00150">write()</a>.</p>
 
 </div>
 </div>
@@ -950,9 +991,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00334">334</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="class_i3_c.html#a53d4307fd001c7811dfffaca446fc73d">I3C</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00302">scan()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00337">337</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00308">scan()</a>.</p>
 
 </div>
 </div>
@@ -991,9 +1034,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00311">311</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="class_i3_c.html#a068fcc71387ac49b3bfd59a6b8b4eea6">I3C</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00302">scan()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00314">314</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00308">scan()</a>.</p>
 
 </div>
 </div>
@@ -1037,9 +1082,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00302">302</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="class_i3_c.html#ab9249f4b2ec4b06383109e5f97166402">I3C</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00172">write_core()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00308">308</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00302">ping()</a>.</p>
 
 </div>
 </div>
@@ -1095,7 +1142,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00150">150</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00224">err_cb</a>, and <a class="el" href="i2c_8cpp_source.html#l00172">write_core()</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00232">err_cb</a>, and <a class="el" href="i2c_8cpp_source.html#l00172">write_core()</a>.</p>
 
 </div>
 </div>
@@ -1186,8 +1233,6 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00172">172</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00221">unit_base</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -1211,7 +1256,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00223">223</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00231">231</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
 
 </div>
 </div>
@@ -1235,7 +1280,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00222">222</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00230">230</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
 
 </div>
 </div>
@@ -1259,7 +1304,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00224">224</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00232">232</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
 
 </div>
 </div>
@@ -1276,7 +1321,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>variable for reporting last state </p>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00213">213</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00221">221</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
 
 </div>
 </div>
@@ -1300,7 +1345,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00220">220</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00228">228</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
 
 </div>
 </div>
@@ -1324,7 +1369,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00221">221</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00229">229</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
 
 </div>
 </div>

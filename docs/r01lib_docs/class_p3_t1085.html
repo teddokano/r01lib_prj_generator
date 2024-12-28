@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.33.7</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.34.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -188,6 +188,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4b2526a8ce59f91ca9019b3d66a76d71 inherit pub_methods_class_i2_c__device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a371e31074e312ef7718ce71708f265c3 inherit pub_methods_class_i2_c__device" id="r_a371e31074e312ef7718ce71708f265c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c__device.html#a371e31074e312ef7718ce71708f265c3">rx</a> (uint8_t *data, uint16_t size)</td></tr>
 <tr class="separator:a371e31074e312ef7718ce71708f265c3 inherit pub_methods_class_i2_c__device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2298c86cb79fdbb630a909c1ca970b05 inherit pub_methods_class_i2_c__device" id="r_a2298c86cb79fdbb630a909c1ca970b05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c__device.html#a2298c86cb79fdbb630a909c1ca970b05">ping</a> (void)</td></tr>
+<tr class="separator:a2298c86cb79fdbb630a909c1ca970b05 inherit pub_methods_class_i2_c__device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6d45f6df6f177c162f519312958c4fb inherit pub_methods_class_i2_c__device" id="r_ab6d45f6df6f177c162f519312958c4fb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c__device.html#ab6d45f6df6f177c162f519312958c4fb">address</a> (void)</td></tr>
 <tr class="separator:ab6d45f6df6f177c162f519312958c4fb inherit pub_methods_class_i2_c__device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8640a457511d523f69549704e8d10d9 inherit pub_methods_class_i2_c__device" id="r_ac8640a457511d523f69549704e8d10d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c__device.html#ac8640a457511d523f69549704e8d10d9">address_overwrite</a> (uint8_t <a class="el" href="class_i2_c__device.html#ab6d45f6df6f177c162f519312958c4fb">address</a>)</td></tr>
@@ -242,7 +244,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p><a class="el" href="class_p3_t1085.html">P3T1085</a> class</p>
 <p>About <a class="el" href="class_p3_t1085.html">P3T1085</a>: <a href="https://www.nxp.com/products/sensors/ic-digital-temperature-sensors/i3c-ic-bus-0-5-c-accurate-digital-temperature-sensor:P3T1085UK">https://www.nxp.com/products/sensors/ic-digital-temperature-sensors/i3c-ic-bus-0-5-c-accurate-digital-temperature-sensor:P3T1085UK</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="_temp_sensor_8h_source.html#l00427">427</a> of file <a class="el" href="_temp_sensor_8h_source.html">TempSensor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_temp_sensor_8h_source.html#l00425">425</a> of file <a class="el" href="_temp_sensor_8h_source.html">TempSensor.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4dafc8bcf7a1d3b77d233c259553dbd7" name="a4dafc8bcf7a1d3b77d233c259553dbd7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4dafc8bcf7a1d3b77d233c259553dbd7">&#9670;&#160;</a></span>P3T1085()</h2>
@@ -270,7 +272,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_temp_sensor_8cpp_source.html#l00082">82</a> of file <a class="el" href="_temp_sensor_8cpp_source.html">TempSensor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_temp_sensor_8cpp_source.html#l00081">81</a> of file <a class="el" href="_temp_sensor_8cpp_source.html">TempSensor.cpp</a>.</p>
 
 </div>
 </div>
@@ -298,7 +300,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Destructor of <a class="el" href="class_p3_t1085.html">P3T1085</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="_temp_sensor_8cpp_source.html#l00083">83</a> of file <a class="el" href="_temp_sensor_8cpp_source.html">TempSensor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_temp_sensor_8cpp_source.html#l00082">82</a> of file <a class="el" href="_temp_sensor_8cpp_source.html">TempSensor.cpp</a>.</p>
 
 </div>
 </div>
@@ -410,9 +412,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Clear ALERT (Clear interurpt)</p>
 <dl class="section return"><dt>Returns</dt><dd>true if FH flag in Congiguration register is set </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_temp_sensor_8cpp_source.html#l00089">89</a> of file <a class="el" href="_temp_sensor_8cpp_source.html">TempSensor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_temp_sensor_8cpp_source.html#l00088">88</a> of file <a class="el" href="_temp_sensor_8cpp_source.html">TempSensor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_temp_sensor_8h_source.html#l00327">P3T1755::Conf</a>, and <a class="el" href="#ac5d7e535b2d3d5b59f37d39c397847b0">read_r16()</a>.</p>
+<p class="reference">References <a class="el" href="_temp_sensor_8h_source.html#l00325">P3T1755::Conf</a>, and <a class="el" href="#ac5d7e535b2d3d5b59f37d39c397847b0">read_r16()</a>.</p>
 
 </div>
 </div>
@@ -448,9 +450,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_p3_t1755.html#a0d1859a4fbc9c01d6876cabf256b9169">P3T1755</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_temp_sensor_8cpp_source.html#l00084">84</a> of file <a class="el" href="_temp_sensor_8cpp_source.html">TempSensor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_temp_sensor_8cpp_source.html#l00083">83</a> of file <a class="el" href="_temp_sensor_8cpp_source.html">TempSensor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="#a55ab9a6164c2cf1f4f79641a12fe67ba">bit_op16()</a>, and <a class="el" href="_temp_sensor_8h_source.html#l00327">P3T1755::Conf</a>.</p>
+<p class="reference">References <a class="el" href="#a55ab9a6164c2cf1f4f79641a12fe67ba">bit_op16()</a>, and <a class="el" href="_temp_sensor_8h_source.html#l00325">P3T1755::Conf</a>.</p>
 
 </div>
 </div>

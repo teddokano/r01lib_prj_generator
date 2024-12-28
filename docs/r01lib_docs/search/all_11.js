@@ -65,5 +65,5 @@ var searchData=
   ['tsr3_5fyears_62',['TSR3_years',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411ae62daf90928dcc4e45e298f49f4fc045',1,'PCF85263A']]],
   ['tsr_5fmode_63',['TSR_mode',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411a39b5758fa2276aeb1ade87954ff525ae',1,'PCF85263A']]],
   ['tx_64',['tx',['../class_i2_c__device.html#a4b2526a8ce59f91ca9019b3d66a76d71',1,'I2C_device']]],
-  ['txrx_65',['txrx',['../class_s_p_i__for___a_f_e.html#a3063f4bf133088e6c239a446310686f5',1,'SPI_for_AFE::txrx()'],['../class_g_p_i_o___s_p_i.html#a554b685983b092885780e440a144487f',1,'GPIO_SPI::txrx()'],['../class_p_c_a995x___s_p_i.html#ad81c131f5d1d1989c8f4ee99570483a7',1,'PCA995x_SPI::txrx()'],['../class_s_p_i__for___r_t_c.html#adc074c5b2d8448ed98470b637be95b3b',1,'SPI_for_RTC::txrx()']]]
+  ['txrx_65',['txrx',['../class_s_p_i__for___a_f_e.html#a3063f4bf133088e6c239a446310686f5',1,'SPI_for_AFE::txrx()'],['../class_g_p_i_o___s_p_i.html#a554b685983b092885780e440a144487f',1,'GPIO_SPI::txrx()'],['../class_p_c_a995x___s_p_i.html#ad81c131f5d1d1989c8f4ee99570483a7',1,'PCA995x_SPI::txrx()'],['../class_a_d5161___s_p_i.html#acaf6513ed3ff8e709b992bfc596e6352',1,'AD5161_SPI::txrx()'],['../class_s_p_i__for___r_t_c.html#adc074c5b2d8448ed98470b637be95b3b',1,'SPI_for_RTC::txrx()']]]
 ];

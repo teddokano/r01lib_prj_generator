@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.33.7</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.34.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -146,14 +146,12 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:a3bddced1c6656ddf696621cf4209e977"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="class_l_e_d_driver.html">LEDDriver</a> operation library for Arduino</p>
-<dl class="section author"><dt>Author</dt><dd>Tedd OKANO</dd></dl>
-<p>Released under the MIT license License <a class="el" href="class_gradation_control.html">GradationControl</a> operation library for Arduino</p>
+<div class="textblock"><p><a class="el" href="class_gradation_control.html">GradationControl</a> operation library for Arduino</p>
 <dl class="section author"><dt>Author</dt><dd>Tedd OKANO</dd></dl>
 <p>Released under the MIT license License <a class="el" href="class_gradation_control.html">GradationControl</a> class</p>
 <p><a class="el" href="class_gradation_control.html">GradationControl</a> class is an API to use <a class="el" href="class_p_c_a9955_b.html">PCA9955B</a> and <a class="el" href="class_p_c_a9957.html">PCA9957</a> gradation control feature. Instances are made for each gradation control groups </p>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00027">27</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00026">26</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="aaa9f0a75203764f128858991301bf099" name="aaa9f0a75203764f128858991301bf099"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa9f0a75203764f128858991301bf099">&#9670;&#160;</a></span>control</h2>
@@ -174,7 +172,7 @@ Static Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="aaa9f0a75203764f128858991301bf099a3ea467a69db241e508717b9bdb42e585" name="aaa9f0a75203764f128858991301bf099a3ea467a69db241e508717b9bdb42e585"></a>CONTINUOUS&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00032">32</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00031">31</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
 
 </div>
 </div>
@@ -188,12 +186,12 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">GradationControl::GradationControl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_p_c_a995x.html">PCA995x</a> *</td>          <td class="paramname"><span class="paramname"><em>dev_ptr</em></span>, </td>
+          <td class="paramtype"><a class="el" href="class_p_c_a995x.html">PCA995x</a> *</td>          <td class="paramname"><span class="paramname"><em>devp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>group_num</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_group</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -207,17 +205,14 @@ Static Private Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">devp</td><td>pointer to <a class="el" href="class_p_c_a9955_b.html">PCA9955B</a> or <a class="el" href="class_p_c_a9957.html">PCA9957</a> device instance </td></tr>
     <tr><td class="paramname">num_group</td><td>int value to specify group number </td></tr>
-    <tr><td class="paramname">bitmap</td><td>option. specifying channels assign into this group (bit 0 = channel 0). Assigning can be done later by "add_channel()" method</td></tr>
+    <tr><td class="paramname">bitmap</td><td>option. specifying channels assign into this group (bit 0 = channel 0). Assigning can be done later by "add_channel()" method </td></tr>
   </table>
   </dd>
 </dl>
-<p><a class="el" href="class_l_e_d_driver.html">LEDDriver</a> operation library for Arduino</p>
-<dl class="section author"><dt>Author</dt><dd>Tedd OKANO</dd></dl>
-<p>Released under the MIT license License </p>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00010">10</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00009">9</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_gradation_control_8cpp_source.html#l00094">gradation_channel_enable()</a>, and <a class="el" href="_gradation_control_8cpp_source.html#l00108">gradation_group_assign()</a>.</p>
+<p class="reference">References <a class="el" href="_gradation_control_8cpp_source.html#l00093">gradation_channel_enable()</a>, and <a class="el" href="_gradation_control_8cpp_source.html#l00107">gradation_group_assign()</a>.</p>
 
 </div>
 </div>
@@ -245,7 +240,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Destructor </p>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00017">17</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00016">16</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
 
 </div>
 </div>
@@ -272,9 +267,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00132">132</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00131">131</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_l_e_d_driver_8h_source.html#l00119">PCA995x::arp</a>, <a class="el" href="_gradation_control_8h_source.html#l00102">devp</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00027">GROUP</a>, <a class="el" href="_gradation_control_8h_source.html#l00103">group</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00026">MODE</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00029">N_GROUP</a>, and <a class="el" href="class_l_e_d_driver.html#aab3c888110aadbd9ace0d7727ea991fa">LEDDriver::reg_access()</a>.</p>
+<p class="reference">References <a class="el" href="_l_e_d_driver_8h_source.html#l00118">PCA995x::arp</a>, <a class="el" href="_gradation_control_8h_source.html#l00101">devp</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00026">GROUP</a>, <a class="el" href="_gradation_control_8h_source.html#l00102">group</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00025">MODE</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00028">N_GROUP</a>, and <a class="el" href="class_l_e_d_driver.html#aab3c888110aadbd9ace0d7727ea991fa">LEDDriver::reg_access()</a>.</p>
 
 </div>
 </div>
@@ -300,9 +295,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00161">161</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00160">160</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_l_e_d_driver_8h_source.html#l00119">PCA995x::arp</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00028">CNTL</a>, <a class="el" href="_gradation_control_8h_source.html#l00102">devp</a>, <a class="el" href="_gradation_control_8h_source.html#l00103">group</a>, and <a class="el" href="class_l_e_d_driver.html#aab3c888110aadbd9ace0d7727ea991fa">LEDDriver::reg_access()</a>.</p>
+<p class="reference">References <a class="el" href="_l_e_d_driver_8h_source.html#l00118">PCA995x::arp</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00027">CNTL</a>, <a class="el" href="_gradation_control_8h_source.html#l00101">devp</a>, <a class="el" href="_gradation_control_8h_source.html#l00102">group</a>, and <a class="el" href="class_l_e_d_driver.html#aab3c888110aadbd9ace0d7727ea991fa">LEDDriver::reg_access()</a>.</p>
 
 </div>
 </div>
@@ -328,9 +323,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00094">94</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00093">93</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_l_e_d_driver_8h_source.html#l00119">PCA995x::arp</a>, <a class="el" href="_gradation_control_8h_source.html#l00102">devp</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00026">MODE</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00081">LEDDriver::n_channel</a>, <a class="el" href="class_l_e_d_driver.html#aab3c888110aadbd9ace0d7727ea991fa">LEDDriver::reg_access()</a>, and <a class="el" href="class_l_e_d_driver.html#a68693f501547672f2a7e82886ba5b0c0">LEDDriver::reg_access_r()</a>.</p>
+<p class="reference">References <a class="el" href="_l_e_d_driver_8h_source.html#l00118">PCA995x::arp</a>, <a class="el" href="_gradation_control_8h_source.html#l00101">devp</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00025">MODE</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00080">LEDDriver::n_channel</a>, <a class="el" href="class_l_e_d_driver.html#aab3c888110aadbd9ace0d7727ea991fa">LEDDriver::reg_access()</a>, and <a class="el" href="class_l_e_d_driver.html#a68693f501547672f2a7e82886ba5b0c0">LEDDriver::reg_access_r()</a>.</p>
 
 </div>
 </div>
@@ -356,9 +351,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00108">108</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00107">107</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_l_e_d_driver_8h_source.html#l00119">PCA995x::arp</a>, <a class="el" href="_gradation_control_8h_source.html#l00102">devp</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00027">GROUP</a>, <a class="el" href="_gradation_control_8h_source.html#l00103">group</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00081">LEDDriver::n_channel</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00029">N_GROUP</a>, <a class="el" href="class_l_e_d_driver.html#aab3c888110aadbd9ace0d7727ea991fa">LEDDriver::reg_access()</a>, and <a class="el" href="class_l_e_d_driver.html#a68693f501547672f2a7e82886ba5b0c0">LEDDriver::reg_access_r()</a>.</p>
+<p class="reference">References <a class="el" href="_l_e_d_driver_8h_source.html#l00118">PCA995x::arp</a>, <a class="el" href="_gradation_control_8h_source.html#l00101">devp</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00026">GROUP</a>, <a class="el" href="_gradation_control_8h_source.html#l00102">group</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00080">LEDDriver::n_channel</a>, <a class="el" href="_l_e_d_driver_8h_source.html#l00028">N_GROUP</a>, <a class="el" href="class_l_e_d_driver.html#aab3c888110aadbd9ace0d7727ea991fa">LEDDriver::reg_access()</a>, and <a class="el" href="class_l_e_d_driver.html#a68693f501547672f2a7e82886ba5b0c0">LEDDriver::reg_access_r()</a>.</p>
 
 </div>
 </div>
@@ -426,9 +421,9 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Actual cycle period after calculation </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00021">21</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00020">20</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_l_e_d_driver_8h_source.html#l00119">PCA995x::arp</a>, <a class="el" href="_gradation_control_8h_source.html#l00041">cycle</a>, <a class="el" href="_gradation_control_8h_source.html#l00102">devp</a>, <a class="el" href="_gradation_control_8h_source.html#l00103">group</a>, <a class="el" href="_gradation_control_8h_source.html#l00188">HOLDTIME</a>, <a class="el" href="class_l_e_d_driver.html#aab3c888110aadbd9ace0d7727ea991fa">LEDDriver::reg_access()</a>, and <a class="el" href="_l_e_d_driver_8h_source.html#l00025">SETTING</a>.</p>
+<p class="reference">References <a class="el" href="_l_e_d_driver_8h_source.html#l00118">PCA995x::arp</a>, <a class="el" href="_gradation_control_8h_source.html#l00040">cycle</a>, <a class="el" href="_gradation_control_8h_source.html#l00101">devp</a>, <a class="el" href="_gradation_control_8h_source.html#l00102">group</a>, <a class="el" href="_gradation_control_8h_source.html#l00187">HOLDTIME</a>, <a class="el" href="class_l_e_d_driver.html#aab3c888110aadbd9ace0d7727ea991fa">LEDDriver::reg_access()</a>, and <a class="el" href="_l_e_d_driver_8h_source.html#l00024">SETTING</a>.</p>
 
 </div>
 </div>
@@ -454,9 +449,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00177">177</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00176">176</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_gradation_control_8h_source.html#l00036">ONE_SHOT</a>.</p>
+<p class="reference">References <a class="el" href="_gradation_control_8h_source.html#l00035">ONE_SHOT</a>.</p>
 
 </div>
 </div>
@@ -476,9 +471,9 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Stop gradation control </p>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00182">182</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8cpp_source.html#l00181">181</a> of file <a class="el" href="_gradation_control_8cpp_source.html">GradationControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_gradation_control_8h_source.html#l00034">GRADATION_STOP</a>.</p>
+<p class="reference">References <a class="el" href="_gradation_control_8h_source.html#l00033">GRADATION_STOP</a>.</p>
 
 </div>
 </div>
@@ -496,7 +491,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Cycle period for the gradation control </p>
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00041">41</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00040">40</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
 
 </div>
 </div>
@@ -520,7 +515,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00102">102</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00101">101</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
 
 </div>
 </div>
@@ -544,7 +539,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00103">103</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00102">102</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
 
 </div>
 </div>
@@ -568,7 +563,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00188">188</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_gradation_control_8h_source.html#l00187">187</a> of file <a class="el" href="_gradation_control_8h_source.html">GradationControl.h</a>.</p>
 
 </div>
 </div>

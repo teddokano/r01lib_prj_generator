@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.33.7</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.34.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -276,7 +276,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="foldopen" id="foldopen00172" data-start="{" data-end="}">
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="class_i2_c.html#a895c650f96ccd365be3f8841740cece1">  172</a></span>status_t <a class="code hl_function" href="class_i2_c.html#a895c650f96ccd365be3f8841740cece1">I2C::write_core</a>( uint8_t address, <span class="keyword">const</span> uint8_t *dp, <span class="keywordtype">int</span> length, <span class="keywordtype">bool</span> stop )</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="class_i3_c.html#afb2a2b583e99807f3aae37c754fc20a1">  172</a></span>status_t <a class="code hl_function" href="class_i2_c.html#a895c650f96ccd365be3f8841740cece1">I2C::write_core</a>( uint8_t address, <span class="keyword">const</span> uint8_t *dp, <span class="keywordtype">int</span> length, <span class="keywordtype">bool</span> stop )</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>{</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    status_t reVal        = kStatus_Fail;</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">size_t</span> txCount        = 0xFFU;</div>
@@ -284,7 +284,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">if</span> ( kStatus_Success == (reVal  = LPI2C_MasterStart( <a class="code hl_variable" href="class_i2_c.html#a6c44b9051a72a4a0c339256f336a2cd9">unit_base</a>, address, kLPI2C_Write)) )</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    {</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        LPI2C_MasterGetFifoCounts( <a class="code hl_variable" href="class_i2_c.html#a6c44b9051a72a4a0c339256f336a2cd9">unit_base</a>, NULL, &amp;txCount );</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordflow">while</span> ( txCount )</div>
+<div class="foldopen" id="foldopen00180" data-start="{" data-end="}">
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="class_i3_c.html#ab9249f4b2ec4b06383109e5f97166402">  180</a></span>        <span class="keywordflow">while</span> ( txCount )</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        {</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            LPI2C_MasterGetFifoCounts( <a class="code hl_variable" href="class_i2_c.html#a6c44b9051a72a4a0c339256f336a2cd9">unit_base</a>, NULL, &amp;txCount );</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        }</div>
@@ -293,7 +294,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        {</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="keywordflow">return</span> kStatus_LPI2C_Nak;</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        }</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="foldopen" id="foldopen00189" data-start="{" data-end="}">
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="class_i3_c.html#a068fcc71387ac49b3bfd59a6b8b4eea6">  189</a></span> </div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        reVal = LPI2C_MasterSend( <a class="code hl_variable" href="class_i2_c.html#a6c44b9051a72a4a0c339256f336a2cd9">unit_base</a>, (uint8_t *)dp, length );</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">if</span> (reVal != kStatus_Success)</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        {</div>
@@ -301,7 +303,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            {</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                LPI2C_MasterStop( <a class="code hl_variable" href="class_i2_c.html#a6c44b9051a72a4a0c339256f336a2cd9">unit_base</a> );</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            }</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keywordflow">return</span> reVal;</div>
+<div class="foldopen" id="foldopen00197" data-start="{" data-end="}">
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="class_i3_c.html#a53d4307fd001c7811dfffaca446fc73d">  197</a></span>            <span class="keywordflow">return</span> reVal;</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        }</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        reVal = LPI2C_MasterStop( <a class="code hl_variable" href="class_i2_c.html#a6c44b9051a72a4a0c339256f336a2cd9">unit_base</a> );</div>
@@ -312,7 +315,6 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">return</span> reVal;</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
-</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
 <div class="foldopen" id="foldopen00209" data-start="{" data-end="}">
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="class_i2_c.html#ae3e166e1dd7c1e18b0f48576dfec2acb">  209</a></span>status_t <a class="code hl_function" href="class_i2_c.html#ae3e166e1dd7c1e18b0f48576dfec2acb">I2C::read_core</a>( uint8_t address, uint8_t *dp, <span class="keywordtype">int</span> length, <span class="keywordtype">bool</span> stop )</div>
@@ -426,89 +428,99 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
 <div class="foldopen" id="foldopen00302" data-start="{" data-end="}">
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno"><a class="line" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">  302</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">I2C::scan</a>( uint8_t start, uint8_t last, <span class="keywordtype">bool</span> *result )</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno"><a class="line" href="class_i2_c.html#afb2a2b583e99807f3aae37c754fc20a1">  302</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_i2_c.html#afb2a2b583e99807f3aae37c754fc20a1">I2C::ping</a>( uint8_t addr )</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>{</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    uint8_t dummy   = 0;</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="keywordflow">for</span> ( uint8_t i = 0; i &lt;= last; i++ ) {</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        result[i]   = !<a class="code hl_function" href="class_i2_c.html#a895c650f96ccd365be3f8841740cece1">write_core</a>( i, &amp;dummy, 0 );</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    }</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>}</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keywordflow">return</span> !<a class="code hl_function" href="class_i2_c.html#a895c650f96ccd365be3f8841740cece1">write_core</a>( addr, &amp;dummy, 0 );</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>}</div>
 </div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
-<div class="foldopen" id="foldopen00311" data-start="{" data-end="}">
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="class_i2_c.html#a068fcc71387ac49b3bfd59a6b8b4eea6">  311</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">I2C::scan</a>( uint8_t start, uint8_t last )</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>{</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="keywordtype">bool</span>    result[ 128 ];</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <a class="code hl_function" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">scan</a>( start, last, result );</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    printf( <span class="stringliteral">&quot;\r\nI2C scan result (in range of 0x00 ~ 0x%02X)\r\n   &quot;</span>, last );</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="keywordflow">for</span> ( uint8_t x = 0; x &lt; 16; x++ )</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        printf( <span class="stringliteral">&quot; x%01X&quot;</span>, x );</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    </div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keywordflow">for</span> ( uint8_t i = 0; i &lt; last; i++ )</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    {</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        <span class="keywordflow">if</span> ( !( i % 16) )</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            printf( <span class="stringliteral">&quot;\r\n%01Xx:&quot;</span>, i / 16 );</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        <span class="keywordflow">if</span> ( result[ i ] )</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            printf( <span class="stringliteral">&quot; %02X&quot;</span>, i );</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            printf( <span class="stringliteral">&quot; --&quot;</span> );</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    }</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    printf( <span class="stringliteral">&quot;\r\n\r\n&quot;</span> );           </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>}</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="foldopen" id="foldopen00308" data-start="{" data-end="}">
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno"><a class="line" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">  308</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">I2C::scan</a>( uint8_t start, uint8_t last, <span class="keywordtype">bool</span> *result )</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>{</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="keywordflow">for</span> ( uint8_t i = 0; i &lt;= last; i++ )</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        result[i]   = <a class="code hl_function" href="class_i2_c.html#afb2a2b583e99807f3aae37c754fc20a1">ping</a>( i );</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>}</div>
 </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
-<div class="foldopen" id="foldopen00334" data-start="{" data-end="}">
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno"><a class="line" href="class_i2_c.html#a53d4307fd001c7811dfffaca446fc73d">  334</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">I2C::scan</a>( uint8_t last )</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>{</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <a class="code hl_function" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">scan</a>( 0, last );</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>}</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
+<div class="foldopen" id="foldopen00314" data-start="{" data-end="}">
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno"><a class="line" href="class_i2_c.html#a068fcc71387ac49b3bfd59a6b8b4eea6">  314</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">I2C::scan</a>( uint8_t start, uint8_t last )</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>{</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="keywordtype">bool</span>    result[ 128 ];</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <a class="code hl_function" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">scan</a>( start, last, result );</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    printf( <span class="stringliteral">&quot;\r\nI2C scan result (in range of 0x00 ~ 0x%02X)\r\n   &quot;</span>, last );</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keywordflow">for</span> ( uint8_t x = 0; x &lt; 16; x++ )</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        printf( <span class="stringliteral">&quot; x%01X&quot;</span>, x );</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="keywordflow">for</span> ( uint8_t i = 0; i &lt; last; i++ )</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        <span class="keywordflow">if</span> ( !( i % 16) )</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            printf( <span class="stringliteral">&quot;\r\n%01Xx:&quot;</span>, i / 16 );</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <span class="keywordflow">if</span> ( result[ i ] )</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            printf( <span class="stringliteral">&quot; %02X&quot;</span>, i );</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            printf( <span class="stringliteral">&quot; --&quot;</span> );</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    }</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    printf( <span class="stringliteral">&quot;\r\n\r\n&quot;</span> );           </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>}</div>
 </div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
-<div class="foldopen" id="foldopen00339" data-start="{" data-end="}">
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="class_i2_c.html#ae10dac7be46ae36aa1ebbb952ab967fd">  339</a></span>status_t <a class="code hl_function" href="class_i2_c.html#ae10dac7be46ae36aa1ebbb952ab967fd">I2C::ccc_set</a>( uint8_t ccc, uint8_t addr, uint8_t data )</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>{</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <span class="keywordflow">return</span> kStatus_Success;</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>}</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="foldopen" id="foldopen00337" data-start="{" data-end="}">
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="class_i2_c.html#a53d4307fd001c7811dfffaca446fc73d">  337</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">I2C::scan</a>( uint8_t last )</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>{</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <a class="code hl_function" href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">scan</a>( 0, last );</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>}</div>
 </div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
-<div class="foldopen" id="foldopen00344" data-start="{" data-end="}">
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno"><a class="line" href="class_i2_c.html#a629b5c62a4a173fc1950010b75cec34b">  344</a></span>status_t <a class="code hl_function" href="class_i2_c.html#a629b5c62a4a173fc1950010b75cec34b">I2C::ccc_get</a>( uint8_t ccc, uint8_t addr, uint8_t *dp, uint8_t length )</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>{</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    memset( dp, 0, length );</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keywordflow">return</span> kStatus_Success;</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>}</div>
+</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="foldopen" id="foldopen00342" data-start="{" data-end="}">
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="class_i2_c.html#ae10dac7be46ae36aa1ebbb952ab967fd">  342</a></span>status_t <a class="code hl_function" href="class_i2_c.html#ae10dac7be46ae36aa1ebbb952ab967fd">I2C::ccc_set</a>( uint8_t ccc, uint8_t addr, uint8_t data )</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>{</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="keywordflow">return</span> kStatus_Success;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>}</div>
+</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="foldopen" id="foldopen00347" data-start="{" data-end="}">
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno"><a class="line" href="class_i2_c.html#a629b5c62a4a173fc1950010b75cec34b">  347</a></span>status_t <a class="code hl_function" href="class_i2_c.html#a629b5c62a4a173fc1950010b75cec34b">I2C::ccc_get</a>( uint8_t ccc, uint8_t addr, uint8_t *dp, uint8_t length )</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>{</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    memset( dp, 0, length );</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keywordflow">return</span> kStatus_Success;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>}</div>
+</div>
+</div>
+</div>
 </div>
 <div class="ttc" id="aclass_digital_in_out_html_a7756405060ef1a62957346ba262f9982a2e721ab48b4a95f9fea8ebbbdfc3fd96"><div class="ttname"><a href="class_digital_in_out.html#a7756405060ef1a62957346ba262f9982a2e721ab48b4a95f9fea8ebbbdfc3fd96">DigitalInOut::PullNone</a></div><div class="ttdeci">@ PullNone</div><div class="ttdef"><b>Definition</b> <a href="io_8h_source.html#l00660">io.h:660</a></div></div>
 <div class="ttc" id="aclass_digital_in_out_html_a7756405060ef1a62957346ba262f9982a38f889197cb81549b4ce8d7d03a64be6"><div class="ttname"><a href="class_digital_in_out.html#a7756405060ef1a62957346ba262f9982a38f889197cb81549b4ce8d7d03a64be6">DigitalInOut::PullUp</a></div><div class="ttdeci">@ PullUp</div><div class="ttdef"><b>Definition</b> <a href="io_8h_source.html#l00661">io.h:661</a></div></div>
 <div class="ttc" id="aclass_digital_in_out_html_a846215455a9b085e5e17cf9581a79163"><div class="ttname"><a href="class_digital_in_out.html#a846215455a9b085e5e17cf9581a79163">DigitalInOut::pin_mux</a></div><div class="ttdeci">void pin_mux(int mux)</div><div class="ttdef"><b>Definition</b> <a href="io_8cpp_source.html#l00479">io.cpp:479</a></div></div>
 <div class="ttc" id="aclass_digital_in_out_html_af4d43da95af41af1400189e15cdd2bc9"><div class="ttname"><a href="class_digital_in_out.html#af4d43da95af41af1400189e15cdd2bc9">DigitalInOut::mode</a></div><div class="ttdeci">void mode(int pin_mode)</div><div class="ttdef"><b>Definition</b> <a href="io_8cpp_source.html#l00484">io.cpp:484</a></div></div>
-<div class="ttc" id="aclass_i2_c_html_a141f2f104343fc764ef1cf0cf60fd4d7"><div class="ttname"><a href="class_i2_c.html#a141f2f104343fc764ef1cf0cf60fd4d7">I2C::err_cb</a></div><div class="ttdeci">err_cb_ptr err_cb</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00224">i2c.h:224</a></div></div>
+<div class="ttc" id="aclass_i2_c_html_a141f2f104343fc764ef1cf0cf60fd4d7"><div class="ttname"><a href="class_i2_c.html#a141f2f104343fc764ef1cf0cf60fd4d7">I2C::err_cb</a></div><div class="ttdeci">err_cb_ptr err_cb</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00232">i2c.h:232</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_a16f825cf263a78a1c983da06506763f2a22c6841e1e9e67230fc1770c7649561c"><div class="ttname"><a href="class_i2_c.html#a16f825cf263a78a1c983da06506763f2a22c6841e1e9e67230fc1770c7649561c">I2C::NO_STOP</a></div><div class="ttdeci">@ NO_STOP</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00036">i2c.h:35</a></div></div>
-<div class="ttc" id="aclass_i2_c_html_a2f20a9d723af29875ec25ea943fcc49c"><div class="ttname"><a href="class_i2_c.html#a2f20a9d723af29875ec25ea943fcc49c">I2C::last_status</a></div><div class="ttdeci">status_t last_status</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00213">i2c.h:213</a></div></div>
+<div class="ttc" id="aclass_i2_c_html_a2f20a9d723af29875ec25ea943fcc49c"><div class="ttname"><a href="class_i2_c.html#a2f20a9d723af29875ec25ea943fcc49c">I2C::last_status</a></div><div class="ttdeci">status_t last_status</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00221">i2c.h:221</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_a430ab75ee49dada60727998e0fac6397"><div class="ttname"><a href="class_i2_c.html#a430ab75ee49dada60727998e0fac6397">I2C::err_handling</a></div><div class="ttdeci">static void err_handling(status_t error, uint8_t address)</div><div class="ttdef"><b>Definition</b> <a href="#l00294">i2c.cpp:294</a></div></div>
-<div class="ttc" id="aclass_i2_c_html_a44f399fc7fa62a3d606e584371f29b33"><div class="ttname"><a href="class_i2_c.html#a44f399fc7fa62a3d606e584371f29b33">I2C::_scl</a></div><div class="ttdeci">DigitalInOut _scl</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00223">i2c.h:223</a></div></div>
+<div class="ttc" id="aclass_i2_c_html_a44f399fc7fa62a3d606e584371f29b33"><div class="ttname"><a href="class_i2_c.html#a44f399fc7fa62a3d606e584371f29b33">I2C::_scl</a></div><div class="ttdeci">DigitalInOut _scl</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00231">i2c.h:231</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_a529cd058cd3ff855d0292d925203b09d"><div class="ttname"><a href="class_i2_c.html#a529cd058cd3ff855d0292d925203b09d">I2C::frequency</a></div><div class="ttdeci">virtual void frequency(uint32_t frequency)</div><div class="ttdef"><b>Definition</b> <a href="#l00137">i2c.cpp:137</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_a5a3af453399e75ace8e4a1f7294e79bc"><div class="ttname"><a href="class_i2_c.html#a5a3af453399e75ace8e4a1f7294e79bc">I2C::I2C</a></div><div class="ttdeci">I2C(int sda, int scl, bool no_hw=false)</div><div class="ttdef"><b>Definition</b> <a href="#l00040">i2c.cpp:40</a></div></div>
-<div class="ttc" id="aclass_i2_c_html_a629b5c62a4a173fc1950010b75cec34b"><div class="ttname"><a href="class_i2_c.html#a629b5c62a4a173fc1950010b75cec34b">I2C::ccc_get</a></div><div class="ttdeci">virtual status_t ccc_get(uint8_t ccc, uint8_t addr, uint8_t *dp, uint8_t length)</div><div class="ttdef"><b>Definition</b> <a href="#l00344">i2c.cpp:344</a></div></div>
-<div class="ttc" id="aclass_i2_c_html_a6c44b9051a72a4a0c339256f336a2cd9"><div class="ttname"><a href="class_i2_c.html#a6c44b9051a72a4a0c339256f336a2cd9">I2C::unit_base</a></div><div class="ttdeci">LPI2C_Type * unit_base</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00221">i2c.h:221</a></div></div>
+<div class="ttc" id="aclass_i2_c_html_a629b5c62a4a173fc1950010b75cec34b"><div class="ttname"><a href="class_i2_c.html#a629b5c62a4a173fc1950010b75cec34b">I2C::ccc_get</a></div><div class="ttdeci">virtual status_t ccc_get(uint8_t ccc, uint8_t addr, uint8_t *dp, uint8_t length)</div><div class="ttdef"><b>Definition</b> <a href="#l00347">i2c.cpp:347</a></div></div>
+<div class="ttc" id="aclass_i2_c_html_a6c44b9051a72a4a0c339256f336a2cd9"><div class="ttname"><a href="class_i2_c.html#a6c44b9051a72a4a0c339256f336a2cd9">I2C::unit_base</a></div><div class="ttdeci">LPI2C_Type * unit_base</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00229">i2c.h:229</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_a6f4376fa19581280c5048b2fd2f1dd68"><div class="ttname"><a href="class_i2_c.html#a6f4376fa19581280c5048b2fd2f1dd68">I2C::err_callback</a></div><div class="ttdeci">virtual err_cb_ptr err_callback(err_cb_ptr)</div><div class="ttdef"><b>Definition</b> <a href="#l00286">i2c.cpp:286</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_a8596716906d59632dc0d21359050d74f"><div class="ttname"><a href="class_i2_c.html#a8596716906d59632dc0d21359050d74f">I2C::err_cb_ptr</a></div><div class="ttdeci">void(*) err_cb_ptr(status_t status, uint8_t address)</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00029">i2c.h:29</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_a895c650f96ccd365be3f8841740cece1"><div class="ttname"><a href="class_i2_c.html#a895c650f96ccd365be3f8841740cece1">I2C::write_core</a></div><div class="ttdeci">virtual status_t write_core(uint8_t address, const uint8_t *dp, int length, bool stop=STOP)</div><div class="ttdef"><b>Definition</b> <a href="#l00172">i2c.cpp:172</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_a95d151cb84a8db6e0034bc767764cd56"><div class="ttname"><a href="class_i2_c.html#a95d151cb84a8db6e0034bc767764cd56">I2C::pullup</a></div><div class="ttdeci">virtual void pullup(bool enable)</div><div class="ttdef"><b>Definition</b> <a href="#l00142">i2c.cpp:142</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_aa1dcd88fb57d976449f635cdaeb22e77"><div class="ttname"><a href="class_i2_c.html#aa1dcd88fb57d976449f635cdaeb22e77">I2C::reg_write</a></div><div class="ttdeci">virtual status_t reg_write(uint8_t targ, uint8_t reg, const uint8_t *dp, int length)</div><div class="ttdef"><b>Definition</b> <a href="#l00234">i2c.cpp:234</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_aadfd70d22d88ab93a33e4bfb50097616"><div class="ttname"><a href="class_i2_c.html#aadfd70d22d88ab93a33e4bfb50097616">I2C::read</a></div><div class="ttdeci">virtual status_t read(uint8_t address, uint8_t *dp, int length, bool stop=STOP)</div><div class="ttdef"><b>Definition</b> <a href="#l00161">i2c.cpp:161</a></div></div>
-<div class="ttc" id="aclass_i2_c_html_ab9249f4b2ec4b06383109e5f97166402"><div class="ttname"><a href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">I2C::scan</a></div><div class="ttdeci">virtual void scan(uint8_t start, uint8_t last, bool *result)</div><div class="ttdef"><b>Definition</b> <a href="#l00302">i2c.cpp:302</a></div></div>
+<div class="ttc" id="aclass_i2_c_html_ab9249f4b2ec4b06383109e5f97166402"><div class="ttname"><a href="class_i2_c.html#ab9249f4b2ec4b06383109e5f97166402">I2C::scan</a></div><div class="ttdeci">virtual void scan(uint8_t start, uint8_t last, bool *result)</div><div class="ttdef"><b>Definition</b> <a href="#l00308">i2c.cpp:308</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_aba7f5f777e19bb5aded1847da55212d6"><div class="ttname"><a href="class_i2_c.html#aba7f5f777e19bb5aded1847da55212d6">I2C::write</a></div><div class="ttdeci">virtual status_t write(uint8_t address, const uint8_t *dp, int length, bool stop=STOP)</div><div class="ttdef"><b>Definition</b> <a href="#l00150">i2c.cpp:150</a></div></div>
-<div class="ttc" id="aclass_i2_c_html_ad3ac8e63765dd4cb1c31f2673fec0ab3"><div class="ttname"><a href="class_i2_c.html#ad3ac8e63765dd4cb1c31f2673fec0ab3">I2C::masterConfig</a></div><div class="ttdeci">lpi2c_master_config_t masterConfig</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00220">i2c.h:220</a></div></div>
-<div class="ttc" id="aclass_i2_c_html_ae10dac7be46ae36aa1ebbb952ab967fd"><div class="ttname"><a href="class_i2_c.html#ae10dac7be46ae36aa1ebbb952ab967fd">I2C::ccc_set</a></div><div class="ttdeci">virtual status_t ccc_set(uint8_t ccc, uint8_t addr, uint8_t data)</div><div class="ttdef"><b>Definition</b> <a href="#l00339">i2c.cpp:339</a></div></div>
+<div class="ttc" id="aclass_i2_c_html_ad3ac8e63765dd4cb1c31f2673fec0ab3"><div class="ttname"><a href="class_i2_c.html#ad3ac8e63765dd4cb1c31f2673fec0ab3">I2C::masterConfig</a></div><div class="ttdeci">lpi2c_master_config_t masterConfig</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00228">i2c.h:228</a></div></div>
+<div class="ttc" id="aclass_i2_c_html_ae10dac7be46ae36aa1ebbb952ab967fd"><div class="ttname"><a href="class_i2_c.html#ae10dac7be46ae36aa1ebbb952ab967fd">I2C::ccc_set</a></div><div class="ttdeci">virtual status_t ccc_set(uint8_t ccc, uint8_t addr, uint8_t data)</div><div class="ttdef"><b>Definition</b> <a href="#l00342">i2c.cpp:342</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_ae3e166e1dd7c1e18b0f48576dfec2acb"><div class="ttname"><a href="class_i2_c.html#ae3e166e1dd7c1e18b0f48576dfec2acb">I2C::read_core</a></div><div class="ttdeci">virtual status_t read_core(uint8_t address, uint8_t *dp, int length, bool stop=STOP)</div><div class="ttdef"><b>Definition</b> <a href="#l00209">i2c.cpp:209</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_ae6133095729f78d8324209280c2995a7"><div class="ttname"><a href="class_i2_c.html#ae6133095729f78d8324209280c2995a7">I2C::reg_read</a></div><div class="ttdeci">virtual status_t reg_read(uint8_t targ, uint8_t reg, uint8_t *dp, int length)</div><div class="ttdef"><b>Definition</b> <a href="#l00256">i2c.cpp:256</a></div></div>
-<div class="ttc" id="aclass_i2_c_html_af8f7be292c9db76518888e35bc5e2335"><div class="ttname"><a href="class_i2_c.html#af8f7be292c9db76518888e35bc5e2335">I2C::_sda</a></div><div class="ttdeci">DigitalInOut _sda</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00222">i2c.h:222</a></div></div>
+<div class="ttc" id="aclass_i2_c_html_af8f7be292c9db76518888e35bc5e2335"><div class="ttname"><a href="class_i2_c.html#af8f7be292c9db76518888e35bc5e2335">I2C::_sda</a></div><div class="ttdeci">DigitalInOut _sda</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00230">i2c.h:230</a></div></div>
 <div class="ttc" id="aclass_i2_c_html_afaad09fa9bdd23623bddbdcd7585a9fe"><div class="ttname"><a href="class_i2_c.html#afaad09fa9bdd23623bddbdcd7585a9fe">I2C::~I2C</a></div><div class="ttdeci">virtual ~I2C()</div><div class="ttdef"><b>Definition</b> <a href="#l00132">i2c.cpp:132</a></div></div>
+<div class="ttc" id="aclass_i2_c_html_afb2a2b583e99807f3aae37c754fc20a1"><div class="ttname"><a href="class_i2_c.html#afb2a2b583e99807f3aae37c754fc20a1">I2C::ping</a></div><div class="ttdeci">virtual bool ping(uint8_t addr)</div><div class="ttdef"><b>Definition</b> <a href="#l00302">i2c.cpp:302</a></div></div>
 <div class="ttc" id="aclass_obj_html"><div class="ttname"><a href="class_obj.html">Obj</a></div><div class="ttdef"><b>Definition</b> <a href="obj_8h_source.html#l00010">obj.h:11</a></div></div>
 <div class="ttc" id="ai2c_8h_html"><div class="ttname"><a href="i2c_8h.html">i2c.h</a></div></div>
 <div class="ttc" id="ai2c_8h_html_a63640d65f31c8e50210e961ffbcfe7fd"><div class="ttname"><a href="i2c_8h.html#a63640d65f31c8e50210e961ffbcfe7fd">REG_RW_BUFFER_SIZE</a></div><div class="ttdeci">#define REG_RW_BUFFER_SIZE</div><div class="ttdef"><b>Definition</b> <a href="i2c_8h_source.html#l00022">i2c.h:22</a></div></div>
