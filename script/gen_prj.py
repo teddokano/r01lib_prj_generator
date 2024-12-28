@@ -18,6 +18,11 @@ filehead_text		= "FILEHEAD.txt"
 ide					= "/Applications/MCUXpressoIDE_24.9.25/ide/MCUXpressoIDE.app/Contents/MacOS/mcuxpressoide"
 
 def main():
+
+	###
+	### prepare project information
+	###
+	
 	base_dir	= os.getcwd() + "/"
 
 	source_folder_path	= os.path.dirname( args.input_folder + "/" )
@@ -54,6 +59,7 @@ def main():
 	
 	###
 	### copying projects for each targets
+	###   this part works even if the script deleting projects 
 	###
 	
 	for t in target_boards:
@@ -108,8 +114,6 @@ def main():
 		### build --- This could not been done. It should be done in active workspace
 		###
 		
-		### ### 
-		
 		commands	 = []
 		
 		for lib in library_folders:
@@ -144,13 +148,19 @@ def main():
 
 		comm_exec( commands, not args.no_exec and not args.delete )
 
+	###
 	### deleting projects after zipping
-
+	###
+	
 	if not args.keep:
 		commands	 = []
 		commands	+= [ "rm -rf " + " ".join( app_folders ) ]
 
 		comm_exec( commands, not args.no_exec )
+
+###
+###	command executer
+###
 
 def comm_exec( commands, exe_flag ):
 	for c in commands:
@@ -158,7 +168,6 @@ def comm_exec( commands, exe_flag ):
 
 		if exe_flag:
 			subprocess.run( c, shell = True )
-
 
 def command_line_handling():
 	parser	= argparse.ArgumentParser( description = "r01lib MCUXpresso project generator" )
