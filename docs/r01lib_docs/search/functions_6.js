@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['gpio0_5firqhandler_0',['GPIO0_IRQHandler',['../irq_8c.html#aa32175f2e875afc79e5e2df8fe065593',1,'irq.c']]],
-  ['gpio1_5firqhandler_1',['GPIO1_IRQHandler',['../irq_8c.html#a0c2ac16c0534feaab295ac82446374a6',1,'irq.c']]],
-  ['gpio2_5firqhandler_2',['GPIO2_IRQHandler',['../irq_8c.html#a249d7a560045daf5efd327072eec8669',1,'irq.c']]],
-  ['gpio3_5firqhandler_3',['GPIO3_IRQHandler',['../irq_8c.html#a0c399b311b42387909aa6db6f17ecc83',1,'irq.c']]],
-  ['gpio_5fbase_4',['GPIO_base',['../class_g_p_i_o__base.html#a175f88e48affeeefd694f3fc1db44e3c',1,'GPIO_base::GPIO_base(I2C &amp;interface, uint8_t i2c_address, int nbits, const uint8_t *arp, uint8_t ai)'],['../class_g_p_i_o__base.html#a06a99c002397d854d93744c8ff0f1c91',1,'GPIO_base::GPIO_base(SPI &amp;interface, uint8_t dev_address, int nbits, const uint8_t *arp, uint8_t ai)']]],
-  ['gpio_5fport_5',['GPIO_PORT',['../class_g_p_i_o___p_o_r_t.html#a7689f94d9534d73743831b712348a437',1,'GPIO_PORT']]],
-  ['gpio_5fspi_6',['GPIO_SPI',['../class_g_p_i_o___s_p_i.html#a6ab53188d2115e2861e02fc879d94364',1,'GPIO_SPI']]],
-  ['gradation_5fchannel_5fenable_7',['gradation_channel_enable',['../class_gradation_control.html#a3625cb2bbd9c82b331f4deaef948b7e6',1,'GradationControl']]],
-  ['gradation_5fgroup_5fassign_8',['gradation_group_assign',['../class_gradation_control.html#a7a15e266570a694e416d953aa8bd7cd5',1,'GradationControl']]],
-  ['gradationcontrol_9',['GradationControl',['../class_gradation_control.html#a3852269547504376e809fcd76edac965',1,'GradationControl']]]
+  ['fall_0',['fall',['../class_interrupt_in.html#add33054d53a7497f62749618c364fc00',1,'InterruptIn']]],
+  ['flush_1',['flush',['../class_p_c_a8561.html#a59832cfeeadf5144e9d98c81eb94f0a8',1,'PCA8561::flush()'],['../class_l_e_d_driver.html#ae23d672fae6284f1c0d730f49b5e2165',1,'LEDDriver::flush()'],['../class_p_c_a9955_b.html#a70cdc5a207cb31de3046f859d9300552',1,'PCA9955B::flush()'],['../class_p_c_a9956_b.html#a40a6766e1a53c4a1cbda93c88ad42db3',1,'PCA9956B::flush()'],['../class_p_c_a9957.html#a556e6eaa6e21de6ea938e3105ebcc3c5',1,'PCA9957::flush()']]],
+  ['forfutureextention_2',['ForFutureExtention',['../class_for_future_extention.html#a46c348944109569d7834b03b41cb74a5',1,'ForFutureExtention']]],
+  ['frequency_3',['frequency',['../class_i2_c.html#a529cd058cd3ff855d0292d925203b09d',1,'I2C::frequency()'],['../class_i3_c.html#ac63c311402200dc8b817ecfed17d270e',1,'I3C::frequency(uint32_t i2c_freq, uint32_t i3c_od_freq, uint32_t i3c_pp_freq)'],['../class_i3_c.html#aba630333fbf456261ccf4733e5f3eb24',1,'I3C::frequency(void)'],['../class_s_p_i.html#abd71d3bd1d6a0337de84f03de7a87f19',1,'SPI::frequency()']]]
 ];

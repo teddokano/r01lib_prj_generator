@@ -49,7 +49,6 @@ var searchData=
   ['control_5f4_46',['Control_4',['../class_p_c_f2131.html#a683c120c6f40e9e42e93c37adff5b2c5a776a3e96bda570548019d8cceb724c18',1,'PCF2131']]],
   ['control_5f5_47',['Control_5',['../class_p_c_f2131.html#a683c120c6f40e9e42e93c37adff5b2c5a6dbb2073299fb734eef284b453c13b2a',1,'PCF2131']]],
   ['control_5fregister_48',['Control_Register',['../class_p_c_f85053_a.html#ab7f4ad9c87ac514866160f256eb7af1eaafe187b2924be2e79c590cd70729b9de',1,'PCF85053A']]],
-  ['cpp_5fconfig_2ecpp_49',['cpp_config.cpp',['../cpp__config_8cpp.html',1,'']]],
-  ['custom_5fregistar_5fxfer_50',['CUSTOM_REGISTAR_XFER',['../i3c_8h.html#a1890ecd35abcfe4c4029772fd92711d9',1,'i3c.h']]],
-  ['cycle_51',['cycle',['../class_gradation_control.html#a8cbbebc831b5b3d93fa281dfa87fcd78',1,'GradationControl']]]
+  ['custom_5fregistar_5fxfer_49',['CUSTOM_REGISTAR_XFER',['../i3c_8h.html#a1890ecd35abcfe4c4029772fd92711d9',1,'i3c.h']]],
+  ['cycle_50',['cycle',['../class_gradation_control.html#a8cbbebc831b5b3d93fa281dfa87fcd78',1,'GradationControl']]]
 ];

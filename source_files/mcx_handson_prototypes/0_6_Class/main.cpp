@@ -1,10 +1,4 @@
-/** test code for r01lib
- *
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 
 class	Blink : public DigitalOut
@@ -63,6 +57,8 @@ int main( void )
 			b	= 1;
 			wait( 0.1 );
 		}
+
+		wait( 0.5 );
 
 		for ( int i = 0; i < 5; i++ )
 		{

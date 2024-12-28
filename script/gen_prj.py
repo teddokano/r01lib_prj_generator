@@ -13,9 +13,16 @@ build_configs		= [ "Debug", "Release" ]
 
 lib_and_template	= "library_and_template_projects"
 
+filehead_text		= "FILEHEAD.txt"
+
 ide					= "/Applications/MCUXpressoIDE_24.9.25/ide/MCUXpressoIDE.app/Contents/MacOS/mcuxpressoide"
 
 def main():
+
+	###
+	### prepare project information
+	###
+	
 	base_dir	= os.getcwd() + "/"
 
 	source_folder_path	= os.path.dirname( args.input_folder + "/" )
@@ -42,6 +49,7 @@ def main():
 	source_path.sort()
 
 	prj_name	= [ os.path.basename( i ) for i in source_path ]
+	prj_name	= [ i for i in prj_name if i != filehead_text ]
 
 	print( "======= process started for .. =======" )
 	print( "project sources:\n    " + "\n    ".join( prj_name ) )
@@ -51,6 +59,7 @@ def main():
 	
 	###
 	### copying projects for each targets
+	###   this part works even if the script deleting projects 
 	###
 	
 	for t in target_boards:
@@ -62,7 +71,9 @@ def main():
 			commands	= []
 			new_prj	= p + "_" + t
 			
-			print( "    generating project: " + new_prj )
+			message	= "deleting" if args.delete else "generating"
+			
+			print( f"    {message} project: {new_prj}" )
 			app_folders	+= [ new_prj ]
 			
 			commands	+= [ f"cp -r {lib_and_template}/{template}/ {new_prj}/" ]	#	copy template
@@ -70,56 +81,86 @@ def main():
 			commands	+= [ "rm -rf " + " ".join( [ new_prj + "/" + i + "/" for i in build_configs ] ) ]		#	delete built folders
 			commands	+= [ f"sed -i -e s/'<name>{template}'/'<name>{new_prj}'/ {new_prj}/.project" ]
 			
+			if not args.delete:
+				comm_exec( commands, not args.no_exec )
+
+	if not args.delete:
+
+		###
+		### filehead replacing
+		###
+		
+		commands	= []
+		
+		for a in app_folders:
+			filehead	= f"{source_folder_path}/FILEHEAD.txt"
+			src_files	= []
+
+			for pathname, dirnames, filenames in os.walk( f"{a}" ):
+				for f in filenames:
+					src_files	+= [ f"{pathname}/{f}" ]
+			
+			src_files	= [ s for s in src_files if "/." not in s ]
+			
+			rep_comm	= "awk 'NR==FNR{a=a $0 ORS; next} {gsub(/\/\/FILEHEAD/, a)}1'"
+			
+			for src in src_files:
+				commands	+= [ f"{rep_comm} {filehead} {src} > tmp && mv tmp {src}" ]
+		
+		comm_exec( commands, not args.no_exec and not args.delete )
+
+		"""
+		###
+		### build --- This could not been done. It should be done in active workspace
+		###
+		
+		commands	 = []
+		
+		for lib in library_folders:
+			commands	+= [ f"cp -r {lib_and_template}/{lib}/ ./{lib}/" ]	#	copy template
+			commands	+= [ f"{ide} -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data '{base_dir}' -cleanBuild {lib}" ]
+
+		comm_exec( commands, not args.no_exec )	
+		"""	
+		
+		###
+		### zipping
+		###
+		
+		try:
+			os.chdir( base_dir + lib_and_template )
+		except:
+			print( "  !!!!!!!!!!  error: couldn't 'cd' to 'library_and_template_projects/'" )
+		else:
+			commands	 = []
+			commands	+= [ f"rm -rf ../{output_zip_name}" ]
+			commands	+= [ f"zip -r ../{output_zip_name} " + " ".join( library_folders ) + " " + " ".join( template_folders ) + "> /dev/null" ]
+
 			comm_exec( commands, not args.no_exec and not args.delete )
 
-	"""
-	###
-	### build --- This could not been done. It should be done in active workspace
-	###
-	
-	### ### 
-	
-	commands	 = []
-	
-	for lib in library_folders:
-		commands	+= [ f"cp -r {lib_and_template}/{lib}/ ./{lib}/" ]	#	copy template
-		commands	+= [ f"{ide} -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data '{base_dir}' -cleanBuild {lib}" ]
+		try:
+			os.chdir( base_dir )
+		except:
+			print( "  !!!!!!!!!!  error: couldn't 'cd' to base directory" )
 
-	comm_exec( commands, not args.no_exec )	
-	"""	
-	
-	###
-	### zipping
-	###
-	
-	try:
-		os.chdir( base_dir + lib_and_template )
-	except:
-		print( "  !!!!!!!!!!  error: couldn't 'cd' to 'library_and_template_projects/'" )
-	else:
 		commands	 = []
-		commands	+= [ f"rm -rf ../{output_zip_name}" ]
-		commands	+= [ f"zip -r ../{output_zip_name} " + " ".join( library_folders ) + " " + " ".join( template_folders ) + "> /dev/null" ]
+		commands	+= [ f"zip -r {output_zip_name} " + " ".join( app_folders ) + "> /dev/null" ]
 
-		comm_exec( commands, not args.no_exec )
+		comm_exec( commands, not args.no_exec and not args.delete )
 
-	try:
-		os.chdir( base_dir )
-	except:
-		print( "  !!!!!!!!!!  error: couldn't 'cd' to base directory" )
-
-	commands	 = []
-	commands	+= [ f"zip -r {output_zip_name} " + " ".join( app_folders ) + "> /dev/null" ]
-
-	comm_exec( commands, not args.no_exec )
-
+	###
 	### deleting projects after zipping
-
+	###
+	
 	if not args.keep:
 		commands	 = []
 		commands	+= [ "rm -rf " + " ".join( app_folders ) ]
 
 		comm_exec( commands, not args.no_exec )
+
+###
+###	command executer
+###
 
 def comm_exec( commands, exe_flag ):
 	for c in commands:
@@ -127,7 +168,6 @@ def comm_exec( commands, exe_flag ):
 
 		if exe_flag:
 			subprocess.run( c, shell = True )
-
 
 def command_line_handling():
 	parser	= argparse.ArgumentParser( description = "r01lib MCUXpresso project generator" )

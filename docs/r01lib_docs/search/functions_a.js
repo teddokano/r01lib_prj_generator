@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['nafe13388_0',['NAFE13388',['../class_n_a_f_e13388.html#a948fc07539686d8e4453dbde4b4926ff',1,'NAFE13388']]],
-  ['nafe13388_5fbase_1',['NAFE13388_Base',['../class_n_a_f_e13388___base.html#a09b7a044e0b090e6bf0eb7eecf10c183',1,'NAFE13388_Base']]],
-  ['nafe13388_5fuim_2',['NAFE13388_UIM',['../class_n_a_f_e13388___u_i_m.html#acc3c031ec95ae2abf188860bd40f8f93',1,'NAFE13388_UIM']]]
+  ['master_5fcallback_0',['master_callback',['../class_i3_c.html#a444405d5fbdbbe12c7f6f66bed3ccb91',1,'I3C']]],
+  ['master_5fibi_5fcallback_1',['master_ibi_callback',['../class_i3_c.html#a0d9aa4e7f9c24b812b25d2434ca5adec',1,'I3C']]],
+  ['mode_2',['mode',['../class_i3_c.html#abe810aadd065a05757bc84420a7a17b6',1,'I3C::mode()'],['../class_digital_in_out.html#af4d43da95af41af1400189e15cdd2bc9',1,'DigitalInOut::mode(int pin_mode)'],['../class_digital_in_out.html#a31d64fc67c448c48dba55b6a62981e5a',1,'DigitalInOut::mode(void)'],['../class_s_p_i.html#ad7f4e6091db10cddd215d29fea9cd5f4',1,'SPI::mode()']]]
 ];
