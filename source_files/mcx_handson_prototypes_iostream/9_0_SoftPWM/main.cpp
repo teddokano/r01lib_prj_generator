@@ -1,39 +1,46 @@
-//FILEHEAD
+/*
+ *  @author Tedd OKANO
+ *
+ *  Released under the MIT license License
+ */
+
 #include	"r01lib.h"
+#include	"SoftPWM.h"
 
 using namespace	std;
 
-DigitalOut	led( BLUE );
 InterruptIn	btn2( SW2 );
 InterruptIn	btn3( SW3 );
-Ticker		t;
 
-const vector	freq_v{ 1.0, 2.0, 10.0, 100.0 };
 volatile bool	event	= false;
-int				f_select	= 0;
-int				duty		= 1;
 
-void ticker_callback( void )
-{
-	static int	count	= 0;
-
-	if ( (count++ % 10) < duty )
-		led	= 0;
-	else
-		led	= 1;
-}
+SoftPWM	pwm( BLUE );
 
 void btn2_callback( void )
 {
+	static const vector	freq_v{ 1.0, 2.0, 10.0, 100.0 };
+	static int			f_select	= 0;
+
+	if ( event )
+		return;
+
 	f_select++;
 	f_select	%= freq_v.size();
-	t.attach( ticker_callback, 0.1 / freq_v[ f_select ] );	
+	pwm.frequency( freq_v[ f_select ] );	
+
 	event	= true;
 }
 
 void btn3_callback( void )
 {
+	static int	duty	= 0x1;
+
+	if ( event )
+		return;
+
 	duty	= (duty & 0x7) ? duty << 1 : 1;
+	pwm.duty( duty / 10.0 );
+
 	event	= true;
 }
 
@@ -46,15 +53,16 @@ int main( void )
 	btn2.rise( btn2_callback );
 	btn3.rise( btn3_callback );
 	
-	t.attach( ticker_callback, 0.1 / freq_v[ 0 ] );
-		
-	cout << freq_v[ f_select ] << "Hz, " << duty * 10 << "%" << endl;
+	pwm.frequency( 1.0 );
+
+	cout << pwm.frequency() << "Hz, " << pwm.duty() * 100 << "%" << endl;
 
 	while ( true )
 	{
 		if ( event )
 		{
-			cout << freq_v[ f_select ] << "Hz, " << duty * 10 << "%" << endl;
+			cout << pwm.frequency() << "Hz, " << pwm.duty() * 100 << "%" << endl;
+			wait( 0.2 );
 			event	= false;
 		}
 	}
