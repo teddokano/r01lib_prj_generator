@@ -16,8 +16,7 @@ public:
 	SoftPWM( int pin_name, float f = 1.0 );
 	void callback( void );
 	float frequency( float f = 0.0 );
-	float duty( float d );
-	float duty( void );
+	float duty( float d = -1.0 );
 
 private:
 	Ticker	timer;
