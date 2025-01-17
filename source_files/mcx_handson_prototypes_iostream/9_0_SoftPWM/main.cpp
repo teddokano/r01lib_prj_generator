@@ -21,7 +21,7 @@ void btn2_callback( void )
 	static const vector	freq_v{ 1.0, 2.0, 10.0, 100.0 };
 	static int			f_select	= 0;
 
-	if ( event )
+	if ( event )	//	check if still in debounce interval
 		return;
 
 	f_select++;
@@ -35,7 +35,7 @@ void btn3_callback( void )
 {
 	static int	duty	= 0x1;
 
-	if ( event )
+	if ( event )	//	check if still in debounce interval
 		return;
 
 	duty	= (duty & 0x7) ? duty << 1 : 1;
@@ -44,26 +44,45 @@ void btn3_callback( void )
 	event	= true;
 }
 
+void show_current_setting( SoftPWM &pwm )
+{
+	const float	duty	= pwm.duty();
+
+	cout << setw( 7 )
+			<< pwm.frequency()
+			<< "Hz, "
+			<< setw( 2 )
+			<< duty * 100
+			<< "%  ";
+
+	for ( int i = 0; i < 10; i++ )
+		cout <<	((i < (int)(duty * 10)) ? "*" : "_");
+
+	cout << endl;
+}
+
 int main( void )
 {
-	cout << "PWM demo" << endl;
+	cout << "*** SoftPWM demo ***" << endl;
 	cout << "press SW2 to change frequency" << endl;
 	cout << "press SW3 to change duty cycle" << endl;
+	cout << right;
 
 	btn2.rise( btn2_callback );
 	btn3.rise( btn3_callback );
 	
 	pwm.frequency( 1.0 );
 
-	cout << pwm.frequency() << "Hz, " << pwm.duty() * 100 << "%" << endl;
+	show_current_setting( pwm );
 
 	while ( true )
 	{
 		if ( event )
 		{
-			cout << pwm.frequency() << "Hz, " << pwm.duty() * 100 << "%" << endl;
-			wait( 0.2 );
-			event	= false;
+			show_current_setting( pwm );
+
+			wait( 0.2 );		//	for debounce
+			event	= false;	//	for debounce
 		}
 	}
 }

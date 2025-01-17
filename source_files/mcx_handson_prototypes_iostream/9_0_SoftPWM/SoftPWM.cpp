@@ -33,10 +33,8 @@ float SoftPWM::frequency( float f )
 
 float SoftPWM::duty( float d )
 {
-	return duty_ratio	= d;
-}
+	if ( !( d < 0.0 ) )
+		duty_ratio	= d;
 
-float SoftPWM::duty( void )
-{
-	return duty( duty_ratio	);
+	return duty_ratio;
 }
