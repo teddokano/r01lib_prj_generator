@@ -9,12 +9,11 @@
 
 using namespace	std;
 
+SoftPWM		pwm( BLUE );
 InterruptIn	btn2( SW2 );
 InterruptIn	btn3( SW3 );
 
 volatile bool	event	= false;
-
-SoftPWM	pwm( BLUE );
 
 void btn2_callback( void )
 {
