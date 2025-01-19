@@ -1,12 +1,7 @@
-/*
- *  @author Tedd OKANO
- *
- *  Released under the MIT license License
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"accelerometer/FXLS89xx_Arduino.h"
-#include	"SoftPWM.h"
+#include	"SoftPWM/SoftPWM.h"
 #include	<math.h>
 
 using namespace	std;

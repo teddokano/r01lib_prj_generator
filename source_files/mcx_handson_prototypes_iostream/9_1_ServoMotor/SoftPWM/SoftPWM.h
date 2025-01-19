@@ -6,7 +6,7 @@
 
 #include	"r01lib.h"
 
-using namespace	std;
+using	instance_callback_fp_t	= std::function<void(void)>;
 
 class SoftPWM_base : public DigitalOut
 {
@@ -14,27 +14,37 @@ public:
 	using DigitalOut::operator=;
 
 	SoftPWM_base( int pin_name, float frequency = 50.0, unsigned int resolution = 1000, bool polarity = true, float duty = 0.1 );
-	virtual void	callback( void );
-	virtual float	frequency( float f = 0.0 );
-	virtual float	resolution( int r = -1 );
 	virtual float	duty( float d = -1.0 );
+	virtual void	instance_callback( void );
+
+	static float	frequency( float f = 0.0 );
+	static float	resolution( int r = -1 );
+	static void		class_callback( void );
+
+	static int		instance_count;
 
 protected:
-	float	freq;
-	int		res;
-	bool	pol;
-	float	duty_ratio;
-	int		count;
+	bool			pol;
+	float			duty_ratio;
+
+	static float	freq;
+	static int		res;
+	static int		count;
 
 private:
-	Ticker	timer;
+	static Ticker	timer;
+	static std::vector<instance_callback_fp_t>	cbs;
 };
+
+
 
 class SoftPWM : public SoftPWM_base
 {
 public:
 	SoftPWM( int pin_name );
 };
+
+
 
 class ServoMotor : public SoftPWM_base
 {

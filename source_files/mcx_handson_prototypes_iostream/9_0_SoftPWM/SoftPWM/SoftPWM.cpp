@@ -7,25 +7,46 @@
 #include	"r01lib.h"
 #include	"SoftPWM.h"
 
-DigitalOut	pin( A4 );
+float	SoftPWM_base::freq	= 50.0;
+int		SoftPWM_base::res	= 1000;
+int		SoftPWM_base::count	= 0;
+int		SoftPWM_base::instance_count	= 0;
+Ticker	SoftPWM_base::timer;
+std::vector<instance_callback_fp_t>	SoftPWM_base::cbs;
 
-SoftPWM_base::SoftPWM_base( int pin_name, float frequency, unsigned int resolution, bool polarity, float duty )
-	: DigitalOut( pin_name ), freq( frequency ), res( resolution ), pol( polarity ), duty_ratio( duty ), count( 0 )
+SoftPWM_base::SoftPWM_base( int pin_name, float f, unsigned int r, bool polarity, float duty )
+	: DigitalOut( pin_name ), pol( polarity ), duty_ratio( duty )
 {
+	if ( !instance_count )
+	{
+		frequency ( f );
+		resolution( r );
+	}
+	
+	cbs.push_back( [this](void){ instance_callback(); } );
+
+	std::cout << "instance_count: " << instance_count++ << std::endl;
 }
 
-void SoftPWM_base::callback( void )
+void SoftPWM_base::instance_callback( void )
 {
-	if ( (count++ % res) < (int)(duty_ratio * (float)res) )
+	if ( count < (int)(duty_ratio * (float)res) )
 	{
 		*this	= pol;
-		pin		= pol;
 	}
 	else
 	{
 		*this	= !pol;
-		pin		= !pol;
 	}
+}
+
+void SoftPWM_base::class_callback( void )
+{
+	for ( auto&& func: cbs )
+		func();
+	
+	count++;
+	count	%= res;
 }
 
 float SoftPWM_base::frequency( float f )
@@ -33,7 +54,7 @@ float SoftPWM_base::frequency( float f )
 	if ( f != 0.0 )
 	{
 		freq	= f;
-		timer.attach( [this](void){ callback(); }, (1.0 / (float)res) / freq );
+		timer.attach( class_callback, (1.0 / (float)res) / freq );
 	}
 
 	return freq;
