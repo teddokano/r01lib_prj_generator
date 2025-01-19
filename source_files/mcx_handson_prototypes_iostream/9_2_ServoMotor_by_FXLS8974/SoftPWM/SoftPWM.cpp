@@ -19,13 +19,12 @@ SoftPWM_base::SoftPWM_base( int pin_name, float f, unsigned int r, bool polarity
 {
 	if ( !instance_count )
 	{
-		frequency ( f );
-		resolution( r );
+		freq	= f;
+		res		= r;
 	}
 	
+	instance_count++;
 	cbs.push_back( [this](void){ instance_callback(); } );
-
-	std::cout << "instance_count: " << instance_count++ << std::endl;
 }
 
 void SoftPWM_base::instance_callback( void )
@@ -58,6 +57,11 @@ float SoftPWM_base::frequency( float f )
 	}
 
 	return freq;
+}
+
+void SoftPWM_base::start( void )
+{
+	frequency( freq );
 }
 
 float SoftPWM_base::duty( float d )

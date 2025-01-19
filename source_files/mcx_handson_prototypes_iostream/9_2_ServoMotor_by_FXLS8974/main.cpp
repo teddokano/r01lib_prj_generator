@@ -18,7 +18,7 @@ int main( void )
 
 	i2c.scan();
 
-	srv.frequency( 50.0 );
+	srv.start();
 
 	sensor.init();
 	sensor.wake_odr		= FXLS89xx::_25HZ;

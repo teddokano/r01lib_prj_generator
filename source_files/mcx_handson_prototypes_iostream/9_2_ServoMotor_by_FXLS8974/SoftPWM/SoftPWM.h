@@ -20,6 +20,7 @@ public:
 	static float	frequency( float f = 0.0 );
 	static float	resolution( int r = -1 );
 	static void		class_callback( void );
+	static void		start( void );
 
 	static int		instance_count;
 

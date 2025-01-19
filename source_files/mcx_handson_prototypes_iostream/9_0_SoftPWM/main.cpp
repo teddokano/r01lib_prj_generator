@@ -65,7 +65,7 @@ int main( void )
 	btn2.rise( btn2_callback );
 	btn3.rise( btn3_callback );
 	
-	pwm.frequency( 1.0 );
+	pwm.start();
 
 	show_current_setting( pwm );
 
