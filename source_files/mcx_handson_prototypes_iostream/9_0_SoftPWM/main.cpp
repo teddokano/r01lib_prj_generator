@@ -1,4 +1,9 @@
-//FILEHEAD
+/*
+ *  @author Tedd OKANO
+ *
+ *  Released under the MIT license
+ */
+
 #include	"r01lib.h"
 #include	"SoftPWM/SoftPWM.h"
 
@@ -33,7 +38,7 @@ void btn3_callback( void )
 		return;
 
 	duty	= (duty & 0x7) ? duty << 1 : 1;
-	pwm.duty( duty / 10.0 );
+	pwm		= ( duty / 10.0 );
 
 	event	= true;
 }

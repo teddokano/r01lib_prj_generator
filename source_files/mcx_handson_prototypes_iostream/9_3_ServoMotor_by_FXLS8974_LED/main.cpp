@@ -44,9 +44,9 @@ int main( void )
 		sensor.read_XYZ( sensor_data );
 		theta	= atan2( sensor_data[ 0 ], sensor_data[ 1 ] ) / M_PI;
 
-//		cout << theta / M_PI * 180.0 << endl;
-
-		srv	= (theta / M_PI * 180.0) -90.0;
+		srv		= (theta * 180.0) -90.0;
+		red		= theta;
+		blue	= theta;
 
 		wait( 0.04 );
 	}

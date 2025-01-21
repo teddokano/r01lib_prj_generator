@@ -5,7 +5,7 @@
 */
 
 #include	"r01lib.h"
-#include	"SoftPWM.h"
+#include	"SoftPWM_base.h"
 
 float	SoftPWM_base::freq	= 50.0;
 int		SoftPWM_base::res	= 1000;
@@ -87,53 +87,3 @@ float SoftPWM_base::resolution( int r )
 
 	return res;
 }
-
-SoftPWM::SoftPWM( int pin_name )
-	: SoftPWM_base( pin_name, 1.0, 10, false, 0.1 )
-{
-}
-
-SoftPWM& SoftPWM::operator=( float d )
-{
-	duty( d );
-	return *this;
-}
-
-SoftPWM& SoftPWM::operator=( SoftPWM& )
-{
-	return *this;
-}
-
-
-ServoMotor::ServoMotor( int pin_name, float pulse_min, float pulse_max )
-	: SoftPWM_base( pin_name, 50.0, 1000, true, 0.1 ), min( pulse_min / (1.0 / freq) ), range( pulse_max  / (1.0 / freq) - min )
-{
-}
-
-float ServoMotor::angle( float degree )
-{
-	deg	= degree;
-	
-	float	pulse_width	= ((degree + 90.0) / 180.0) * range + min;
-	duty( pulse_width );
-	
-	return deg;
-}
-
-float ServoMotor::angle( void )
-{
-	return deg;
-}
-
-ServoMotor& ServoMotor::operator=( float a )
-{
-	angle( a );
-	return *this;
-}
-
-ServoMotor& ServoMotor::operator=( ServoMotor& )
-{
-	return *this;
-}
-
-

@@ -4,58 +4,32 @@
  *  Released under the MIT license License
  */
 
-#include	"r01lib.h"
+#ifndef R01LIB_SOFTPWM_SOFTPWM_H
+#define R01LIB_SOFTPWM_SOFTPWM_H
 
-using	instance_callback_fp_t	= std::function<void(void)>;
+#include	"SoftPWM_base.h"
 
-class SoftPWM_base : public DigitalOut
-{
-public:
-	using DigitalOut::operator=;
-
-	SoftPWM_base( int pin_name, float frequency = 50.0, unsigned int resolution = 1000, bool polarity = true, float duty = 0.1 );
-	virtual float	duty( float d = -1.0 );
-	virtual void	instance_callback( void );
-
-	static float	frequency( float f = 0.0 );
-	static float	resolution( int r = -1 );
-	static void		class_callback( void );
-	static void		start( void );
-
-	static int		instance_count;
-
-protected:
-	bool			pol;
-	float			duty_ratio;
-
-	static float	freq;
-	static int		res;
-	static int		count;
-
-private:
-	static Ticker	timer;
-	static std::vector<instance_callback_fp_t>	cbs;
-};
-
-
+/** SoftPWM class
+ *	
+ *  @class SoftPWM
+ *
+ *	A software based PWM controls an output pin
+ */
 
 class SoftPWM : public SoftPWM_base
 {
 public:
+
+	/** Create a SoftPWM instance with specified pin
+	 *
+	 * @param pin_num pin number
+	 */
 	SoftPWM( int pin_name );
+	
+	/** A short hand for setting pins
+	 */
+	SoftPWM&	operator=( float duty );
+	SoftPWM&	operator=( SoftPWM& rhs );
 };
 
-
-
-class ServoMotor : public SoftPWM_base
-{
-public:
-	ServoMotor( int pin_name, float pulse_min = 0.5 / 1000.0, float pulse_max = 2.4 / 1000.0 );
-	float	angle( float degree );
-	float	angle( void );
-
-private:
-	float	min;
-	float	range;
-	float	deg;
-};
+#endif // R01LIB_SOFTPWM_SOFTPWM_H
