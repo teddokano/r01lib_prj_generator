@@ -42,7 +42,7 @@ int main( void )
 	while ( true )
 	{
 		sensor.read_XYZ( sensor_data );
-		theta	= atan2( sensor_data[ 0 ], sensor_data[ 1 ] ) / M_PI;
+		theta	= atan2( sensor_data[ 0 ], sensor_data[ 1 ] );
 
 //		cout << theta / M_PI * 180.0 << endl;
 

@@ -5,7 +5,7 @@
  */
 
 #include	"r01lib.h"
-#include	"SoftPWM/SoftPWM.h"
+#include	"SoftPWM/ServoMotor.h"
 
 using namespace	std;
 
