@@ -1,9 +1,4 @@
-/*
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"SoftPWM/ServoMotor.h"
 
