@@ -1,11 +1,6 @@
-/*
- *  @author Tedd OKANO
- *
- *  Released under the MIT license License
- */
-
+//FILEHEAD
 #include	"r01lib.h"
-#include	"SoftPWM.h"
+#include	"SoftPWM/ServoMotor.h"
 
 using namespace	std;
 
@@ -27,8 +22,7 @@ int main( void )
 	cout << "press SW3 for [-] direction" << endl;
 	cout << right;
 
-	srv.frequency( 50.0 );
-//	srv.duty( 0.025 );
+	srv.start();
 
 	show_current_setting( srv );
 
