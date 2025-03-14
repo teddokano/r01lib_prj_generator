@@ -5,5 +5,6 @@ var searchData=
   ['digitalin_2',['DigitalIn',['../class_digital_in.html#a4c92a94513c5f55fdcc99789ae35d84a',1,'DigitalIn']]],
   ['digitalinout_3',['DigitalInOut',['../class_digital_in_out.html#a020a631fa7eb46952d7a28e80b716931',1,'DigitalInOut']]],
   ['digitalout_4',['DigitalOut',['../class_digital_out.html#a0cca6a9bcbced230b94cd2a33526e00d',1,'DigitalOut']]],
-  ['direction_5',['direction',['../class_digital_in_out.html#a1d3cba5d308078cf510100e8085b91f0',1,'DigitalInOut']]]
+  ['direction_5',['direction',['../class_digital_in_out.html#a1d3cba5d308078cf510100e8085b91f0',1,'DigitalInOut']]],
+  ['drdy_5fdelay_6',['drdy_delay',['../class_a_f_e__base.html#a4532d65069cc745c3e4589aac8294e2c',1,'AFE_base']]]
 ];
