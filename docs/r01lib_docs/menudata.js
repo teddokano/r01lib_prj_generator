@@ -95,7 +95,8 @@ var menudata={children:[
 {text:"p",url:"functions_vars.html#index_p"},
 {text:"r",url:"functions_vars.html#index_r"},
 {text:"s",url:"functions_vars.html#index_s"},
-{text:"u",url:"functions_vars.html#index_u"}]},
+{text:"u",url:"functions_vars.html#index_u"},
+{text:"v",url:"functions_vars.html#index_v"}]},
 {text:"Typedefs",url:"functions_type.html"},
 {text:"Enumerations",url:"functions_enum.html",children:[
 {text:"a",url:"functions_enum.html#index_a"},
@@ -103,6 +104,7 @@ var menudata={children:[
 {text:"c",url:"functions_enum.html#index_c"},
 {text:"d",url:"functions_enum.html#index_d"},
 {text:"f",url:"functions_enum.html#index_f"},
+{text:"g",url:"functions_enum.html#index_g"},
 {text:"i",url:"functions_enum.html#index_i"},
 {text:"m",url:"functions_enum.html#index_m"},
 {text:"p",url:"functions_enum.html#index_p"},
