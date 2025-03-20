@@ -18,10 +18,13 @@ var searchData=
   ['broadcast_5fentdaa_15',['BROADCAST_ENTDAA',['../i3c_8h.html#acba81d13b8fe4dc120a844ff5fb37321a7112cc447056721f3b0447d61a288ef9',1,'i3c.h']]],
   ['broadcast_5frstdaa_16',['BROADCAST_RSTDAA',['../i3c_8h.html#acba81d13b8fe4dc120a844ff5fb37321a2e90424598dd58e7b33ab74abb5009cf',1,'i3c.h']]],
   ['buffer_5fenable_17',['buffer_enable',['../class_l_e_d_driver.html#a6c0ac4f1112d8c07446483f03c0c0917',1,'LEDDriver::buffer_enable()'],['../class_p_c_a9955_b.html#a6ca36acdaffd55cbadf722f4cf330867',1,'PCA9955B::buffer_enable()'],['../class_p_c_a9956_b.html#ab71a01f9bb00959cebe474c9c3fd892e',1,'PCA9956B::buffer_enable()'],['../class_p_c_a9957.html#abad628b839d28b284f02e5a59badf816',1,'PCA9957::buffer_enable()']]],
-  ['bus_5ftype_18',['bus_type',['../class_i3_c.html#a389cee8e905dc2503a002b1e9e532f71',1,'I3C']]],
-  ['busin_19',['BusIn',['../class_bus_in.html',1,'BusIn'],['../class_bus_in.html#a11ab185dae32d4573ea217172245078e',1,'BusIn::BusIn()']]],
-  ['businout_20',['BusInOut',['../class_bus_in_out.html',1,'BusInOut'],['../class_bus_in_out.html#a6d47626f7518b2ff15ed678713287c9b',1,'BusInOut::BusInOut()']]],
-  ['businout_2ecpp_21',['BusInOut.cpp',['../_bus_in_out_8cpp.html',1,'']]],
-  ['businout_2eh_22',['BusInOut.h',['../_bus_in_out_8h.html',1,'']]],
-  ['busout_23',['BusOut',['../class_bus_out.html',1,'BusOut'],['../class_bus_out.html#a6c1b754503b8a357167848cfea9767b8',1,'BusOut::BusOut()']]]
+  ['burst_18',['burst',['../class_s_p_i__for___a_f_e.html#a9533b87a2fa75bc3fc06a3c46a22785e',1,'SPI_for_AFE']]],
+  ['bus_5ftype_19',['bus_type',['../class_i3_c.html#a389cee8e905dc2503a002b1e9e532f71',1,'I3C']]],
+  ['busin_20',['BusIn',['../class_bus_in.html',1,'BusIn'],['../class_bus_in.html#a11ab185dae32d4573ea217172245078e',1,'BusIn::BusIn()']]],
+  ['businout_21',['BusInOut',['../class_bus_in_out.html',1,'BusInOut'],['../class_bus_in_out.html#a6d47626f7518b2ff15ed678713287c9b',1,'BusInOut::BusInOut()']]],
+  ['businout_2ecpp_22',['BusInOut.cpp',['../_bus_in_out_8cpp.html',1,'']]],
+  ['businout_2eh_23',['BusInOut.h',['../_bus_in_out_8h.html',1,'']]],
+  ['busout_24',['BusOut',['../class_bus_out.html',1,'BusOut'],['../class_bus_out.html#a6c1b754503b8a357167848cfea9767b8',1,'BusOut::BusOut()']]],
+  ['byteswap16_25',['byteswap16',['../_s_p_i__for___a_f_e_8cpp.html#a1861b74f3471f089e2d93a85e0caf4c4',1,'SPI_for_AFE.cpp']]],
+  ['byteswap24_26',['byteswap24',['../_s_p_i__for___a_f_e_8cpp.html#a798e667cd7d5f4d543b68e262d55cee0',1,'SPI_for_AFE.cpp']]]
 ];

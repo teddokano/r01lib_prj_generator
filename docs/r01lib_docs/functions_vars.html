@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.35.9</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.36.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -119,22 +119,25 @@ $(function(){ initResizable(false); });
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>cal_index&#160;:&#160;<a class="el" href="struct_n_a_f_e13388___base_1_1__ref__points.html#a739afcfcf2d07313029a01f2e89ec770">NAFE13388_Base::_ref_points</a></li>
+<li>cbf_DRDY&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a0d753f54a7bd67726c97d7c5c7e4c099">AFE_base</a></li>
 <li>ch_delay&#160;:&#160;<a class="el" href="class_a_f_e__base.html#ad07d4008dee06260b258735657978110">AFE_base</a></li>
 <li>channel&#160;:&#160;<a class="el" href="class_l_e_d.html#aa0658528456bedcf2164545440a3e486">LED</a></li>
 <li>char_pattern&#160;:&#160;<a class="el" href="class_p_c_a8561.html#a5f56d90aa2c851d9794b2fa3390b3d1c">PCA8561</a></li>
 <li>coeff_index&#160;:&#160;<a class="el" href="struct_n_a_f_e13388___base_1_1__ref__points.html#a0113dfdfbac3ef46d49604c1f3ceff78">NAFE13388_Base::_ref_points</a></li>
 <li>coeff_uV&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a6814b0b5b6c98d04d2a884a9d9747848">AFE_base</a></li>
+<li>command_length&#160;:&#160;<a class="el" href="class_s_p_i__for___a_f_e.html#a6e3a567b3f14eb7c9c42eccd58af084e">SPI_for_AFE</a></li>
 <li>cycle&#160;:&#160;<a class="el" href="class_gradation_control.html#a8cbbebc831b5b3d93fa281dfa87fcd78">GradationControl</a></li>
 </ul>
 
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>data&#160;:&#160;<a class="el" href="struct_n_a_f_e13388___base_1_1__reference__point.html#adf2d030b1028c39bf5730cf3fda09ae0">NAFE13388_Base::_reference_point</a></li>
-<li>default_delay&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a3dcae331e0eb2bdd5e280ff8e3f2e099">AFE_base</a></li>
 <li>delay_accuracy&#160;:&#160;<a class="el" href="class_a_f_e__base.html#acd523d577a2530916581eebb74e12942">AFE_base</a></li>
 <li>dev&#160;:&#160;<a class="el" href="class_p_o_r_t.html#a00d111e3425a15e9a01b2bef7d468035">PORT</a></li>
 <li>dev_addr&#160;:&#160;<a class="el" href="class_g_p_i_o___s_p_i.html#a5a866754bdeddd862eb7c328c7873866">GPIO_SPI</a></li>
 <li>devp&#160;:&#160;<a class="el" href="class_gradation_control.html#acc16659872a02ec76a4a09b99b283fc2">GradationControl</a>, <a class="el" href="class_l_e_d.html#ab704d9e5cd6d0ec7f0cc897a60a4da6f">LED</a></li>
+<li>drdy_count&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a5ef54554ca2b5b80b084612c8372a025">AFE_base</a></li>
+<li>drdy_flag&#160;:&#160;<a class="el" href="class_a_f_e__base.html#ac93936d3b7d2fb9725e133bb69ac1834">AFE_base</a></li>
 </ul>
 
 
@@ -166,7 +169,6 @@ $(function(){ initResizable(false); });
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
 <li>i2c&#160;:&#160;<a class="el" href="class_i2_c__device.html#a5bfeccd62183b8969e43f18ec025a619">I2C_device</a></li>
 <li>i2c_addr&#160;:&#160;<a class="el" href="class_i2_c__device.html#ac1690942862f4dac204ff918b1f8ca48">I2C_device</a></li>
-<li>immidiate_read&#160;:&#160;<a class="el" href="class_a_f_e__base.html#abddfae1a67b6e01ca2b39322673f8d6b">AFE_base</a></li>
 <li>init_done&#160;:&#160;<a class="el" href="class_obj.html#a3780646d9406c2806c8cd811d1c6b5df">Obj</a></li>
 <li>int_mask_reg&#160;:&#160;<a class="el" href="class_p_c_f2131.html#a149b381404baf73e7d44b02c3a452401">PCF2131</a></li>
 <li>intfp&#160;:&#160;<a class="el" href="class_g_p_i_o__base.html#aebc75d0e128dc3223ce52e89ca8e8ba1">GPIO_base</a>, <a class="el" href="class_p_c_f2131.html#a53ceb56c0e819833adfff49cc43fcc21">PCF2131</a></li>
@@ -206,8 +208,8 @@ $(function(){ initResizable(false); });
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
 <li>pga_gain&#160;:&#160;<a class="el" href="class_n_a_f_e13388___base.html#ad38285e1295543668a501479dc10d97f">NAFE13388_Base</a></li>
 <li>pin&#160;:&#160;<a class="el" href="struct__gpio__pin.html#a55c8e1eca5a59ff1e20c8e4a823cf637">_gpio_pin</a></li>
-<li>pin_DRDY&#160;:&#160;<a class="el" href="class_a_f_e__base.html#ab2e84e0c32924a6730dc2b62ffaacce5">AFE_base</a></li>
-<li>pin_nINT&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a0be5beb60f6d7d61d1613543ffb910a5">AFE_base</a></li>
+<li>pin_DRDY&#160;:&#160;<a class="el" href="class_a_f_e__base.html#ae1f2ce4f66293400ede3e728cd99b0b9">AFE_base</a></li>
+<li>pin_nINT&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a1c01d1aff2abca4a331d1d69bde1b9e0">AFE_base</a></li>
 <li>pin_nRESET&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a20495da600ed94228b945e1a426651c6">AFE_base</a></li>
 <li>pin_SYN&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a5d4f29fe9b2568103ac54baffaf02121">AFE_base</a></li>
 <li>pn&#160;:&#160;<a class="el" href="class_p_o_r_t.html#a9f389c63b75d12ae4e496d6c73616cdb">PORT</a></li>
@@ -230,6 +232,12 @@ $(function(){ initResizable(false); });
 <li>spi_setting&#160;:&#160;<a class="el" href="class_p_c_a995x___s_p_i.html#a05269890927293c722388959380093da">PCA995x_SPI</a></li>
 <li>str_buffer&#160;:&#160;<a class="el" href="class_p_c_a8561.html#acd10dfccbda2f4dce117ddd2cec9dcd0">PCA8561</a></li>
 <li>str_pos&#160;:&#160;<a class="el" href="class_p_c_a8561.html#ad95c7d37957644adb5f846b524874e37">PCA8561</a></li>
+</ul>
+
+
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>timeout_limit&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a308b9039a3221a2b13f6ebcd1f6605b3">AFE_base</a></li>
+<li>total_delay&#160;:&#160;<a class="el" href="class_a_f_e__base.html#afebe805e43da330337776aca5fe9cbba">AFE_base</a></li>
 </ul>
 
 
