@@ -33,7 +33,7 @@ var searchData=
   ['spi_30',['spi',['../class_g_p_i_o___s_p_i.html#a305bcda4446e6f569d55e7d9e65a76d6',1,'GPIO_SPI::spi'],['../class_p_c_a995x___s_p_i.html#a2dcb921b75cef951e888cb6d0561f0f9',1,'PCA995x_SPI::spi'],['../class_a_d5161___s_p_i.html#a4ce4f66c83a29759709958132c30d483',1,'AD5161_SPI::spi'],['../class_s_p_i__for___r_t_c.html#a8a3add19a9616261a08a4de788a2ae55',1,'SPI_for_RTC::spi']]],
   ['spi_2ecpp_31',['spi.cpp',['../spi_8cpp.html',1,'']]],
   ['spi_2eh_32',['spi.h',['../spi_8h.html',1,'']]],
-  ['spi_5ffor_5fafe_33',['SPI_for_AFE',['../class_s_p_i__for___a_f_e.html',1,'SPI_for_AFE'],['../class_s_p_i__for___a_f_e.html#a057a2897703a990a2a974527b242a471',1,'SPI_for_AFE::SPI_for_AFE()']]],
+  ['spi_5ffor_5fafe_33',['SPI_for_AFE',['../class_s_p_i__for___a_f_e.html',1,'SPI_for_AFE'],['../class_s_p_i__for___a_f_e.html#ae2b6c61f32b125dff51df4d8ec573211',1,'SPI_for_AFE::SPI_for_AFE()']]],
   ['spi_5ffor_5fafe_2ecpp_34',['SPI_for_AFE.cpp',['../_s_p_i__for___a_f_e_8cpp.html',1,'']]],
   ['spi_5ffor_5fafe_2eh_35',['SPI_for_AFE.h',['../_s_p_i__for___a_f_e_8h.html',1,'']]],
   ['spi_5ffor_5frtc_36',['SPI_for_RTC',['../class_s_p_i__for___r_t_c.html',1,'SPI_for_RTC'],['../class_s_p_i__for___r_t_c.html#a94abe155c88fabee509b85a88e4e52f9',1,'SPI_for_RTC::SPI_for_RTC()']]],

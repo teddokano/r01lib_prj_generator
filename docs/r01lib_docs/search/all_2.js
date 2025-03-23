@@ -24,7 +24,5 @@ var searchData=
   ['businout_21',['BusInOut',['../class_bus_in_out.html',1,'BusInOut'],['../class_bus_in_out.html#a6d47626f7518b2ff15ed678713287c9b',1,'BusInOut::BusInOut()']]],
   ['businout_2ecpp_22',['BusInOut.cpp',['../_bus_in_out_8cpp.html',1,'']]],
   ['businout_2eh_23',['BusInOut.h',['../_bus_in_out_8h.html',1,'']]],
-  ['busout_24',['BusOut',['../class_bus_out.html',1,'BusOut'],['../class_bus_out.html#a6c1b754503b8a357167848cfea9767b8',1,'BusOut::BusOut()']]],
-  ['byteswap16_25',['byteswap16',['../_s_p_i__for___a_f_e_8cpp.html#a1861b74f3471f089e2d93a85e0caf4c4',1,'SPI_for_AFE.cpp']]],
-  ['byteswap24_26',['byteswap24',['../_s_p_i__for___a_f_e_8cpp.html#a798e667cd7d5f4d543b68e262d55cee0',1,'SPI_for_AFE.cpp']]]
+  ['busout_24',['BusOut',['../class_bus_out.html',1,'BusOut'],['../class_bus_out.html#a6c1b754503b8a357167848cfea9767b8',1,'BusOut::BusOut()']]]
 ];

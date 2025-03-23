@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.36.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.36.1</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -111,8 +111,8 @@ Inheritance diagram for SPI_for_AFE:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a057a2897703a990a2a974527b242a471" id="r_a057a2897703a990a2a974527b242a471"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a057a2897703a990a2a974527b242a471">SPI_for_AFE</a> (<a class="el" href="class_s_p_i.html">SPI</a> &amp;spi)</td></tr>
-<tr class="separator:a057a2897703a990a2a974527b242a471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2b6c61f32b125dff51df4d8ec573211" id="r_ae2b6c61f32b125dff51df4d8ec573211"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2b6c61f32b125dff51df4d8ec573211">SPI_for_AFE</a> (<a class="el" href="class_s_p_i.html">SPI</a> &amp;spi, bool <a class="el" href="#a20b99fe3bc7f3461b734ced3894ea663">dev_ad</a>)</td></tr>
+<tr class="separator:ae2b6c61f32b125dff51df4d8ec573211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ffb083afba16f2861baa8e6677050d8" id="r_a0ffb083afba16f2861baa8e6677050d8"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ffb083afba16f2861baa8e6677050d8">~SPI_for_AFE</a> ()</td></tr>
 <tr class="separator:a0ffb083afba16f2861baa8e6677050d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3063f4bf133088e6c239a446310686f5" id="r_a3063f4bf133088e6c239a446310686f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3063f4bf133088e6c239a446310686f5">txrx</a> (uint8_t *data, int size)</td></tr>
@@ -141,6 +141,8 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ac158962137993fa62b11b4dc152ce7a7" id="r_ac158962137993fa62b11b4dc152ce7a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_p_i.html">SPI</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac158962137993fa62b11b4dc152ce7a7">_spi</a></td></tr>
 <tr class="separator:ac158962137993fa62b11b4dc152ce7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b99fe3bc7f3461b734ced3894ea663" id="r_a20b99fe3bc7f3461b734ced3894ea663"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20b99fe3bc7f3461b734ced3894ea663">dev_ad</a></td></tr>
+<tr class="separator:a20b99fe3bc7f3461b734ced3894ea663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -154,8 +156,8 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00015">15</a> of file <a class="el" href="_s_p_i__for___a_f_e_8h_source.html">SPI_for_AFE.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a057a2897703a990a2a974527b242a471" name="a057a2897703a990a2a974527b242a471"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a057a2897703a990a2a974527b242a471">&#9670;&#160;</a></span>SPI_for_AFE()</h2>
+<a id="ae2b6c61f32b125dff51df4d8ec573211" name="ae2b6c61f32b125dff51df4d8ec573211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2b6c61f32b125dff51df4d8ec573211">&#9670;&#160;</a></span>SPI_for_AFE()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,8 +165,12 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">SPI_for_AFE::SPI_for_AFE </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_s_p_i.html">SPI</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>spi</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_s_p_i.html">SPI</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>spi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>spi_addr</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -174,7 +180,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00012">12</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00083">_spi</a>.</p>
+<p class="reference">References <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00083">_spi</a>, and <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00084">dev_ad</a>.</p>
 
 </div>
 </div>
@@ -230,7 +236,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00083">83</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00081">81</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00082">command_length</a>, <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00072">get_data24()</a>, and <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00020">txrx()</a>.</p>
 
@@ -313,9 +319,9 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>data value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00051">51</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00048">48</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00048">byteswap16</a>, <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00082">command_length</a>, and <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00020">txrx()</a>.</p>
+<p class="reference">References <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00082">command_length</a>, <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00067">get_data16()</a>, and <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00020">txrx()</a>.</p>
 
 </div>
 </div>
@@ -342,7 +348,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>data value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00072">72</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00070">70</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00082">command_length</a>, <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00072">get_data24()</a>, and <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00020">txrx()</a>.</p>
 
@@ -377,7 +383,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00020">20</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00083">_spi</a>, and <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00082">command_length</a>.</p>
+<p class="reference">References <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00083">_spi</a>, <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00082">command_length</a>, and <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00084">dev_ad</a>.</p>
 
 </div>
 </div>
@@ -403,7 +409,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00030">30</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00032">32</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00020">txrx()</a>.</p>
 
@@ -436,7 +442,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00038">38</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00040">40</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00020">txrx()</a>.</p>
 
@@ -469,7 +475,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00064">64</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00062">62</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00020">txrx()</a>.</p>
 
@@ -521,6 +527,30 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00082">82</a> of file <a class="el" href="_s_p_i__for___a_f_e_8h_source.html">SPI_for_AFE.h</a>.</p>
+
+</div>
+</div>
+<a id="a20b99fe3bc7f3461b734ced3894ea663" name="a20b99fe3bc7f3461b734ced3894ea663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b99fe3bc7f3461b734ced3894ea663">&#9670;&#160;</a></span>dev_ad</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool SPI_for_AFE::dev_ad</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00084">84</a> of file <a class="el" href="_s_p_i__for___a_f_e_8h_source.html">SPI_for_AFE.h</a>.</p>
 
 </div>
 </div>
