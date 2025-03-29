@@ -12,7 +12,7 @@ var searchData=
   ['addr_5fpin_9',['ADDR_PIN',['../class_g_p_i_o__base.html#aba382c911388177dbf6089a77cf37707',1,'GPIO_base']]],
   ['address_10',['address',['../class_i2_c__device.html#ab6d45f6df6f177c162f519312958c4fb',1,'I2C_device']]],
   ['address_5foverwrite_11',['address_overwrite',['../class_i2_c__device.html#ac8640a457511d523f69549704e8d10d9',1,'I2C_device']]],
-  ['afe_5fbase_12',['AFE_base',['../class_a_f_e__base.html',1,'AFE_base'],['../class_a_f_e__base.html#ab5f03baebf9c6ddfadacd324f6c4ae45',1,'AFE_base::AFE_base()']]],
+  ['afe_5fbase_12',['AFE_base',['../class_a_f_e__base.html',1,'AFE_base'],['../class_a_f_e__base.html#ab6c05c7b2d17b564a6062a2a54c4990e',1,'AFE_base::AFE_base()']]],
   ['afe_5fnxp_2ecpp_13',['AFE_NXP.cpp',['../_a_f_e___n_x_p_8cpp.html',1,'']]],
   ['afe_5fnxp_2eh_14',['AFE_NXP.h',['../_a_f_e___n_x_p_8h.html',1,'']]],
   ['aging_5foffset_15',['Aging_offset',['../class_p_c_f2131.html#a683c120c6f40e9e42e93c37adff5b2c5ac592f515ee349c6dc7702981aaeccd0d',1,'PCF2131']]],
