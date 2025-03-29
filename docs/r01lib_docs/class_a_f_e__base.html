@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.36.1</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.36.2</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -122,8 +122,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab5f03baebf9c6ddfadacd324f6c4ae45" id="r_ab5f03baebf9c6ddfadacd324f6c4ae45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5f03baebf9c6ddfadacd324f6c4ae45">AFE_base</a> (<a class="el" href="class_s_p_i.html">SPI</a> &amp;spi, bool spi_addr, int nINT, int DRDY, int SYN, int nRESET)</td></tr>
-<tr class="separator:ab5f03baebf9c6ddfadacd324f6c4ae45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c05c7b2d17b564a6062a2a54c4990e" id="r_ab6c05c7b2d17b564a6062a2a54c4990e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6c05c7b2d17b564a6062a2a54c4990e">AFE_base</a> (<a class="el" href="class_s_p_i.html">SPI</a> &amp;spi, bool spi_addr, bool <a class="el" href="#a4b9360b3a7d6adba2793fa0ff2f02490">highspeed_variant</a>, int nINT, int DRDY, int SYN, int nRESET)</td></tr>
+<tr class="separator:ab6c05c7b2d17b564a6062a2a54c4990e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eb09caa23b3a25d50f3f8af502a6827" id="r_a1eb09caa23b3a25d50f3f8af502a6827"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1eb09caa23b3a25d50f3f8af502a6827">~AFE_base</a> ()</td></tr>
 <tr class="separator:a1eb09caa23b3a25d50f3f8af502a6827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33584cc8f4bcf9455a4ee06dfa65cbd8" id="r_a33584cc8f4bcf9455a4ee06dfa65cbd8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33584cc8f4bcf9455a4ee06dfa65cbd8">begin</a> (void)</td></tr>
@@ -216,6 +216,8 @@ Static Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a4b9360b3a7d6adba2793fa0ff2f02490" id="r_a4b9360b3a7d6adba2793fa0ff2f02490"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b9360b3a7d6adba2793fa0ff2f02490">highspeed_variant</a></td></tr>
+<tr class="separator:a4b9360b3a7d6adba2793fa0ff2f02490"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c01d1aff2abca4a331d1d69bde1b9e0" id="r_a1c01d1aff2abca4a331d1d69bde1b9e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_interrupt_in.html">InterruptIn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c01d1aff2abca4a331d1d69bde1b9e0">pin_nINT</a></td></tr>
 <tr class="separator:a1c01d1aff2abca4a331d1d69bde1b9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1f2ce4f66293400ede3e728cd99b0b9" id="r_ae1f2ce4f66293400ede3e728cd99b0b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_interrupt_in.html">InterruptIn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1f2ce4f66293400ede3e728cd99b0b9">pin_DRDY</a></td></tr>
@@ -263,7 +265,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>set callback function when DRDY comes </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00085">85</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00084">84</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
 
 </div>
 </div>
@@ -279,7 +281,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00062">62</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00061">61</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
 
 </div>
 </div>
@@ -296,13 +298,13 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>ADC readout types </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00061">61</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00060">60</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab5f03baebf9c6ddfadacd324f6c4ae45" name="ab5f03baebf9c6ddfadacd324f6c4ae45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5f03baebf9c6ddfadacd324f6c4ae45">&#9670;&#160;</a></span>AFE_base()</h2>
+<a id="ab6c05c7b2d17b564a6062a2a54c4990e" name="ab6c05c7b2d17b564a6062a2a54c4990e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6c05c7b2d17b564a6062a2a54c4990e">&#9670;&#160;</a></span>AFE_base()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,6 +318,11 @@ Static Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>spi_addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>highspeed_variant</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -343,7 +350,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8cpp_source.html#l00021">21</a> of file <a class="el" href="_a_f_e___n_x_p_8cpp_source.html">AFE_NXP.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00261">enabled_channels</a>, <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00254">pin_DRDY</a>, <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00253">pin_nINT</a>, <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00256">pin_nRESET</a>, <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00255">pin_SYN</a>, and <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00012">SPI_for_AFE::SPI_for_AFE()</a>.</p>
+<p class="reference">References <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00261">enabled_channels</a>, <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00252">highspeed_variant</a>, <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00254">pin_DRDY</a>, <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00253">pin_nINT</a>, <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00256">pin_nRESET</a>, <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00255">pin_SYN</a>, and <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00012">SPI_for_AFE::SPI_for_AFE()</a>.</p>
 
 </div>
 </div>
@@ -554,7 +561,7 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00219">219</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00218">218</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00264">coeff_uV</a>.</p>
 
@@ -682,7 +689,7 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00228">228</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00227">227</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00267">ch_delay</a>.</p>
 
@@ -712,7 +719,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Caliculated delay from logical channel setting (for all channels) </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00235">235</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00234">234</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00268">total_delay</a>.</p>
 
@@ -742,7 +749,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Number of enabled logical channels </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00241">241</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00240">240</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00261">enabled_channels</a>.</p>
 
@@ -908,7 +915,7 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00200">200</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00199">199</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00264">coeff_uV</a>.</p>
 
@@ -949,7 +956,7 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00190">190</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00189">189</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00264">coeff_uV</a>.</p>
 
@@ -990,7 +997,7 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00210">210</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00209">209</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00264">coeff_uV</a>.</p>
 
@@ -1581,6 +1588,30 @@ Static Protected Attributes</h2></td></tr>
 <p>Number of enabled logical channels </p>
 
 <p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00261">261</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
+
+</div>
+</div>
+<a id="a4b9360b3a7d6adba2793fa0ff2f02490" name="a4b9360b3a7d6adba2793fa0ff2f02490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b9360b3a7d6adba2793fa0ff2f02490">&#9670;&#160;</a></span>highspeed_variant</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AFE_base::highspeed_variant</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8h_source.html#l00252">252</a> of file <a class="el" href="_a_f_e___n_x_p_8h_source.html">AFE_NXP.h</a>.</p>
 
 </div>
 </div>
