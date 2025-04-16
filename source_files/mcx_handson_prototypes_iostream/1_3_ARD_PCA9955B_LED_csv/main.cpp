@@ -3,6 +3,7 @@
 #include	"led/PCA9955B.h"
 #include	<math.h>
 #include	<fstream>
+#define		M_PI	3.1415926535897
 
 using namespace	std;
 
