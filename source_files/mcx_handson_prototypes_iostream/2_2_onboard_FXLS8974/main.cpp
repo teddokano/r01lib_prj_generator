@@ -2,6 +2,7 @@
 #include	"r01lib.h"
 #include	"accelerometer/FXLS89xx_Arduino.h"
 #include	<math.h>
+#define		M_PI	3.1415926535897
 
 using namespace	std;
 

@@ -1,29 +1,22 @@
 //FILEHEAD
 #include	"r01lib.h"
-#include	"led/PCA9955B.h"
 #include	"accelerometer/FXLS89xx_Arduino.h"
+#include	"SoftPWM/SoftPWM.h"
 #include	<math.h>
-#define		M_PI	3.1415926535897
 
 using namespace	std;
 
-//	Since the FRDM-MCXN236 I2C on A4/A5 and MB_SDA/MB_SCL are using same peripheral unit.
-//	However, the IO pins are assigned to different ones and those cannot be routed in parallel.
-//	So, when this demo is being tried, connect following pins
-//		1. PCA9955BTW-ARD J89 pin4 -- FRDM-MCXN236 J8 pin4
-//		2. PCA9955BTW-ARD J89 pin2 -- FRDM-MCXN236 J8 pin3
-
 I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
-PCA9955B	drv(    i2c );
 FXLS89xx	sensor( i2c );
+SoftPWM		red( RED );
+SoftPWM		green( GREEN );
+SoftPWM		blue( BLUE );
 
 int main( void )
 {
-	cout << "***** Hello, PCA9955B and FXLS89xx! *****" << endl;
+	cout << "***** Hello, FXLS89xx! *****" << endl;
 	cout << "Shows direction of tilt in color" << endl;
 	i2c.scan();
-
-	drv.begin( 1.0, PCA9955B::ARDUINO_SHIELD );
 
 	sensor.init();
 
@@ -35,13 +28,21 @@ int main( void )
 	float	sensor_data[ 3 ];
 	float	a, b, c, theta;
 	
+	red.resolution(   100.0 );
+	green.resolution( 100.0 );
+	blue.resolution(  100.0 );
+
+	red.frequency(    50.0 );
+	green.frequency(  50.0 );
+	blue.frequency(   50.0 );
+
+	red.start();
+	
 	while ( true )
 	{
 		sensor.read_XYZ( sensor_data );
 
 		theta	= atan2( sensor_data[ 0 ], sensor_data[ 1 ] );
-
-		cout << theta / M_PI * 180.0 << endl;
 
 		a	= sin( theta + (2.0 * M_PI) * (0.0 / 3.0) );
 		b	= sin( theta + (2.0 * M_PI) * (1.0 / 3.0) );
@@ -50,15 +51,10 @@ int main( void )
 		b	= 0.5 + 0.5 * b;
 		c	= 0.5 + 0.5 * c;
 
-#if 0
-		drv.pwm( 0, a );
-		drv.pwm( 4, b );
-		drv.pwm( 8, c );
-#else
-		drv.pwm( 0, a * a );
-		drv.pwm( 1, b * b );
-		drv.pwm( 2, c * c );
-#endif
+		red		= a * a;
+		green	= b * b;
+		blue	= c * c;
+
 		wait( 0.05 );
 	}
 }
