@@ -11,10 +11,10 @@ int main( void )
 
 	while ( true )
 	{
-		led	= 1;
+		led	= PIN_LED_ON;
 		wait( 0.5 );
 
-		led	= 0;
+		led	= PIN_LED_OFF;
 		wait( 0.5 );
 	}
 }
