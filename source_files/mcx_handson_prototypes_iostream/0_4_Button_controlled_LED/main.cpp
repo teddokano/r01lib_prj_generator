@@ -1,8 +1,6 @@
 //FILEHEAD
 #include	"r01lib.h"
 
-using namespace	std;
-
 DigitalOut	r( RED   );
 DigitalOut	g( GREEN );
 DigitalOut	b( BLUE  );
@@ -11,13 +9,13 @@ DigitalIn	btn( SW3 );
 
 int main( void )
 {
-	cout << "Hello, world!" << endl;
-	cout << "Press button to change color" << endl;
+	std::cout << "Hello, world!" << std::endl;
+	std::cout << "Press button to change color" << std::endl;
 
 	int	count	= 0;
 
-	cout << count;
-	cout << "   \033[31mred\033[39m" << endl;
+	std::cout << count;
+	std::cout << "   \033[31mred\033[39m" << std::endl;
 
 	r	= PIN_LED_ON;
 	g	= PIN_LED_OFF;
@@ -29,11 +27,11 @@ int main( void )
 		{
 			count	= (count + 1) % 3;
 
-			cout << count;
+			std::cout << count;
 
 			if ( count == 0 )
 			{
-				cout << "   \033[31mred\033[39m" << endl;
+				std::cout << "   \033[31mred\033[39m" << std::endl;
 
 				r	= PIN_LED_ON;
 				g	= PIN_LED_OFF;
@@ -42,7 +40,7 @@ int main( void )
 
 			if ( count == 1 )
 			{
-				cout << "   \033[32mgreen\033[39m" << endl;
+				std::cout << "   \033[32mgreen\033[39m" << std::endl;
 
 				r	= PIN_LED_OFF;
 				g	= PIN_LED_ON;
@@ -51,7 +49,7 @@ int main( void )
 
 			if ( count == 2 )
 			{
-				cout << "   \033[34mblue\033[39m" << endl;
+				std::cout << "   \033[34mblue\033[39m" << std::endl;
 
 				r	= PIN_LED_OFF;
 				g	= PIN_LED_OFF;

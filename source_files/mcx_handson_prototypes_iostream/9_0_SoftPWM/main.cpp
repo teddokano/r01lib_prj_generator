@@ -2,8 +2,6 @@
 #include	"r01lib.h"
 #include	"SoftPWM/SoftPWM.h"
 
-using namespace	std;
-
 SoftPWM		pwm( BLUE );
 InterruptIn	btn2( SW2 );
 InterruptIn	btn3( SW3 );
@@ -12,8 +10,8 @@ volatile bool	event	= false;
 
 void btn2_callback( void )
 {
-	static const vector	freq_v{ 1.0, 2.0, 10.0, 100.0 };
-	static int			f_select	= 0;
+	static const std::vector	freq_v{ 1.0, 2.0, 10.0, 100.0 };
+	static int					f_select	= 0;
 
 	if ( event )	//	check if still in debounce interval
 		return;
@@ -42,25 +40,25 @@ void show_current_setting( SoftPWM &pwm )
 {
 	const float	duty	= pwm.duty();
 
-	cout << setw( 7 )
-			<< pwm.frequency()
-			<< "Hz, "
-			<< setw( 2 )
-			<< duty * 100
-			<< "%  ";
+	std::cout	<< std::setw( 7 )
+				<< pwm.frequency()
+				<< "Hz, "
+				<< std::setw( 2 )
+				<< duty * 100
+				<< "%  ";
 
 	for ( int i = 0; i < 10; i++ )
-		cout <<	((i < (int)(duty * 10)) ? "*" : "_");
+		std::cout <<	((i < (int)(duty * 10)) ? "*" : "_");
 
-	cout << endl;
+	std::cout << std::endl;
 }
 
 int main( void )
 {
-	cout << "*** SoftPWM demo ***" << endl;
-	cout << "press SW2 to change frequency" << endl;
-	cout << "press SW3 to change duty cycle" << endl;
-	cout << right;
+	std::cout << "*** SoftPWM demo ***" << std::endl;
+	std::cout << "press SW2 to change frequency" << std::endl;
+	std::cout << "press SW3 to change duty cycle" << std::endl;
+	std::cout << std::right;
 
 	btn2.rise( btn2_callback );
 	btn3.rise( btn3_callback );

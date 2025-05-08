@@ -2,25 +2,23 @@
 #include	"r01lib.h"
 #include	"SoftPWM/ServoMotor.h"
 
-using namespace	std;
-
 ServoMotor	srv( A5 );
 DigitalIn	btn2( SW2 );
 DigitalIn	btn3( SW3 );
 
 void show_current_setting( ServoMotor &srv )
 {
-	cout << setw( 7 )
-			<< srv.angle()
-			<< "°"
-			<< endl;
+	std::cout	<< std::setw( 7 )
+				<< srv.angle()
+				<< "°"
+				<< std::endl;
 }
 
 int main( void )
-{	cout << "*** ServoMotor demo ***" << endl;
-	cout << "press SW2 for [+] direction" << endl;
-	cout << "press SW3 for [-] direction" << endl;
-	cout << right;
+{	std::cout << "*** ServoMotor demo ***" << std::endl;
+	std::cout << "press SW2 for [+] direction" << std::endl;
+	std::cout << "press SW3 for [-] direction" << std::endl;
+	std::cout << std::right;
 
 	srv.start();
 

@@ -4,15 +4,13 @@
 #include	<math.h>
 #define		M_PI	3.1415926535897
 
-using namespace	std;
-
 I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
 FXLS89xx	sensor( i2c );
 
 int main( void )
 {
-	cout << "***** Hello, FXLS89xx! *****" << endl;
-	cout << "Shows direction of tilt" << endl;
+	std::cout << "***** Hello, FXLS89xx! *****" << std::endl;
+	std::cout << "Shows direction of tilt" << std::endl;
 	i2c.scan();
 
 	sensor.init();
@@ -30,7 +28,7 @@ int main( void )
 		sensor.read_XYZ( sensor_data );
 		theta	= atan2( sensor_data[ 0 ], sensor_data[ 1 ] );
 		
-		cout << theta / M_PI * 180.0 << endl;
+		std::cout << theta / M_PI * 180.0 << std::endl;
 		
 		wait( 0.2 );
 	}
