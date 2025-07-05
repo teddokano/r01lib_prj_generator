@@ -2,14 +2,12 @@
 #include	"r01lib.h"
 #include	"accelerometer/FXLS89xx_Arduino.h"
 
-using namespace	std;
-
 I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
 FXLS89xx	sensor( i2c );
 
 int main( void )
 {
-	cout << "***** Hello, FXLS89xx! *****" << endl;
+	std::cout << "***** Hello, FXLS89xx! *****" << std::endl;
 	i2c.scan();
 
 	sensor.init();
@@ -24,7 +22,7 @@ int main( void )
 	while ( true )
 	{
 		sensor.read_XYZ( sensor_data );
-		cout << sensor_data[ 0 ] << ", " << sensor_data[ 1 ] << ", " << sensor_data[ 2 ] << endl;
+		std::cout << sensor_data[ 0 ] << ", " << sensor_data[ 1 ] << ", " << sensor_data[ 2 ] << std::endl;
 		wait( 0.2 );
 	}
 }

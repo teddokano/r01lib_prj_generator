@@ -21,10 +21,10 @@
 							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF;org.eclipse.cdt.core.GNU_ELF" id="com.crt.advproject.platform.exe.debug.889398879" name="ARM-based MCU (Debug)" superClass="com.crt.advproject.platform.exe.debug"/>
 							<builder buildPath="${workspace_loc:/MCXN947_Project}/Debug" id="com.crt.advproject.builder.exe.debug.2113955055" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="com.crt.advproject.builder.exe.debug"/>
 							<tool id="com.crt.advproject.cpp.exe.debug.2138363111" name="MCU C++ Compiler" superClass="com.crt.advproject.cpp.exe.debug">
-								<option id="com.crt.advproject.cpp.hdrlib.1422211207" name="Library headers" superClass="com.crt.advproject.cpp.hdrlib" useByScannerDiscovery="false" value="com.crt.advproject.cpp.hdrlib.newlibnano" valueType="enumerated"/>
+								<option id="com.crt.advproject.cpp.hdrlib.1422211207" name="Library headers" superClass="com.crt.advproject.cpp.hdrlib" useByScannerDiscovery="false" value="com.crt.advproject.cpp.hdrlib.newlib" valueType="enumerated"/>
 								<option id="com.crt.advproject.cpp.fpu.194463446" name="Floating point" superClass="com.crt.advproject.cpp.fpu" useByScannerDiscovery="true" value="com.crt.advproject.cpp.fpu.fpv5sp.hard" valueType="enumerated"/>
 								<option id="com.crt.advproject.cpp.thumb.378385593" name="Thumb mode" superClass="com.crt.advproject.cpp.thumb" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-								<option id="com.crt.advproject.cpp.specs.1988464934" name="Specs" superClass="com.crt.advproject.cpp.specs" useByScannerDiscovery="false" value="com.crt.advproject.cpp.specs.newlibnano" valueType="enumerated"/>
+								<option id="com.crt.advproject.cpp.specs.1988464934" name="Specs" superClass="com.crt.advproject.cpp.specs" useByScannerDiscovery="false" value="com.crt.advproject.cpp.specs.newlib" valueType="enumerated"/>
 								<option id="com.crt.advproject.cpp.arch.1254081293" name="Architecture" superClass="com.crt.advproject.cpp.arch" useByScannerDiscovery="true" value="com.crt.advproject.cpp.target.cm33" valueType="enumerated"/>
 								<option id="com.crt.advproject.cpp.misc.dialect.2073515870" name="Language standard" superClass="com.crt.advproject.cpp.misc.dialect" useByScannerDiscovery="true" value="com.crt.advproject.misc.dialect.cpp20" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.dialect.flags.1228120107" name="Other dialect flags" superClass="gnu.cpp.compiler.option.dialect.flags" useByScannerDiscovery="true"/>
@@ -137,8 +137,8 @@
 									<listOptionValue builtIn="false" value="TARGET_N236"/>
 								</option>
 								<option id="com.crt.advproject.gcc.thumb.2060879483" name="Thumb mode" superClass="com.crt.advproject.gcc.thumb" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-								<option id="com.crt.advproject.gcc.hdrlib.1213914200" name="Library headers" superClass="com.crt.advproject.gcc.hdrlib" useByScannerDiscovery="false" value="com.crt.advproject.gcc.hdrlib.newlibnano" valueType="enumerated"/>
-								<option id="com.crt.advproject.gcc.specs.1792136499" name="Specs" superClass="com.crt.advproject.gcc.specs" useByScannerDiscovery="false" value="com.crt.advproject.gcc.specs.newlibnano" valueType="enumerated"/>
+								<option id="com.crt.advproject.gcc.hdrlib.1213914200" name="Library headers" superClass="com.crt.advproject.gcc.hdrlib" useByScannerDiscovery="false" value="com.crt.advproject.gcc.hdrlib.newlib" valueType="enumerated"/>
+								<option id="com.crt.advproject.gcc.specs.1792136499" name="Specs" superClass="com.crt.advproject.gcc.specs" useByScannerDiscovery="false" value="com.crt.advproject.gcc.specs.newlib" valueType="enumerated"/>
 								<option id="com.crt.advproject.gcc.arch.1736138667" name="Architecture" superClass="com.crt.advproject.gcc.arch" useByScannerDiscovery="true" value="com.crt.advproject.gcc.target.cm33" valueType="enumerated"/>
 								<option id="com.crt.advproject.c.misc.dialect.305190498" name="Language standard" superClass="com.crt.advproject.c.misc.dialect" useByScannerDiscovery="true"/>
 								<option id="gnu.c.compiler.option.dialect.flags.1611902765" name="Other dialect flags" superClass="gnu.c.compiler.option.dialect.flags" useByScannerDiscovery="true"/>
@@ -215,8 +215,8 @@
 							</tool>
 							<tool id="com.crt.advproject.gas.exe.debug.154501780" name="MCU Assembler" superClass="com.crt.advproject.gas.exe.debug">
 								<option id="com.crt.advproject.gas.thumb.274063623" name="Thumb mode" superClass="com.crt.advproject.gas.thumb" value="true" valueType="boolean"/>
-								<option id="com.crt.advproject.gas.hdrlib.394815268" name="Library headers" superClass="com.crt.advproject.gas.hdrlib" value="com.crt.advproject.gas.hdrlib.newlibnano" valueType="enumerated"/>
-								<option id="com.crt.advproject.gas.specs.25011561" name="Specs" superClass="com.crt.advproject.gas.specs" value="com.crt.advproject.gas.specs.newlibnano" valueType="enumerated"/>
+								<option id="com.crt.advproject.gas.hdrlib.394815268" name="Library headers" superClass="com.crt.advproject.gas.hdrlib" value="com.crt.advproject.gas.hdrlib.newlib" valueType="enumerated"/>
+								<option id="com.crt.advproject.gas.specs.25011561" name="Specs" superClass="com.crt.advproject.gas.specs" value="com.crt.advproject.gas.specs.newlib" valueType="enumerated"/>
 								<option id="com.crt.advproject.gas.arch.1288011118" name="Architecture" superClass="com.crt.advproject.gas.arch" value="com.crt.advproject.gas.target.cm33" valueType="enumerated"/>
 								<option id="gnu.both.asm.option.flags.crt.1964293559" name="Assembler flags" superClass="gnu.both.asm.option.flags.crt" value="-c -x assembler-with-cpp -D__NEWLIB__" valueType="string"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.both.asm.option.include.paths.1228577407" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
@@ -275,12 +275,12 @@
 								<option id="com.crt.advproject.link.cpp.lto.optmization.level.309042851" name="Link-time optimization level" superClass="com.crt.advproject.link.cpp.lto.optmization.level"/>
 								<option id="com.crt.advproject.link.cpp.fpu.1080020321" name="Floating point" superClass="com.crt.advproject.link.cpp.fpu" value="com.crt.advproject.link.cpp.fpu.fpv5sp.hard" valueType="enumerated"/>
 								<option id="com.crt.advproject.link.cpp.manage.1879964678" name="Manage linker script" superClass="com.crt.advproject.link.cpp.manage" value="true" valueType="boolean"/>
-								<option id="com.crt.advproject.link.cpp.script.510673545" name="Linker script" superClass="com.crt.advproject.link.cpp.script" value="app_template_FRDM_MCXN236_Multiple_configurations.ld" valueType="string"/>
+								<option id="com.crt.advproject.link.cpp.script.510673545" name="Linker script" superClass="com.crt.advproject.link.cpp.script" value="app_template_FRDM_MCXN236_Debug.ld" valueType="string"/>
 								<option id="com.crt.advproject.link.cpp.scriptdir.459592900" name="Script path" superClass="com.crt.advproject.link.cpp.scriptdir" value="" valueType="string"/>
 								<option id="com.crt.advproject.link.cpp.crpenable.610193849" name="Enable automatic placement of Code Read Protection field in image" superClass="com.crt.advproject.link.cpp.crpenable"/>
 								<option id="com.crt.advproject.link.cpp.flashconfigenable.373753028" name="Enable automatic placement of Flash Configuration field in image" superClass="com.crt.advproject.link.cpp.flashconfigenable" value="true" valueType="boolean"/>
 								<option id="com.crt.advproject.link.cpp.ecrp.364121382" name="Enhanced CRP" superClass="com.crt.advproject.link.cpp.ecrp"/>
-								<option id="com.crt.advproject.link.cpp.hdrlib.1921339305" name="Library" superClass="com.crt.advproject.link.cpp.hdrlib" value="com.crt.advproject.cpp.link.hdrlib.newlibnano.semihost" valueType="enumerated"/>
+								<option id="com.crt.advproject.link.cpp.hdrlib.1921339305" name="Library" superClass="com.crt.advproject.link.cpp.hdrlib" value="com.crt.advproject.cpp.link.hdrlib.newlib.semihost" valueType="enumerated"/>
 								<option id="com.crt.advproject.link.cpp.nanofloat.636595309" name="Enable printf float " superClass="com.crt.advproject.link.cpp.nanofloat" value="true" valueType="boolean"/>
 								<option id="com.crt.advproject.link.cpp.nanofloat.scanf.1610951852" name="Enable scanf float " superClass="com.crt.advproject.link.cpp.nanofloat.scanf" value="true" valueType="boolean"/>
 								<option id="com.crt.advproject.link.cpp.toram.2010836322" name="Link application to RAM" superClass="com.crt.advproject.link.cpp.toram"/>
@@ -641,7 +641,7 @@
 								<option id="com.crt.advproject.link.cpp.lto.optmization.level.679368012" name="Link-time optimization level" superClass="com.crt.advproject.link.cpp.lto.optmization.level"/>
 								<option id="com.crt.advproject.link.cpp.fpu.924294152" name="Floating point" superClass="com.crt.advproject.link.cpp.fpu" value="com.crt.advproject.link.cpp.fpu.fpv5sp.hard" valueType="enumerated"/>
 								<option id="com.crt.advproject.link.cpp.manage.996391697" name="Manage linker script" superClass="com.crt.advproject.link.cpp.manage" value="true" valueType="boolean"/>
-								<option id="com.crt.advproject.link.cpp.script.2078675897" name="Linker script" superClass="com.crt.advproject.link.cpp.script" value="app_template_FRDM_MCXN236_Multiple_configurations.ld" valueType="string"/>
+								<option id="com.crt.advproject.link.cpp.script.2078675897" name="Linker script" superClass="com.crt.advproject.link.cpp.script" value="app_template_FRDM_MCXN236_Release.ld" valueType="string"/>
 								<option id="com.crt.advproject.link.cpp.scriptdir.1075638288" name="Script path" superClass="com.crt.advproject.link.cpp.scriptdir" value="" valueType="string"/>
 								<option id="com.crt.advproject.link.cpp.crpenable.792271003" name="Enable automatic placement of Code Read Protection field in image" superClass="com.crt.advproject.link.cpp.crpenable"/>
 								<option id="com.crt.advproject.link.cpp.flashconfigenable.1657540099" name="Enable automatic placement of Flash Configuration field in image" superClass="com.crt.advproject.link.cpp.flashconfigenable" value="true" valueType="boolean"/>
@@ -794,7 +794,7 @@
 	</storageModule>
 	<storageModule moduleId="com.nxp.mcuxpresso.core.datamodels">
 		<sdkName>SDK_2.x_FRDM-MCXN236</sdkName>
-		<sdkVersion>24.12.000</sdkVersion>
+		<sdkVersion>25.06.000</sdkVersion>
 		<sdkComponents>middleware.baremetal.MCXN236;platform.drivers.reset.MCXN236;utility.debug_console.MCXN236;platform.drivers.clock.MCXN236;platform.drivers.lpflexcomm_lpuart.MCXN236;component.lpuart_adapter.MCXN236;platform.drivers.port.MCXN236;component.serial_manager_uart.MCXN236;component.lists.MCXN236;platform.drivers.gpio.MCXN236;component.serial_manager.MCXN236;platform.utilities.assert.MCXN236;platform.drivers.mcx_spc.MCXN236;platform.drivers.lpflexcomm.MCXN236;CMSIS_Include_core_cm.MCXN236;platform.drivers.common.MCXN236;</sdkComponents>
 		<boardId>frdmmcxn236</boardId>
 		<package>MCXN236VDF</package>

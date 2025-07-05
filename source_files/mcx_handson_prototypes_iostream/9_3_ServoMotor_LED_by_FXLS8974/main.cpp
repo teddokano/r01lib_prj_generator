@@ -6,8 +6,6 @@
 #include	<math.h>
 #define		M_PI	3.1415926535897
 
-using namespace	std;
-
 I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
 FXLS89xx	sensor( i2c );
 ServoMotor	srv( A5 );
@@ -18,7 +16,7 @@ DigitalIn	btn3( SW3 );
 
 int main( void )
 {
-	cout << "*** ServoMotor demo ***" << endl;
+	std::cout << "*** ServoMotor demo ***" << std::endl;
 
 	i2c.scan();
 

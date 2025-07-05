@@ -6,8 +6,6 @@
 #include	<math.h>
 #define		M_PI	3.1415926535897
 
-using namespace	std;
-
 I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
 FXLS89xx	sensor( i2c );
 ServoMotor	srv( A5 );
@@ -18,7 +16,7 @@ DigitalIn	btn3( SW3 );
 
 int main( void )
 {
-	cout << "*** ServoMotor demo ***" << endl;
+	std::cout << "*** ServoMotor demo ***" << std::endl;
 
 	i2c.scan();
 
@@ -40,7 +38,7 @@ int main( void )
 		sensor.read_XYZ( sensor_data );
 		theta	= atan2( sensor_data[ 0 ], sensor_data[ 1 ] );
 
-//		cout << theta / M_PI * 180.0 << endl;
+//		std::cout << theta / M_PI * 180.0 << std::endl;
 
 		srv	= (theta / M_PI * 180.0) -90.0;
 
