@@ -3,6 +3,7 @@
 #include	"accelerometer/FXLS89xx_Arduino.h"
 #include	"SoftPWM/SoftPWM.h"
 #include	<math.h>
+#define		M_PI	3.1415926535897
 
 using namespace	std;
 
@@ -14,8 +15,9 @@ SoftPWM		blue( BLUE );
 
 int main( void )
 {
-	cout << "***** Hello, FXLS89xx! *****" << endl;
-	cout << "Shows direction of tilt in color" << endl;
+	printf( "***** Hello, FXLS89xx! *****\r\n" );
+	printf( "Shows direction of tilt in color\r\n" );
+
 	i2c.scan();
 
 	sensor.init();
