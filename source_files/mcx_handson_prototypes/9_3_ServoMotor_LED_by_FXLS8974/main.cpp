@@ -1,0 +1,47 @@
+//FILEHEAD
+#include	"r01lib.h"
+#include	"accelerometer/FXLS89xx_Arduino.h"
+#include	"SoftPWM/SoftPWM.h"
+#include	"SoftPWM/ServoMotor.h"
+#include	<math.h>
+#define		M_PI	3.1415926535897
+
+I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
+FXLS89xx	sensor( i2c );
+ServoMotor	srv( A5 );
+SoftPWM		red( RED );
+SoftPWM		blue( BLUE );
+DigitalIn	btn2( SW2 );
+DigitalIn	btn3( SW3 );
+
+int main( void )
+{
+	printf( "*** ServoMotor demo ***\r\n" );
+
+	i2c.scan();
+
+	srv.start();
+	red.polarity( false );
+	blue.polarity( true );
+
+	sensor.init();
+	sensor.wake_odr		= FXLS89xx::_25HZ;
+	sensor.wake_pm		= FXLS89xx::_HPM;
+	sensor.sensor_range	= FXLS89xx::_2G;
+	sensor.run();
+
+	float	sensor_data[ 3 ];
+	float	theta;
+
+	while ( true )
+	{
+		sensor.read_XYZ( sensor_data );
+		theta	= atan2( sensor_data[ 0 ], sensor_data[ 1 ] ) / M_PI;
+
+		srv		= (theta * 180.0) -90.0;
+		red		= theta;
+		blue	= theta;
+
+		wait( 0.04 );
+	}
+}
