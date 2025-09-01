@@ -4,6 +4,10 @@
 #include	"led/LED.h"
 #include	<math.h>
 
+#ifndef		M_PI
+#define		M_PI	3.14159265358979323
+#endif
+
 constexpr	double	cycle	= 100;
 
 SPI		spi( D11, D12, D13, D10 );	//	MOSI, MISO, SCLK, CS

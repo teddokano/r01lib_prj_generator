@@ -4,6 +4,10 @@
 #include	"led/LED.h"
 #include	<math.h>
 
+#ifndef		M_PI
+#define		M_PI	3.14159265358979323
+#endif
+
 constexpr	double	cycle	= 100;
 
 I2C			i2c( I2C_SDA, I2C_SCL );
