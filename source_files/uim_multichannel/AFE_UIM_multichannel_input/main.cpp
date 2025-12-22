@@ -1,9 +1,4 @@
-/*
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"afe/NAFE13388_UIM.h"
 #include	"utils.h"
@@ -13,9 +8,10 @@
 SPI				spi( ARD_MOSI, ARD_MISO, ARD_SCK, ARD_CS );	//	MOSI, MISO, SCLK, CS
 NAFE13388_UIM	afe( spi );
 
-constexpr auto		n_lc			= 8;
+constexpr auto		normal_lc		= 8;
+constexpr auto		monitor_lc		= normal_lc + 6;
 volatile bool		conversion_done	= false;
-std::vector<raw_t>	dv( n_lc );
+std::vector<raw_t>	dv( monitor_lc );
 
 void drdy_callback( void )
 {
@@ -46,11 +42,35 @@ int main( void )
 	constexpr uint16_t	cc2	= 0x4C00;
 	constexpr uint16_t	cc3	= 0x0000;
 
-	for (  auto i = 0; i < n_lc / 2; i++ )
+	for (  auto i = 0; i < normal_lc / 2; i++ )
 	{
 		afe.open_logical_channel(  i * 2 + 0, cc0 | (i + 1) << 12 | 7       << 8, cc1, cc2, cc3 );
 		afe.open_logical_channel(  i * 2 + 1, cc0 | 7       << 12 | (i + 1) << 8, cc1, cc2, cc3 );
 	}
+
+	afe.open_logical_channel(  normal_lc + 0, 0x9900, 0x007C, 0x4C00, 0x0000 );
+	afe.open_logical_channel(  normal_lc + 1, 0xAA02, 0x007C, 0x4C00, 0x0000 );
+	afe.open_logical_channel(  normal_lc + 2, 0xBB04, 0x007C, 0x4C00, 0x0000 );
+	afe.open_logical_channel(  normal_lc + 3, 0xCC06, 0x007C, 0x4C00, 0x0000 );
+	afe.open_logical_channel(  normal_lc + 4, 0xDD08, 0x007C, 0x4C00, 0x0000 );
+	afe.open_logical_channel(  normal_lc + 5, 0xEE0A, 0x007C, 0x4C00, 0x0000 );
+
+	const char *ch_name[]	= {
+		"ch0  freq0/phase0",
+		"ch1  freq0/phase1",
+		"ch2  freq0/phase2",
+		"ch3  freq1/phase0",
+		"ch4  freq1/phase1",
+		"ch5  freq1/phase2",
+		"ch6  sawtooth",
+		"ch7  square",
+		"ch8  REF2-REF2",
+		"ch9  GPIO-GPIO1",
+		"ch10  REF_Coarse-REF2",
+		"ch11  VADD",
+		"ch12  VHDD",
+		"ch13  VDSS",
+	};
 
 	printf( "\r\nenabled logical channel(s) %2d\r\n", afe.enabled_logical_channels() );
 	logical_ch_config_view();
@@ -71,7 +91,8 @@ int main( void )
 			int i = 0;
 			for ( auto&& v: dv )
 			{
-				printf( ">ch%d: %10.8lf\r\n", i, afe.raw2v( i, v ) );
+				printf( ">%s: %10.8lf\r\n", ch_name[ i ], afe.raw2v( i, v ) );
+//				printf( ">ch%d: %10.8lf\r\n", i, afe.raw2v( i, v ) );
 				i++;
 			}
 
