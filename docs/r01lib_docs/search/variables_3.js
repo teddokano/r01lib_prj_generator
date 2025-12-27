@@ -8,6 +8,7 @@ var searchData=
   ['char_5fpattern_5',['char_pattern',['../class_p_c_a8561.html#a5f56d90aa2c851d9794b2fa3390b3d1c',1,'PCA8561']]],
   ['coeff_5findex_6',['coeff_index',['../struct_n_a_f_e13388___base_1_1__ref__points.html#a0113dfdfbac3ef46d49604c1f3ceff78',1,'NAFE13388_Base::_ref_points']]],
   ['coeff_5fuv_7',['coeff_uV',['../class_a_f_e__base.html#a6814b0b5b6c98d04d2a884a9d9747848',1,'AFE_base']]],
-  ['command_5flength_8',['command_length',['../class_s_p_i__for___a_f_e.html#a6e3a567b3f14eb7c9c42eccd58af084e',1,'SPI_for_AFE']]],
-  ['cycle_9',['cycle',['../class_gradation_control.html#a8cbbebc831b5b3d93fa281dfa87fcd78',1,'GradationControl']]]
+  ['command_5fbyte_8',['command_byte',['../class_i2_c___character___l_c_d.html#a2ae98e9f03e199459fbf1937ccb56a30',1,'I2C_Character_LCD']]],
+  ['command_5flength_9',['command_length',['../class_s_p_i__for___a_f_e.html#a6e3a567b3f14eb7c9c42eccd58af084e',1,'SPI_for_AFE']]],
+  ['cycle_10',['cycle',['../class_gradation_control.html#a8cbbebc831b5b3d93fa281dfa87fcd78',1,'GradationControl']]]
 ];

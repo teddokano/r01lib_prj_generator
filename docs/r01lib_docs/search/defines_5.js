@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['n_5fgpio_0',['N_GPIO',['../_interrupt_in_8cpp.html#a1d213b251de3419709de01c6e19df275',1,'InterruptIn.cpp']]],
-  ['non_5ftemplate_5fversion_5ffor_5fstart_5fand_5fread_1',['NON_TEMPLATE_VERSION_FOR_START_AND_READ',['../_a_f_e___n_x_p_8h.html#adbc90e48dd58d1142c96b0792839273c',1,'AFE_NXP.h']]]
+  ['kfallingedge_0',['kFallingEdge',['../_interrupt_in_8cpp.html#a00caabc154049fbd0f8ee6c8d6489733',1,'InterruptIn.cpp']]],
+  ['krisingedge_1',['kRisingEdge',['../_interrupt_in_8cpp.html#a1f2b7b62102c68e8cb9e63e3d6ffea59',1,'InterruptIn.cpp']]]
 ];

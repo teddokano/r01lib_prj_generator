@@ -4,8 +4,8 @@ import	os
 import	subprocess
 import	argparse
 
-suppported_boards	= [ "FRDM_MCXA153", "FRDM_MCXA156", "FRDM_MCXN236", "FRDM_MCXN947" ]
-libraries			= [ "_r01lib_frdm_mcxa153", "_r01lib_frdm_mcxa156", "_r01lib_frdm_mcxn236", "_r01lib_frdm_mcxn947" ]
+suppported_boards	= [ "FRDM_MCXA153", "FRDM_MCXA156", "FRDM_MCXC444", "FRDM_MCXN236", "FRDM_MCXN947" ]
+libraries			= [ "_r01lib_frdm_mcxa153", "_r01lib_frdm_mcxa156", "_r01lib_frdm_mcxc444", "_r01lib_frdm_mcxn236", "_r01lib_frdm_mcxn947" ]
 lib_dict			= dict( zip( suppported_boards, libraries ) )
 
 new_folder_place	= "../"
