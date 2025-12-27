@@ -1,6 +1,10 @@
 //FILEHEAD
 #include	"r01lib.h"
 
+#ifdef	TARGET_C444
+#error	"r01lib on C444 is not supporting Ticker"
+#endif
+
 Ticker		t;
 DigitalOut	led( GREEN );
 

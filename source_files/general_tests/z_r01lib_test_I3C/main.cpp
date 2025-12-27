@@ -1,8 +1,8 @@
 //FILEHEAD
 #include	"r01lib.h"
 
-#ifdef	TARGET_N236
-#error	"r01lib on N236 is not supporting I3C"
+#if	defined( TARGET_N236 ) || defined( TARGET_C444 )
+#error	"r01lib on N236 and C444 are not supporting I3C"
 #endif
 
 I3C		i3c( I3C_SDA, I3C_SCL );	//	SDA, SCL

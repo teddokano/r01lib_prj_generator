@@ -10,3 +10,6 @@
 [submodule "_r01lib_frdm_mcxn947/source"]
 	path = library_and_template_projects/_r01lib_frdm_mcxn947/source
 	url = https://github.com/teddokano/r01lib.git
+[submodule "library_and_template_projects/_r01lib_frdm_mcxc444/source"]
+	path = library_and_template_projects/_r01lib_frdm_mcxc444/source
+	url = https://github.com/teddokano/r01lib.git
