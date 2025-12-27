@@ -4,8 +4,8 @@ import	os
 import	subprocess
 import	argparse
 
-suppported_boards	= [ "FRDM_MCXA153", "FRDM_MCXA156", "FRDM_MCXN236", "FRDM_MCXN947" ]
-libraries			= [ "_r01lib_frdm_mcxa153", "_r01lib_frdm_mcxa156", "_r01lib_frdm_mcxn236", "_r01lib_frdm_mcxn947" ]
+suppported_boards	= [ "FRDM_MCXA153", "FRDM_MCXA156", "FRDM_MCXC444", "FRDM_MCXN236", "FRDM_MCXN947" ]
+libraries			= [ "_r01lib_frdm_mcxa153", "_r01lib_frdm_mcxa156", "_r01lib_frdm_mcxc444", "_r01lib_frdm_mcxn236", "_r01lib_frdm_mcxn947" ]
 lib_dict			= dict( zip( suppported_boards, libraries ) )
 
 app_template_prj	= "app_template_"
@@ -15,7 +15,7 @@ lib_and_template	= "library_and_template_projects"
 
 filehead_text		= "FILEHEAD.txt"
 sdk_version_file	= "script/sdk_version_identifier.txt"
-ide					= "/Applications/MCUXpressoIDE_24.9.25/ide/MCUXpressoIDE.app/Contents/MacOS/mcuxpressoide"
+ide					= "/Applications/MCUXpressoIDE_25.6.136/ide/MCUXpressoIDE.app/Contents/MacOS/mcuxpressoide"
 
 def main():
 
