@@ -29,5 +29,6 @@ var searchData=
   ['hr_5f00_5fxx_5fxx_5falm1_26',['Hr_00_xx_xx_alm1',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411aea9add2f4e158574b3ac81330f2fd676',1,'PCF85263A']]],
   ['hr_5fxx_5f00_5falm2_27',['Hr_xx_00_alm2',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411ad4d62b6975182d2f5ce815b998f423ae',1,'PCF85263A']]],
   ['hr_5fxx_5f00_5fxx_5falm1_28',['Hr_xx_00_xx_alm1',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411a6eecaa66ee57e849f7e8dc98f7995c97',1,'PCF85263A']]],
-  ['hr_5fxx_5fxx_5f00_5falm1_29',['Hr_xx_xx_00_alm1',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411a25a3c22ab88971b2c8a6f57ebf548dc9',1,'PCF85263A']]]
+  ['hr_5fxx_5fxx_5f00_5falm1_29',['Hr_xx_xx_00_alm1',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411a25a3c22ab88971b2c8a6f57ebf548dc9',1,'PCF85263A']]],
+  ['hv_5fmux_30',['HV_MUX',['../class_a_f_e__base.html#a4ac5e1c23c1bd907c835027ca1f33b4ca55e1432f4542cbb3f6ec4c65c863550f',1,'AFE_base']]]
 ];
