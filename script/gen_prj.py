@@ -14,8 +14,10 @@ build_configs		= [ "Debug", "Release" ]
 lib_and_template	= "library_and_template_projects"
 
 filehead_text		= "FILEHEAD.txt"
+exclude_text		= "EXCLUDE.txt"
 sdk_version_file	= "script/sdk_version_identifier.txt"
 ide					= "/Applications/MCUXpressoIDE_25.6.136/ide/MCUXpressoIDE.app/Contents/MacOS/mcuxpressoide"
+
 
 def main():
 
@@ -66,7 +68,7 @@ def main():
 	source_path.sort()
 
 	prj_name	= [ os.path.basename( i ) for i in source_path ]
-	prj_name	= [ i for i in prj_name if i != filehead_text ]
+	prj_name	= [ i for i in prj_name if (i != filehead_text) and (i != exclude_text) ]
 
 	print( "======= process started for .. =======" )
 	print( "project sources:\n    " + "\n    ".join( prj_name ) )
@@ -110,7 +112,7 @@ def main():
 		commands	= []
 		
 		for a in app_folders:
-			filehead	= f"{source_folder_path}/FILEHEAD.txt"
+			filehead	= f"{source_folder_path}/{filehead_text}"
 			src_files	= []
 
 			for pathname, dirnames, filenames in os.walk( f"{a}" ):
@@ -126,6 +128,25 @@ def main():
 		
 		comm_exec( commands, not args.no_exec and not args.delete )
 
+
+		###
+		### removine invalid projects
+		###
+		
+		print( "################################################################################################" )
+		print( "################################################################################################" )
+		print( "################################################################################################" )
+		
+		try:
+			with open( f"{source_folder_path}/{exclude_text}", "r" ) as f:
+				excluding_list = lines = f.read().splitlines()
+		except:
+			pass
+		else:
+			commands	= [ "rm -rf " + " ".join( excluding_list ) ]
+			comm_exec( commands, not args.no_exec )
+
+
 		"""
 		###
 		### build --- This could not been done. It should be done in active workspace
@@ -139,7 +160,9 @@ def main():
 
 		comm_exec( commands, not args.no_exec )	
 		"""	
-		
+
+
+
 		###
 		### zipping
 		###
