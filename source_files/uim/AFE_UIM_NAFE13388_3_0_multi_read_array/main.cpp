@@ -4,7 +4,12 @@
 #include	"utils.h"
 
 SPI				spi( ARD_MOSI, ARD_MISO, ARD_SCK, ARD_CS );	//	MOSI, MISO, SCLK, CS
+
+#ifdef	TARGET_C4444
+NAFE13388_UIM	afe( spi, 0, false, D3, D5, D6, D7 );
+#else
 NAFE13388_UIM	afe( spi );
+#endif
 
 int main( void )
 {
