@@ -4,6 +4,8 @@
 #include	"utils.h"
 #include	<variant>
 
+using	microvolt_t	= NAFE13388_UIM::microvolt_t;
+
 SPI				spi( ARD_MOSI, ARD_MISO, ARD_SCK, ARD_CS );	//	MOSI, MISO, SCLK, CS
 NAFE13388_UIM	afe( spi );
 
@@ -76,7 +78,7 @@ int main( void )
 	afe.set_DRDY_callback( drdy_callback );	//	set callback function for when DRDY detected
 	afe.DRDY_by_sequencer_done( true );		//	generate DRDY at all logical channel conversions are done
 
-	std::vector<raw_t>	dv( monitor_lc );
+	std::vector<microvolt_t>	dv( monitor_lc );
 	
 	afe.start_continuous_conversion();
 
@@ -91,7 +93,7 @@ int main( void )
 			int i = 0;
 			for ( auto&& v: dv )
 			{
-				printf( ">%s: %12.9lf\r\n", ch_name[ i ], v );
+				printf( ">%s: %12.9lf\r\n", ch_name[ i ], v * 1e-6 );
 				i++;
 			}
 
