@@ -55,14 +55,14 @@ int main( void )
 	afe.use_DRDY_trigger( true );		//	default = true
 	afe.DRDY_by_sequencer_done( true );	//	generate DRDY at all logical channel conversions are done
 
-	raw_t	dp[ 16 ];
+	std::vector<raw_t>	dv( afe.enabled_logical_channels() );
 
 	while ( true )
 	{
-		afe.start_and_read( dp );
+		afe.start_and_read( dv );	//	measurement start and read data by MCMR (Multi-Channel Multi-Reading)
 
-		for ( auto ch = 0; ch < 16; ch++ )
-			printf( " %8ld,", dp[ ch ] );
+		for ( auto& v: dv )
+			printf( " %8ld,", v );
 
 		printf( "\r\n" );
 	}

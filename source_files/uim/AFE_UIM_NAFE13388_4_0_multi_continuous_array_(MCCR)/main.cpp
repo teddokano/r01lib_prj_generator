@@ -3,10 +3,18 @@
 #include	"afe/NAFE13388_UIM.h"
 #include	"utils.h"
 
-using	raw_t	= NAFE13388_UIM::raw_t;
+using	microvolt_t	= NAFE13388_UIM::microvolt_t;
 
 SPI				spi( ARD_MOSI, ARD_MISO, ARD_SCK, ARD_CS );	//	MOSI, MISO, SCLK, CS
 NAFE13388_UIM	afe( spi );
+
+microvolt_t		dp[ 16 ];
+volatile bool	conversion_done	= false;
+
+void drdy_callback( void )
+{
+	conversion_done	= true;
+}
 
 int main( void )
 {
@@ -52,18 +60,23 @@ int main( void )
 	printf( "\r\nenabled logical channel(s) %2d\r\n", afe.enabled_logical_channels() );
 	logical_ch_config_view();
 
-	afe.use_DRDY_trigger( true );		//	default = true
-	afe.DRDY_by_sequencer_done( true );	//	generate DRDY at all logical channel conversions are done
+	afe.set_DRDY_callback( drdy_callback );	//	set callback function for when DRDY detected
+	afe.DRDY_by_sequencer_done( true );		//	generate DRDY at all logical channel conversions are done
 
-	std::vector<raw_t>	dv( afe.enabled_logical_channels() );
+	afe.start_continuous_conversion();	//	measurement start as MCCR (Multi-Channel Continuous-Reading)
 
 	while ( true )
 	{
-		afe.start_and_read( dv );
+		if ( conversion_done )
+		{
+			conversion_done	= false;
 
-		for ( auto& v: dv )
-			printf( " %8ld,", v );
+			afe.read( dp );	//	read data from all enabled channels
 
-		printf( "\r\n" );
+			for ( auto i = 0; i < 14; i++ )
+				printf( "  %12.9lfV,", dp[ i ] * 1e-6 );
+
+			printf( "\r\n" );
+		}
 	}
 }

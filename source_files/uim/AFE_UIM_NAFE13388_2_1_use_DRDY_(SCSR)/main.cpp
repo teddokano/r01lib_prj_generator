@@ -41,7 +41,7 @@ int main( void )
 	{
 		for ( auto ch = 0; ch < 2; ch++ )
 		{
-			data	= afe.logical_channel[ ch ];
+			data	= afe.logical_channel[ ch ];	//	measurement start and read data by SCSR (Single-Channel Single-Reading)
 			printf( "   channel %2d : %12.9lfV,", ch, data * 1e-6 );
 		}
 		printf( "\r\n" );

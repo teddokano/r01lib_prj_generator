@@ -64,7 +64,7 @@ int main( void )
 
 	std::vector<microvolt_t>	dv( afe.enabled_logical_channels() );
 
-	afe.start_continuous_conversion();
+	afe.start_continuous_conversion();	//	measurement start as MCCR (Multi-Channel Continuous-Reading)
 
 	while ( true )
 	{
@@ -72,7 +72,7 @@ int main( void )
 		{
 			conversion_done	= false;
 
-			afe.read( dv );
+			afe.read( dv );	//	read data from all enabled channels
 
 			for ( auto&& v: dv )
 				printf( "  %12.9lfV,", v * 1e-6 );

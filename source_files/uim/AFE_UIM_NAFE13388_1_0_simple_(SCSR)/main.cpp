@@ -28,8 +28,8 @@ int main( void )
 
 	while ( true )
 	{
-		data0	= afe.logical_channel[ 0 ];	//	read logical channel 0
-		data1	= afe.logical_channel[ 1 ];	//	read logical channel 1
+		data0	= afe.logical_channel[ 0 ];	//	measurement start and read logical channel 0 by SCSR (Single-Channel Single-Reading)
+		data1	= afe.logical_channel[ 1 ];	//	measurement start and read logical channel 1 by SCSR (Single-Channel Single-Reading)
 
 		printf( "   channel 0 : %12.9lfV,   channel 1 : %12.9lfV\r\n", data0 * 1e-6, data1 * 1e-6 );
 	}
