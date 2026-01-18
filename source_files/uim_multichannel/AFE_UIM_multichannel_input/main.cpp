@@ -1,16 +1,8 @@
-/*
- *  @author Tedd OKANO
- *
- *  Released under the MIT license
- */
-
+//FILEHEAD
 #include	"r01lib.h"
 #include	"afe/NAFE13388_UIM.h"
 #include	"utils.h"
 #include	<variant>
-
-using	microvolt_t		= NAFE13388_Base::microvolt_t;
-using	LogicalChannel	= NAFE13388_UIM::LogicalChannel;
 
 SPI				spi( ARD_MOSI, ARD_MISO, ARD_SCK, ARD_CS );	//	MOSI, MISO, SCLK, CS
 NAFE13388_UIM	afe( spi );
@@ -18,7 +10,6 @@ NAFE13388_UIM	afe( spi );
 constexpr auto		normal_lc		= 8;
 constexpr auto		monitor_lc		= normal_lc + 6;
 volatile bool		conversion_done	= false;
-std::vector<raw_t>	dv( monitor_lc );
 
 void drdy_callback( void )
 {
@@ -49,23 +40,18 @@ int main( void )
 	constexpr uint16_t	cc2	= 0x4C00;
 	constexpr uint16_t	cc3	= 0x0000;
 
-	LogicalChannel	lc[]	= {
-		LogicalChannel( afe,  0, cc0 | 1 << 12 | 7 << 8, cc1, cc2, cc3 ),
-		LogicalChannel( afe,  2, cc0 | 2 << 12 | 7 << 8, cc1, cc2, cc3 ),
-		LogicalChannel( afe,  4, cc0 | 3 << 12 | 7 << 8, cc1, cc2, cc3 ),
-		LogicalChannel( afe,  6, cc0 | 4 << 12 | 7 << 8, cc1, cc2, cc3 ),
-		LogicalChannel( afe,  1, cc0 | 7 << 12 | 1 << 8, cc1, cc2, cc3 ),
-		LogicalChannel( afe,  3, cc0 | 7 << 12 | 2 << 8, cc1, cc2, cc3 ),
-		LogicalChannel( afe,  5, cc0 | 7 << 12 | 3 << 8, cc1, cc2, cc3 ),
-		LogicalChannel( afe,  7, cc0 | 7 << 12 | 4 << 8, cc1, cc2, cc3 ),
-		
-		LogicalChannel( afe,  8, 0x9900, 0x007C, 0x4C00, 0x0000 ),
-		LogicalChannel( afe,  9, 0xAA02, 0x007C, 0x4C00, 0x0000 ),
-		LogicalChannel( afe, 10, 0xBB04, 0x007C, 0x4C00, 0x0000 ),
-		LogicalChannel( afe, 11, 0xCC06, 0x007C, 0x4C00, 0x0000 ),
-		LogicalChannel( afe, 12, 0xDD08, 0x007C, 0x4C00, 0x0000 ),
-		LogicalChannel( afe, 13, 0xEE0A, 0x007C, 0x4C00, 0x0000 )
-	};
+	for (  auto i = 0; i < normal_lc / 2; i++ )
+	{
+		afe.logical_channel[ i * 2 + 0 ].configure( cc0 | (i + 1) << 12 | 7       << 8, cc1, cc2, cc3 );
+		afe.logical_channel[ i * 2 + 1 ].configure( cc0 | 7       << 12 | (i + 1) << 8, cc1, cc2, cc3 );
+	}
+
+	afe.logical_channel[ normal_lc + 0 ].configure( 0x9900, 0x007C, 0x4C00, 0x0000 );
+	afe.logical_channel[ normal_lc + 1 ].configure( 0xAA02, 0x007C, 0x4C00, 0x0000 );
+	afe.logical_channel[ normal_lc + 2 ].configure( 0xBB04, 0x007C, 0x4C00, 0x0000 );
+	afe.logical_channel[ normal_lc + 3 ].configure( 0xCC06, 0x007C, 0x4C00, 0x0000 );
+	afe.logical_channel[ normal_lc + 4 ].configure( 0xDD08, 0x007C, 0x4C00, 0x0000 );
+	afe.logical_channel[ normal_lc + 5 ].configure( 0xEE0A, 0x007C, 0x4C00, 0x0000 );
 
 	const char *ch_name[]	= {
 		"ch0  freq0/phase0",
@@ -90,8 +76,8 @@ int main( void )
 	afe.set_DRDY_callback( drdy_callback );	//	set callback function for when DRDY detected
 	afe.DRDY_by_sequencer_done( true );		//	generate DRDY at all logical channel conversions are done
 
-	std::vector<microvolt_t>	dv( afe.enabled_logical_channels() );
-
+	std::vector<raw_t>	dv( monitor_lc );
+	
 	afe.start_continuous_conversion();
 
 	while ( true )
@@ -105,7 +91,7 @@ int main( void )
 			int i = 0;
 			for ( auto&& v: dv )
 			{
-				printf( ">%s: %10.8lf\r\n", ch_name[ i ], v * 1e-6 );
+				printf( ">%s: %12.9lf\r\n", ch_name[ i ], v );
 				i++;
 			}
 
