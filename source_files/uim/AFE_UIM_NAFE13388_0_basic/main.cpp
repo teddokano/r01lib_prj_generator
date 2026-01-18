@@ -1,4 +1,9 @@
-//FILEHEAD
+/*
+ *  @author Tedd OKANO
+ *
+ *  Released under the MIT license
+ */
+
 #include	"r01lib.h"
 #include	"afe/NAFE13388_UIM.h"
 
