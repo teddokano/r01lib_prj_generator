@@ -69,7 +69,7 @@ int main( void )
 		"ch10  REF_Coarse-REF2",
 		"ch11  VADD",
 		"ch12  VHDD",
-		"ch13  VDSS",
+		"ch13  VHSS",
 	};
 
 	printf( "\r\nenabled logical channel(s) %2d\r\n", afe.enabled_logical_channels() );
