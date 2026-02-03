@@ -21,6 +21,8 @@ var searchData=
   ['lines_18',['lines',['../class_i2_c___character___l_c_d.html#adc9a3d45b81f141e63b89b5e6047ebb3',1,'I2C_Character_LCD']]],
   ['lm75b_19',['LM75B',['../class_l_m75_b.html',1,'LM75B'],['../class_l_m75_b.html#aa1283b853d8484f85ed8937d9e393ba1',1,'LM75B::LM75B()']]],
   ['lm75b_2eh_20',['LM75B.h',['../_l_m75_b_8h.html',1,'']]],
-  ['low_21',['low',['../struct_n_a_f_e13388___base_1_1__ref__points.html#a5b3425dce4014a63f73eec13b18ca61a',1,'NAFE13388_Base::_ref_points']]],
-  ['lv_5fmux_5fsel_22',['LV_mux_sel',['../class_a_f_e__base.html#a4ac5e1c23c1bd907c835027ca1f33b4c',1,'AFE_base']]]
+  ['logical_5fchannel_21',['logical_channel',['../class_n_a_f_e13388___base.html#a34f578474b1f74e4d5f71f3bc29a2502',1,'NAFE13388_Base']]],
+  ['logicalchannel_22',['LogicalChannel',['../class_n_a_f_e13388___base_1_1_logical_channel.html',1,'NAFE13388_Base::LogicalChannel'],['../class_n_a_f_e13388___base_1_1_logical_channel.html#ad2cd39f02e58f6cdee8679e24cfb62e9',1,'NAFE13388_Base::LogicalChannel::LogicalChannel()']]],
+  ['low_23',['low',['../struct_n_a_f_e13388___base_1_1__ref__points.html#a5b3425dce4014a63f73eec13b18ca61a',1,'NAFE13388_Base::_ref_points']]],
+  ['lv_5fmux_5fsel_24',['LV_mux_sel',['../class_a_f_e__base.html#a4ac5e1c23c1bd907c835027ca1f33b4c',1,'AFE_base']]]
 ];

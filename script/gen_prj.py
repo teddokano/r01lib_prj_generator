@@ -69,6 +69,8 @@ def main():
 
 	prj_name	= [ os.path.basename( i ) for i in source_path ]
 	prj_name	= [ i for i in prj_name if (i != filehead_text) and (i != exclude_text) ]
+	prj_name	= [ i.replace( '(', '\(' ) for i in prj_name ]
+	prj_name	= [ i.replace( ')', '\)' ) for i in prj_name ]
 
 	print( "======= process started for .. =======" )
 	print( "project sources:\n    " + "\n    ".join( prj_name ) )

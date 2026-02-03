@@ -8,7 +8,8 @@ var searchData=
   ['digitalinout_5',['DigitalInOut',['../class_digital_in_out.html#a020a631fa7eb46952d7a28e80b716931',1,'DigitalInOut']]],
   ['digitalout_6',['DigitalOut',['../class_digital_out.html#a0cca6a9bcbced230b94cd2a33526e00d',1,'DigitalOut']]],
   ['direction_7',['direction',['../class_digital_in_out.html#a1d3cba5d308078cf510100e8085b91f0',1,'DigitalInOut']]],
-  ['drdy_5fby_5fsequencer_5fdone_8',['DRDY_by_sequencer_done',['../class_a_f_e__base.html#afb8f89980f53f2c2d638fb879ef73904',1,'AFE_base::DRDY_by_sequencer_done()'],['../class_n_a_f_e13388___base.html#a9b7138ba4a0e2735a868aced27d07fbd',1,'NAFE13388_Base::DRDY_by_sequencer_done()']]],
-  ['drdy_5fcb_9',['DRDY_cb',['../class_a_f_e__base.html#adb8f188e1c2ce335d69a857be91900d1',1,'AFE_base']]],
-  ['drdy_5fdelay_10',['drdy_delay',['../class_a_f_e__base.html#a4532d65069cc745c3e4589aac8294e2c',1,'AFE_base::drdy_delay(int ch)'],['../class_a_f_e__base.html#aea5557492d4a9282429f8e6f90f336ce',1,'AFE_base::drdy_delay(void)']]]
+  ['disable_8',['disable',['../class_n_a_f_e13388___base_1_1_logical_channel.html#ad8272a2c8f2d47a30ccfbf194ca34040',1,'NAFE13388_Base::LogicalChannel']]],
+  ['drdy_5fby_5fsequencer_5fdone_9',['DRDY_by_sequencer_done',['../class_a_f_e__base.html#afb8f89980f53f2c2d638fb879ef73904',1,'AFE_base::DRDY_by_sequencer_done()'],['../class_n_a_f_e13388___base.html#a9b7138ba4a0e2735a868aced27d07fbd',1,'NAFE13388_Base::DRDY_by_sequencer_done()']]],
+  ['drdy_5fcb_10',['DRDY_cb',['../class_a_f_e__base.html#adb8f188e1c2ce335d69a857be91900d1',1,'AFE_base']]],
+  ['drdy_5fdelay_11',['drdy_delay',['../class_a_f_e__base.html#a4532d65069cc745c3e4589aac8294e2c',1,'AFE_base::drdy_delay(int ch)'],['../class_a_f_e__base.html#aea5557492d4a9282429f8e6f90f336ce',1,'AFE_base::drdy_delay(void)']]]
 ];
