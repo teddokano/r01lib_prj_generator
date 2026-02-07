@@ -4,7 +4,7 @@ var searchData=
   ['cb_5ftable_1',['cb_table',['../_interrupt_in_8cpp.html#a090e9d4991bdaf6a026d00f682058dd4',1,'InterruptIn.cpp']]],
   ['cbf_5fdrdy_2',['cbf_DRDY',['../class_a_f_e__base.html#a0d753f54a7bd67726c97d7c5c7e4c099',1,'AFE_base']]],
   ['ch_5fdelay_3',['ch_delay',['../class_a_f_e__base.html#ad07d4008dee06260b258735657978110',1,'AFE_base']]],
-  ['ch_5fnumber_4',['ch_number',['../class_n_a_f_e13388___base_1_1_logical_channel.html#a855e4077f98d1b95fb24e87bfbcefdd0',1,'NAFE13388_Base::LogicalChannel']]],
+  ['ch_5fnumber_4',['ch_number',['../class_logical_channel___base.html#ad31b44ac65d2caacd6cf19547072f63a',1,'LogicalChannel_Base']]],
   ['channel_5',['channel',['../class_l_e_d.html#aa0658528456bedcf2164545440a3e486',1,'LED']]],
   ['char_5fpattern_6',['char_pattern',['../class_p_c_a8561.html#a5f56d90aa2c851d9794b2fa3390b3d1c',1,'PCA8561']]],
   ['coeff_5findex_7',['coeff_index',['../struct_n_a_f_e13388___base_1_1__ref__points.html#a0113dfdfbac3ef46d49604c1f3ceff78',1,'NAFE13388_Base::_ref_points']]],

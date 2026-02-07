@@ -40,7 +40,7 @@ var searchData=
   ['direct_5fsetnewda_37',['DIRECT_SETNEWDA',['../i3c_8h.html#acba81d13b8fe4dc120a844ff5fb37321abd8898a2dd4ff63c7f6473e4ff21a1c3',1,'i3c.h']]],
   ['direction_38',['direction',['../class_bus_in_out.html#a55cd6d430f2c6c81ce6ad6d8396d3ea5',1,'BusInOut::direction'],['../class_digital_in_out.html#a6042e4468e550347265bda8db2325be4',1,'DigitalInOut::direction'],['../class_digital_in_out.html#a1d3cba5d308078cf510100e8085b91f0',1,'DigitalInOut::direction(bool dir)']]],
   ['disable_39',['DISABLE',['../class_p_c_f2131.html#afb07387c482fa41981cf77fe11bec637a706869d5e81430ac5db17a2a172e40e4',1,'PCF2131::DISABLE'],['../class_p_c_f85263_a.html#ada70b814df16b266ea08c9cb30804396a1c5340d74ab6f8a49b25c6eb4cbfde96',1,'PCF85263A::DISABLE']]],
-  ['disable_40',['disable',['../class_n_a_f_e13388___base_1_1_logical_channel.html#ad8272a2c8f2d47a30ccfbf194ca34040',1,'NAFE13388_Base::LogicalChannel']]],
+  ['disable_40',['disable',['../class_logical_channel___base.html#adb0d0d2c4522146bb948e58e2048ff66',1,'LogicalChannel_Base']]],
   ['disabled_5fgpio_41',['DISABLED_GPIO',['../io_8cpp.html#a558ea429228d4d91c2ca448f9653102b',1,'io.cpp']]],
   ['disabled_5fpin_42',['DISABLED_PIN',['../io_8cpp.html#ac1ce626a969ca4e6c05c76611217dd92',1,'io.cpp']]],
   ['display_5fctrl_5f1_43',['Display_ctrl_1',['../class_p_c_a8561.html#a1f1e6911093f3dc92a7cb0b45d5355b2a08e5eeef81c7e501809fc5ae36a4c397',1,'PCA8561']]],
