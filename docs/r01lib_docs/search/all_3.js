@@ -68,7 +68,7 @@ var searchData=
   ['ch_5fdata8_65',['CH_DATA8',['../class_n_a_f_e13388___base.html#a8da94b56680ae6228400f123970f1828a80ab6b3dfd4ac7f133bb03e6a2d03513',1,'NAFE13388_Base']]],
   ['ch_5fdata9_66',['CH_DATA9',['../class_n_a_f_e13388___base.html#a8da94b56680ae6228400f123970f1828a1afa2141418d3163c7d0f850e80bb6de',1,'NAFE13388_Base']]],
   ['ch_5fdelay_67',['ch_delay',['../class_a_f_e__base.html#ad07d4008dee06260b258735657978110',1,'AFE_base']]],
-  ['ch_5fnumber_68',['ch_number',['../class_n_a_f_e13388___base_1_1_logical_channel.html#a855e4077f98d1b95fb24e87bfbcefdd0',1,'NAFE13388_Base::LogicalChannel']]],
+  ['ch_5fnumber_68',['ch_number',['../class_logical_channel___base.html#ad31b44ac65d2caacd6cf19547072f63a',1,'LogicalChannel_Base']]],
   ['ch_5fsetting_5ft_69',['ch_setting_t',['../class_n_a_f_e13388___base.html#ae7103de04ebc70b8384f25a36451e79d',1,'NAFE13388_Base']]],
   ['ch_5fstatus0_70',['CH_STATUS0',['../class_n_a_f_e13388___base.html#ae88e748f942fa5e9787d1180602ea9fba6b5c53dca5ec184bb53088f4ec91ca97',1,'NAFE13388_Base']]],
   ['ch_5fstatus1_71',['CH_STATUS1',['../class_n_a_f_e13388___base.html#ae88e748f942fa5e9787d1180602ea9fbaf61372a98921b068718e189410b6231a',1,'NAFE13388_Base']]],
