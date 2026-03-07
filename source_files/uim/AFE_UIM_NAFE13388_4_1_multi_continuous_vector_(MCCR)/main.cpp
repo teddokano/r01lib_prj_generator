@@ -3,7 +3,7 @@
 #include	"afe/NAFE13388_UIM.h"
 #include	"utils.h"
 
-using	microvolt_t	= NAFE13388_UIM::microvolt_t;
+using	volt_t	= NAFE13388_UIM::volt_t;
 
 SPI				spi( ARD_MOSI, ARD_MISO, ARD_SCK, ARD_CS );	//	MOSI, MISO, SCLK, CS
 NAFE13388_UIM	afe( spi );
@@ -62,7 +62,7 @@ int main( void )
 	afe.set_DRDY_callback( drdy_callback );	//	set callback function for when DRDY detected
 	afe.DRDY_by_sequencer_done( true );		//	generate DRDY at all logical channel conversions are done
 
-	std::vector<microvolt_t>	dv( afe.enabled_logical_channels() );
+	std::vector<volt_t>	dv( afe.enabled_logical_channels() );
 
 	afe.start_continuous_conversion();	//	measurement start as MCCR (Multi-Channel Continuous-Reading)
 
@@ -75,7 +75,7 @@ int main( void )
 			afe.read( dv );	//	read data from all enabled channels
 
 			for ( auto&& v: dv )
-				printf( "  %12.9lfV,", v * 1e-6 );
+				printf( "  %12.9lfV,", v );
 
 			printf( "\r\n" );
 		}

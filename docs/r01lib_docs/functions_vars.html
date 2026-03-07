@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.38.7</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.39.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -90,7 +90,7 @@ $(function() {
 <h3 class="doxsection"><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>access_ref&#160;:&#160;<a class="el" href="class_p_c_a9554.html#a71161701cead34bffa8adb785a5a87af">PCA9554</a>, <a class="el" href="class_p_c_a9555.html#aae64fdfb90074ac2e770bf3c6a62baa9">PCA9555</a>, <a class="el" href="class_p_c_a9955_b.html#a83226c61e5e052061c23fe9a804bb291">PCA9955B</a>, <a class="el" href="class_p_c_a9956_b.html#ac658f83860c5139adc2facc76abaaa28">PCA9956B</a>, <a class="el" href="class_p_c_a9957.html#a0a3b8ff426de62f995040b34e2c4cb32">PCA9957</a>, <a class="el" href="class_p_c_a_l6408_a.html#afd2a97276746c7fe2e605710679a5777">PCAL6408A</a>, <a class="el" href="class_p_c_a_l6416_a.html#a39cac90a909c2962cb8997f9c45f5c73">PCAL6416A</a>, <a class="el" href="class_p_c_a_l6524.html#a79211b07a18c31edd5e52f6e8569ebf5">PCAL6524</a>, <a class="el" href="class_p_c_a_l6534.html#acee301f9780b8abad13f1a76b0742c8d">PCAL6534</a>, <a class="el" href="class_p_c_a_l9722.html#a484fd909b1c209a4b887206ff63bfd2e">PCAL9722</a></li>
 <li>ADDR_PIN&#160;:&#160;<a class="el" href="class_g_p_i_o__base.html#aba382c911388177dbf6089a77cf37707">GPIO_base</a></li>
-<li>afe_ptr&#160;:&#160;<a class="el" href="class_logical_channel___base.html#a5c0e2923506882471e9a44d1096f7802">LogicalChannel_Base</a></li>
+<li>afe_ptr&#160;:&#160;<a class="el" href="class_logical_channel___base.html#a5c0e2923506882471e9a44d1096f7802">LogicalChannel_Base</a>, <a class="el" href="class_n_a_f_e33352___base_1_1_d_a_c.html#a15b3636e3f7887bba7c8e4fc48a4353b">NAFE33352_Base::DAC</a></li>
 <li>alarm_offsets&#160;:&#160;<a class="el" href="class_p_c_f85053_a.html#a55793635d943505a3c9c229ee91ceb72">PCF85053A</a></li>
 <li>arp&#160;:&#160;<a class="el" href="class_g_p_i_o__base.html#a995489eca6580d4e42aafb2e5f2d3807">GPIO_base</a>, <a class="el" href="class_p_c_a995x.html#a48a030032d08fe1a5eeb73d0ec199d16">PCA995x</a></li>
 <li>auto_increment&#160;:&#160;<a class="el" href="class_g_p_i_o__base.html#a5a88e1ac04df134ce9b22a685e1d3170">GPIO_base</a>, <a class="el" href="class_g_p_i_o___s_p_i.html#aa32429f734d18f18f254ee408e630542">GPIO_SPI</a></li>
@@ -113,7 +113,7 @@ $(function() {
 <li>channel&#160;:&#160;<a class="el" href="class_l_e_d.html#aa0658528456bedcf2164545440a3e486">LED</a></li>
 <li>char_pattern&#160;:&#160;<a class="el" href="class_p_c_a8561.html#a5f56d90aa2c851d9794b2fa3390b3d1c">PCA8561</a></li>
 <li>coeff_index&#160;:&#160;<a class="el" href="struct_n_a_f_e13388___base_1_1__ref__points.html#a0113dfdfbac3ef46d49604c1f3ceff78">NAFE13388_Base::_ref_points</a></li>
-<li>coeff_uV&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a6814b0b5b6c98d04d2a884a9d9747848">AFE_base</a></li>
+<li>coeff_V&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a8b48a815db11e4725e4ee3be52dcc7c9">AFE_base</a></li>
 <li>command_byte&#160;:&#160;<a class="el" href="class_i2_c___character___l_c_d.html#a2ae98e9f03e199459fbf1937ccb56a30">I2C_Character_LCD</a></li>
 <li>command_length&#160;:&#160;<a class="el" href="class_s_p_i__for___a_f_e.html#a6e3a567b3f14eb7c9c42eccd58af084e">SPI_for_AFE</a></li>
 <li>cycle&#160;:&#160;<a class="el" href="class_gradation_control.html#a8cbbebc831b5b3d93fa281dfa87fcd78">GradationControl</a></li>
@@ -121,6 +121,7 @@ $(function() {
 
 
 <h3 class="doxsection"><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>dac&#160;:&#160;<a class="el" href="class_n_a_f_e33352___base.html#a9e83fe7194aa3e65ee81edee4cc2e8fe">NAFE33352_Base</a></li>
 <li>data&#160;:&#160;<a class="el" href="struct_n_a_f_e13388___base_1_1__reference__point.html#adf2d030b1028c39bf5730cf3fda09ae0">NAFE13388_Base::_reference_point</a></li>
 <li>data_byte&#160;:&#160;<a class="el" href="class_i2_c___character___l_c_d.html#a9d225690b5a40627b60ad5b004beb8e3">I2C_Character_LCD</a></li>
 <li>DEFAULT_ADDR&#160;:&#160;<a class="el" href="class_a_c_m1602_n_i___f_l_w___f_b_w.html#a0791d139ea8ba27b0fcbd82c7d5c1a5f">ACM1602NI_FLW_FBW</a>, <a class="el" href="class_a_c_m2004_d___f_l_w___f_b_w___i_i_c.html#a1f42a13efed6e78e3ae1e975ec70cca0">ACM2004D_FLW_FBW_IIC</a>, <a class="el" href="class_a_e___a_q_m0802.html#a592a7e0e06edf70eb2d5b3c1537d98ff">AE_AQM0802</a></li>
@@ -143,6 +144,7 @@ $(function() {
 
 <h3 class="doxsection"><a id="index_f" name="index_f"></a>- f -</h3><ul>
 <li>first_broadcast&#160;:&#160;<a class="el" href="class_i3_c.html#a0d76c4cdf0a9c0fee968f48629a94350">I3C</a></li>
+<li>full_scale&#160;:&#160;<a class="el" href="class_n_a_f_e33352___base_1_1_d_a_c.html#a6c8286a11e9adfee594c202b4bc67129">NAFE33352_Base::DAC</a></li>
 </ul>
 
 
@@ -173,7 +175,7 @@ $(function() {
 <li>last_status&#160;:&#160;<a class="el" href="class_i2_c.html#a2f20a9d723af29875ec25ea943fcc49c">I2C</a>, <a class="el" href="class_s_p_i.html#ad2f260501cc43fb5063f31882b57d8dd">SPI</a></li>
 <li>line_select&#160;:&#160;<a class="el" href="class_i2_c___character___l_c_d.html#a4ee68b2fd150a93a29eb7ca80546d363">I2C_Character_LCD</a></li>
 <li>lines&#160;:&#160;<a class="el" href="class_i2_c___character___l_c_d.html#adc9a3d45b81f141e63b89b5e6047ebb3">I2C_Character_LCD</a></li>
-<li>logical_channel&#160;:&#160;<a class="el" href="class_n_a_f_e13388___base.html#a34f578474b1f74e4d5f71f3bc29a2502">NAFE13388_Base</a></li>
+<li>logical_channel&#160;:&#160;<a class="el" href="class_n_a_f_e13388___base.html#a34f578474b1f74e4d5f71f3bc29a2502">NAFE13388_Base</a>, <a class="el" href="class_n_a_f_e33352___base.html#af6431a4fefa9247b07a3f8acf770172b">NAFE33352_Base</a></li>
 <li>low&#160;:&#160;<a class="el" href="struct_n_a_f_e13388___base_1_1__ref__points.html#a5b3425dce4014a63f73eec13b18ca61a">NAFE13388_Base::_ref_points</a></li>
 </ul>
 
@@ -202,16 +204,19 @@ $(function() {
 
 <h3 class="doxsection"><a id="index_o" name="index_o"></a>- o -</h3><ul>
 <li>oe_pin&#160;:&#160;<a class="el" href="class_l_e_d_driver.html#a62ae48aacacf502d1511a9cee867c8eb">LEDDriver</a></li>
+<li>on_board_shunt_resister&#160;:&#160;<a class="el" href="class_n_a_f_e33352___base.html#a062ffbf589f4921a690afb59aedcbca1">NAFE33352_Base</a></li>
+<li>output_mode&#160;:&#160;<a class="el" href="class_n_a_f_e33352___base_1_1_d_a_c.html#a652154d12fec96d0a8182ce3c78b60d7">NAFE33352_Base::DAC</a></li>
 </ul>
 
 
 <h3 class="doxsection"><a id="index_p" name="index_p"></a>- p -</h3><ul>
-<li>pga_gain&#160;:&#160;<a class="el" href="class_n_a_f_e13388___base.html#ad38285e1295543668a501479dc10d97f">NAFE13388_Base</a></li>
+<li>pga_gain&#160;:&#160;<a class="el" href="class_n_a_f_e13388___base.html#ad38285e1295543668a501479dc10d97f">NAFE13388_Base</a>, <a class="el" href="class_n_a_f_e33352___base.html#a5c428500ae9e465b561f62c6a14430b0">NAFE33352_Base</a></li>
 <li>pin&#160;:&#160;<a class="el" href="struct__gpio__pin.html#a55c8e1eca5a59ff1e20c8e4a823cf637">_gpio_pin</a></li>
 <li>pin_DRDY&#160;:&#160;<a class="el" href="class_a_f_e__base.html#ae1f2ce4f66293400ede3e728cd99b0b9">AFE_base</a></li>
 <li>pin_nINT&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a1c01d1aff2abca4a331d1d69bde1b9e0">AFE_base</a></li>
 <li>pin_nRESET&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a20495da600ed94228b945e1a426651c6">AFE_base</a></li>
 <li>pin_SYN&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a5d4f29fe9b2568103ac54baffaf02121">AFE_base</a></li>
+<li>pin_SYNCDAC&#160;:&#160;<a class="el" href="class_a_f_e__base.html#a736f8fbf3be94a77dcff1cf19934d77e">AFE_base</a></li>
 <li>pn&#160;:&#160;<a class="el" href="class_p_o_r_t.html#a9f389c63b75d12ae4e496d6c73616cdb">PORT</a></li>
 <li>port_n&#160;:&#160;<a class="el" href="class_digital_in_out.html#a1b495b857a3087a92dd4ed0ecfc9eb9a">DigitalInOut</a></li>
 </ul>

@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.38.7</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.39.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -83,15 +83,89 @@ What is this?</h1>
 </p>
 <p>This is a repository which works as a submodule of <a href="https://github.com/teddokano/r01lib_prj_generator"><b>"r01lib_prj_generator"</b></a>. <br  />
  The code is intended to build in MCUXpresso library projects. <br  />
- Those libraries projects are..</p><ul>
-<li>_r01lib_frdm_mcxa153</li>
-<li>_r01lib_frdm_mcxa156</li>
-<li>_r01lib_frdm_mcxc444</li>
-<li>_r01lib_frdm_mcxn236</li>
-<li>_r01lib_frdm_mcxn947</li>
-</ul>
+ Those libraries projects are..</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">library name  </th><th class="markdownTableHeadNone">MCU board  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">_r01lib_frdm_mcxa153  </td><td class="markdownTableBodyNone">FRDM-MCXA153  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">_r01lib_frdm_mcxa156  </td><td class="markdownTableBodyNone">FRDM-MCXA156  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">_r01lib_frdm_mcxc444  </td><td class="markdownTableBodyNone">FRDM-MCXC444  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">_r01lib_frdm_mcxn236  </td><td class="markdownTableBodyNone">FRDM-MCXN236  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">_r01lib_frdm_mcxn947  </td><td class="markdownTableBodyNone">FRDM-MCXN947  </td></tr>
+</table>
 <p>Each of these projects have MCU dependent driver code and settings for code building. The "r01lib" code is identical in all projects. Those can be just cpoied into the <span class="tt">source</span> folder and built. <br  />
 </p>
+<p><b>"r01lib"</b> is including some device class drivers for easy device operations. <br  />
+</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">category  </th><th class="markdownTableHeadNone">type  </th><th class="markdownTableHeadNone">interface  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">AFE  </td><td class="markdownTableBodyNone"><a class="el" href="class_n_a_f_e33352.html">NAFE33352</a>  </td><td class="markdownTableBodyNone"><a class="el" href="class_s_p_i.html">SPI</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">AFE  </td><td class="markdownTableBodyNone"><a class="el" href="class_n_a_f_e13388.html">NAFE13388</a>  </td><td class="markdownTableBodyNone"><a class="el" href="class_s_p_i.html">SPI</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">LCD driver  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a8561.html">PCA8561</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">LCD module  </td><td class="markdownTableBodyNone"><a class="el" href="class_a_e___a_q_m0802.html">AE_AQM0802</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">LCD module  </td><td class="markdownTableBodyNone"><a class="el" href="class_a_c_m2004_d___f_l_w___f_b_w___i_i_c.html">ACM2004D_FLW_FBW_IIC</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">LCD module  </td><td class="markdownTableBodyNone"><a class="el" href="class_a_c_m1602_n_i___f_l_w___f_b_w.html">ACM1602NI_FLW_FBW</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="class_l_e_d.html">LED</a> driver  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a9955_b.html">PCA9955B</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="class_l_e_d.html">LED</a> driver  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a9956_b.html">PCA9956B</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="class_l_e_d.html">LED</a> driver  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a9957.html">PCA9957</a>  </td><td class="markdownTableBodyNone"><a class="el" href="class_s_p_i.html">SPI</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">GPIO expander  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a9554.html">PCA9554</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">GPIO expander  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a9555.html">PCA9555</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">GPIO expander  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a_l6408_a.html">PCAL6408A</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">GPIO expander  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a_l6416_a.html">PCAL6416A</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">GPIO expander  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a_l6524.html">PCAL6524</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">GPIO expander  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a_l6534.html">PCAL6534</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">GPIO expander  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a_l9722.html">PCAL9722</a>  </td><td class="markdownTableBodyNone"><a class="el" href="class_s_p_i.html">SPI</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">RTC  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_f2131.html">PCF2131</a>  </td><td class="markdownTableBodyNone">I²C/SPI  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">RTC  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_f85053_a.html">PCF85053A</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">RTC  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_f85063_a.html">PCF85063A</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">RTC  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_f85063_t_p.html">PCF85063TP</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">RTC  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_f85263_a.html">PCF85263A</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">temperature sensor  </td><td class="markdownTableBodyNone"><a class="el" href="class_l_m75_b.html">LM75B</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">temperature sensor  </td><td class="markdownTableBodyNone"><a class="el" href="class_p3_t1035.html">P3T1035</a>  </td><td class="markdownTableBodyNone">I²C/I3C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">temperature sensor  </td><td class="markdownTableBodyNone"><a class="el" href="class_p3_t1085.html">P3T1085</a>  </td><td class="markdownTableBodyNone">I²C/I3C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">temperature sensor  </td><td class="markdownTableBodyNone"><a class="el" href="class_p3_t1755.html">P3T1755</a>  </td><td class="markdownTableBodyNone">I²C/I3C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">temperature sensor  </td><td class="markdownTableBodyNone"><a class="el" href="class_p3_t2030.html">P3T2030</a>  </td><td class="markdownTableBodyNone">I²C/I3C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">temperature sensor  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_t2075.html">PCT2075</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">I²C bus switch  </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a9846.html">PCA9846</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">EEPROM  </td><td class="markdownTableBodyNone"><a class="el" href="class_m24_c02.html">M24C02</a>  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Potentiometer  </td><td class="markdownTableBodyNone">AD5161  </td><td class="markdownTableBodyNone">I²C  </td></tr>
+</table>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 References</h1>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
