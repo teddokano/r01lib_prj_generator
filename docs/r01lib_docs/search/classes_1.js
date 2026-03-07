@@ -9,5 +9,8 @@ var searchData=
   ['ad5161_5fspi_6',['AD5161_SPI',['../class_a_d5161___s_p_i.html',1,'']]],
   ['ae_5faqm0802_7',['AE_AQM0802',['../class_a_e___a_q_m0802.html',1,'']]],
   ['afe_5fbase_8',['AFE_base',['../class_a_f_e__base.html',1,'']]],
-  ['aqm0802_9',['AQM0802',['../class_a_q_m0802.html',1,'']]]
+  ['afe_5ftraits_9',['AFE_Traits',['../struct_a_f_e___traits.html',1,'']]],
+  ['afe_5ftraits_3c_20nafe13388_5fbase_20_3e_10',['AFE_Traits&lt; NAFE13388_Base &gt;',['../struct_a_f_e___traits_3_01_n_a_f_e13388___base_01_4.html',1,'']]],
+  ['afe_5ftraits_3c_20nafe33352_5fbase_20_3e_11',['AFE_Traits&lt; NAFE33352_Base &gt;',['../struct_a_f_e___traits_3_01_n_a_f_e33352___base_01_4.html',1,'']]],
+  ['aqm0802_12',['AQM0802',['../class_a_q_m0802.html',1,'']]]
 ];
