@@ -3,7 +3,7 @@
 #include	"afe/NAFE13388_UIM.h"
 #include	"utils.h"
 
-using	microvolt_t	= NAFE13388_UIM::microvolt_t;
+using	volt_t	= NAFE13388_UIM::volt_t;
 
 SPI				spi( ARD_MOSI, ARD_MISO, ARD_SCK, ARD_CS );	//	MOSI, MISO, SCLK, CS
 NAFE13388_UIM	afe( spi );
@@ -35,14 +35,14 @@ int main( void )
 
 	afe.use_DRDY_trigger( true );	//	default = true
 
-	microvolt_t	data;
+	volt_t	data;
 	
 	while ( true )
 	{
 		for ( auto ch = 0; ch < 2; ch++ )
 		{
 			data	= afe.logical_channel[ ch ];	//	measurement start and read data by SCSR (Single-Channel Single-Reading)
-			printf( "   channel %2d : %12.9lfV,", ch, data * 1e-6 );
+			printf( "   channel %2d : %12.9lfV,", ch, data );
 		}
 		printf( "\r\n" );
 	}

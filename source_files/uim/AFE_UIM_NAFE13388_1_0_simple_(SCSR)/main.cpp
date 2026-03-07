@@ -2,7 +2,7 @@
 #include	"r01lib.h"
 #include	"afe/NAFE13388_UIM.h"
 
-using	microvolt_t	= NAFE13388_UIM::microvolt_t;
+using	volt_t	= NAFE13388_UIM::volt_t;
 
 SPI				spi( ARD_MOSI, ARD_MISO, ARD_SCK, ARD_CS );	//	MOSI, MISO, SCLK, CS
 NAFE13388_UIM	afe( spi );
@@ -23,14 +23,14 @@ int main( void )
 
 	printf( "\r\nenabled logical channel(s) %2d\r\n", afe.enabled_logical_channels() );
 
-	microvolt_t	data0;
-	microvolt_t	data1;
+	volt_t	data0;
+	volt_t	data1;
 
 	while ( true )
 	{
 		data0	= afe.logical_channel[ 0 ];	//	measurement start and read logical channel 0 by SCSR (Single-Channel Single-Reading)
 		data1	= afe.logical_channel[ 1 ];	//	measurement start and read logical channel 1 by SCSR (Single-Channel Single-Reading)
 
-		printf( "   channel 0 : %12.9lfV,   channel 1 : %12.9lfV\r\n", data0 * 1e-6, data1 * 1e-6 );
+		printf( "   channel 0 : %12.9lfV,   channel 1 : %12.9lfV\r\n", data0, data1 );
 	}
 }

@@ -3,12 +3,12 @@
 #include	"afe/NAFE13388_UIM.h"
 #include	"utils.h"
 
-using	microvolt_t	= NAFE13388_UIM::microvolt_t;
+using	volt_t	= NAFE13388_UIM::volt_t;
 
 SPI				spi( ARD_MOSI, ARD_MISO, ARD_SCK, ARD_CS );	//	MOSI, MISO, SCLK, CS
 NAFE13388_UIM	afe( spi );
 
-microvolt_t		dp[ 16 ];
+volt_t		dp[ 16 ];
 volatile bool	conversion_done	= false;
 
 void drdy_callback( void )
@@ -74,7 +74,7 @@ int main( void )
 			afe.read( dp );	//	read data from all enabled channels
 
 			for ( auto i = 0; i < 14; i++ )
-				printf( "  %12.9lfV,", dp[ i ] * 1e-6 );
+				printf( "  %12.9lfV,", dp[ i ] );
 
 			printf( "\r\n" );
 		}
