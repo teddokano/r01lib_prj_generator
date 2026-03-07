@@ -11,11 +11,11 @@ using enum NAFE33352_UIOM::Command;
 int main( void )
 {
 	printf( "***** Hello, SHASTA board! *****\r\n" );
-	printf( "  This sample code demonstrates ADC input and DAC output on NAFE33352 UIOM board.\r\n" );
 	printf( "\r\n" );
 	printf( "  ##### REQUIRED HARDWARE SETUP #####\r\n" );
+	printf( "  This ample code demonstrates ADC input and DAC output on NAFE33352 UIOM board.\r\n" );
 	printf( "  Connect a wire between pin1(DUT_AO) and pin5(AIP) on J3 terminal block to loopback the voltage output.\r\n" );
-	printf( "  The DAC output voltage can be seen at logical-channel 0 on the ADC input.\r\n" );
+	printf( "  The DAC output voltage can be seen at logical-channel 0on the ADC input.\r\n" );
 	printf( "\r\n" );
 
 	spi.frequency( 1'000'000 );
@@ -31,12 +31,12 @@ int main( void )
 
 	//	DAC setting
 	shasta.reg( AIO_CONFIG,   0x6040 );
-	shasta.reg( AO_CAL_COEF,  0x1000 );
+	shasta.reg( AO_CAL_COEF,  0x0000 );
 	shasta.reg( AIO_PROT_CFG, 0x87FF );
 	shasta.reg( AO_SLR_CTRL,  0x8200 );
 	shasta.reg( AO_SYSCFG,    0x0C00 );
 
-	double	output_voltage	= 5.00;	// 5V
+	double	output_voltage	= 5.00;
 	int32_t	output_data		= (int32_t)((double)(1 << (18 -1)) * -1.00 * output_voltage / 12.50);
 
 	shasta.reg( AO_DATA,    output_data << 6 );
@@ -62,10 +62,10 @@ int main( void )
 	int32_t	data;
 	double	volt;
 	
-	printf( "* ADC logical channel-0 reading voltage and AIO_STATUS register value\r\n" );
-
 	wait( 1.0 );
 	
+	printf( "* ADC logical channel-0 reading voltage and AIO_STATUS register value\r\n" );
+
 	while ( true )
 	{
 		shasta.command( CMD_SS );

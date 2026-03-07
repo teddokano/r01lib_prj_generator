@@ -7,6 +7,7 @@
 #include	"r01lib.h"
 #include	"afe/NAFE33352_UIOM.h"
 #include	"utils.h"
+#include	<map>
 
 extern	NAFE33352_UIOM	shasta;
 
@@ -87,3 +88,4 @@ void table_view( int length, int cols, std::function<void(int)> value, std::func
 	else
 		printf( "\r\n" );
 }
+

@@ -10,7 +10,7 @@ using enum NAFE33352_UIOM::Register24;
 using enum NAFE33352_UIOM::Command;
 using enum NAFE33352_UIOM::DAC::ModeSelect;
 
-//#define	AIO_VOLTAGE_INPUT
+#define	AIO_VOLTAGE_INPUT
 
 int main( void )
 {

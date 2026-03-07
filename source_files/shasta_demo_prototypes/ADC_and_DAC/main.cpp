@@ -14,30 +14,7 @@ using enum NAFE33352_UIOM::DAC::ModeSelect;
 
 int main( void )
 {
-	printf( "***** Hello, SHASTA board! *****\r\n" );
-	printf( "  This sample code demonstrates ADC input and DAC output on NAFE33352 UIOM board.\r\n" );
-	printf( "  On this demo, the ADC logical-channels are configured as following..\r\n" );
-	printf( "     - logical-channel[ 0 ] : Voltage input on AIP and VCM(GND)\r\n" );
-	printf( "     - logical-channel[ 1 ] : Voltage monitoring on VHDD (high-voltage positive supply)\r\n" );
-	printf( "     - logical-channel[ 2 ] : Voltage monitoring on VHSS (high-voltage negative supply)\r\n" );
-	printf( "     - logical-channel[ 3 ] : VSNS voltage\r\n" );
-	printf( "     - logical-channel[ 4 ] : ISNS current\r\n" );
-	printf( "\r\n" );
-	printf( "  The DAC output can be configured voltage output or current output by \"VOLTAGE_OUTPUT_SETTING\" difinition.\r\n" );
-	printf( "  Comment-out \"#define VOLTAGE_OUTPUT_SETTING\" to let the DAC in current mode. \r\n" );
-	printf( "  The DAC output will altered to positive and negative at each measurement interval (+/-5V or +/-20mA).\r\n" );
-	printf( "\r\n" );	
-	printf( "\r\n" );
-	printf( "  ##### REQUIRED HARDWARE SETUP FOR VOLTAGE OUTPUT #####\r\n" );
-	printf( "  This sample code demonstrates ADC input and DAC output on NAFE33352 UIOM board.\r\n" );
-	printf( "  CONNECT a wire between pin1(DUT_AO) and pin5(AIP) on J3 terminal block to loopback the voltage output.\r\n" );
-	printf( "  Make sure, UNCONNECT a wire between pin1(GND) and pin5(DUT_AO) on J1 terminal block.\r\n" );
-	printf( "  The DAC output voltage can be seen at logical-channel 0 and 3 on the ADC input.\r\n" );
-	printf( "\r\n" );
-	printf( "  ##### REQUIRED HARDWARE SETUP FOR CURRENT OUTPUT #####\r\n" );
-	printf( "  Make sure CONNECT a wire between pin1(GND) and pin5(DUT_AO) on J1 terminal block to cut current path to AO output to GND.\r\n" );
-	printf( "  The DAC output current can be seen at logical-channel 4 on the ADC input.\r\n" );
-	printf( "\r\n" );
+	printf( "***** Hello, UIOM board! *****\r\n" );
 
 	spi.frequency( 1'000'000 );
 	spi.mode( 1 );
@@ -64,7 +41,7 @@ int main( void )
 	shasta.logical_channel[  1 ].configure( 0x0080, 0x5064, 0x5000 );
 	shasta.logical_channel[  2 ].configure( 0x0088, 0x5064, 0x5000 );
 	shasta.logical_channel[  3 ].configure( 0x0038, 0x2064, 0x5000 );
-	shasta.logical_channel[  4 ].configure( 0x0030, 0x2064, 0x5000 );
+	shasta.logical_channel[  4 ].configure( 0x0030, 0x3064, 0x5000 );
 
 	printf( "\r\nregister dump: device info:\r\n" );
 	reg_dump( { PN2, PN1, PN0_REV, SERIAL1, SERIAL0, DIE_TEMP }, 1 );
@@ -81,23 +58,19 @@ int main( void )
 	printf( "\r\nregister dump: logical channel info:\r\n" );
 	logical_ch_config_view();
 
-	printf( "\r\n" );
+	printf( "\r\n  AIP(SE)[V]      VHDD[V]         VHSS[V]         VSNS[V]         ISNS[A]         AIO_STATUS\r\n" );
 
 	double	data;
 	auto	count	= 0;;
 
 	while ( true )
 	{
-		for ( auto i = 0; i < shasta.enabled_logical_channels() - 1; i++ )
+		for ( auto i = 0; i < shasta.enabled_logical_channels(); i++ )
 		{
 			data	= shasta.logical_channel[ i ];
-			printf( "    % lfV", data );
+			printf( "  %13.9lf,", data );
 		}
-
-		data	= shasta.logical_channel[ shasta.enabled_logical_channels() - 1 ] / shasta.on_board_shunt_resister;
-		printf( "    % lfA", data );
-
-		printf( "    AIO_STATUS = 0x%04X\r\n", shasta.reg( AIO_STATUS ) );
+		printf( "    0x%04X\r\n", shasta.reg( AIO_STATUS ) );
 
 		shasta.dac	= output_value * (count++ & 0x1 ? +1.00 : -1.00);
 
