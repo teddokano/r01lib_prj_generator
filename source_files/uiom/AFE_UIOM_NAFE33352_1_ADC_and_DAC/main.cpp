@@ -27,15 +27,13 @@ int main( void )
 
 #ifdef	VOLTAGE_OUTPUT_SETTING
 	double	output_value	= 5.00;			//	5V
-
 	shasta.dac.configure( VOLTAGE );
-	shasta.dac	= output_value;
 #else
 	double	output_value	= 20 * 1e-3;	//	20mA
-
 	shasta.dac.configure( CURRENT );
-	shasta.dac	= output_value;
 #endif
+
+	shasta.dac	= output_value;
 
 	shasta.logical_channel[  0 ].configure( 0x0020, 0x50B4, 0x5000 );
 	shasta.logical_channel[  1 ].configure( 0x0080, 0x5064, 0x5000 );
