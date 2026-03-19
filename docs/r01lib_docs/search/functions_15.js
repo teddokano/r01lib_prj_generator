@@ -61,11 +61,12 @@ var searchData=
   ['_7epcf85263a_58',['~PCF85263A',['../class_p_c_f85263_a.html#a3f0029574164fb2e0389148f72c344a0',1,'PCF85263A']]],
   ['_7epct2075_59',['~PCT2075',['../class_p_c_t2075.html#a5db78c5b6a4719d0537553f9c010e089',1,'PCT2075']]],
   ['_7ertc_5fnxp_60',['~RTC_NXP',['../class_r_t_c___n_x_p.html#ad8b82f3d96d3ee866b2ba0b5e77de9fd',1,'RTC_NXP']]],
-  ['_7eserial_5fdevice_61',['~Serial_device',['../class_serial__device.html#a5ccdd43e316c77fad4d9b6117f67bf28',1,'Serial_device']]],
-  ['_7espi_62',['~SPI',['../class_s_p_i.html#a6babebf1ea3e8ff0330f43a3e2312ac4',1,'SPI']]],
-  ['_7espi_5ffor_5fafe_63',['~SPI_for_AFE',['../class_s_p_i__for___a_f_e.html#a0ffb083afba16f2861baa8e6677050d8',1,'SPI_for_AFE']]],
-  ['_7espi_5ffor_5frtc_64',['~SPI_for_RTC',['../class_s_p_i__for___r_t_c.html#aa0d75be4459f5a57dfa6774da42de3e6',1,'SPI_for_RTC']]],
-  ['_7etempsensor_65',['~TempSensor',['../class_temp_sensor.html#a8527455e1393f2facd705ef0b1076349',1,'TempSensor']]],
-  ['_7etest_5flm75b_66',['~test_LM75B',['../classtest___l_m75_b.html#a6e52defd3acc93a2c6824f28a8f667cf',1,'test_LM75B']]],
-  ['_7eticker_67',['~Ticker',['../class_ticker.html#af19442994442b69ac58939de373d655f',1,'Ticker']]]
+  ['_7eserial_61',['~Serial',['../class_serial.html#a5b32c394c0ff923a4ef1c13cfb20a6ba',1,'Serial']]],
+  ['_7eserial_5fdevice_62',['~Serial_device',['../class_serial__device.html#a5ccdd43e316c77fad4d9b6117f67bf28',1,'Serial_device']]],
+  ['_7espi_63',['~SPI',['../class_s_p_i.html#a6babebf1ea3e8ff0330f43a3e2312ac4',1,'SPI']]],
+  ['_7espi_5ffor_5fafe_64',['~SPI_for_AFE',['../class_s_p_i__for___a_f_e.html#a0ffb083afba16f2861baa8e6677050d8',1,'SPI_for_AFE']]],
+  ['_7espi_5ffor_5frtc_65',['~SPI_for_RTC',['../class_s_p_i__for___r_t_c.html#aa0d75be4459f5a57dfa6774da42de3e6',1,'SPI_for_RTC']]],
+  ['_7etempsensor_66',['~TempSensor',['../class_temp_sensor.html#a8527455e1393f2facd705ef0b1076349',1,'TempSensor']]],
+  ['_7etest_5flm75b_67',['~test_LM75B',['../classtest___l_m75_b.html#a6e52defd3acc93a2c6824f28a8f667cf',1,'test_LM75B']]],
+  ['_7eticker_68',['~Ticker',['../class_ticker.html#af19442994442b69ac58939de373d655f',1,'Ticker']]]
 ];

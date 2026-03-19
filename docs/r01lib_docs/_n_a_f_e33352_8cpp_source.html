@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.39.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.40.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -647,7 +647,7 @@ $(function() {
 <div class="foldopen" id="foldopen00486" data-start="{" data-end="}">
 <div class="line"><a id="l00486" name="l00486"></a><span class="lineno"><a class="line" href="class_n_a_f_e33352___base.html#aefdea10ec1127bc67b9d4a9bbc5a3487">  486</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="class_n_a_f_e33352___base.html#aefdea10ec1127bc67b9d4a9bbc5a3487">NAFE33352_Base::temperature</a>( <span class="keywordtype">void</span> )</div>
 <div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>{</div>
-<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_n_a_f_e33352___base.html#aff45c96ad20662f0f8c1caca78cac347">reg</a>( <a class="code hl_enumvalue" href="class_n_a_f_e33352___base.html#a1852162ffd62ea90b54532e038fc9a21aacb02bf4b0ae2a60d243aeef93f3fabe">DIE_TEMP</a> ) / 64.0;</div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>    <span class="keywordflow">return</span> ((int16_t)<a class="code hl_function" href="class_n_a_f_e33352___base.html#aff45c96ad20662f0f8c1caca78cac347">reg</a>( <a class="code hl_enumvalue" href="class_n_a_f_e33352___base.html#a1852162ffd62ea90b54532e038fc9a21aacb02bf4b0ae2a60d243aeef93f3fabe">DIE_TEMP</a> )) / 64.0;</div>
 <div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>}</div>
 </div>
 <div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span> </div>

@@ -49,5 +49,6 @@ var searchData=
   ['tsr3_5fmonths_46',['TSR3_months',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411a2bae93a65096b737f5f2b8f4b6b5f1eb',1,'PCF85263A']]],
   ['tsr3_5fseconds_47',['TSR3_seconds',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411ae131e4ca3abbfaa56506b222b633e038',1,'PCF85263A']]],
   ['tsr3_5fyears_48',['TSR3_years',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411ae62daf90928dcc4e45e298f49f4fc045',1,'PCF85263A']]],
-  ['tsr_5fmode_49',['TSR_mode',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411a39b5758fa2276aeb1ade87954ff525ae',1,'PCF85263A']]]
+  ['tsr_5fmode_49',['TSR_mode',['../class_p_c_f85263_a.html#aa8b27745f67151341314514efb025411a39b5758fa2276aeb1ade87954ff525ae',1,'PCF85263A']]],
+  ['txirq_50',['TxIrq',['../class_serial.html#a05f90a53ae071948269d4c5cf8e87e93a61b97cd88b4873eae195e5b84a513127',1,'Serial']]]
 ];

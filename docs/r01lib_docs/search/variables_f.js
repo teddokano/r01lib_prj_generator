@@ -5,5 +5,6 @@ var searchData=
   ['reg_5fpwm_2',['reg_PWM',['../class_l_e_d_driver.html#a6d32dcec6914f6d7d3b46e182eed52c2',1,'LEDDriver']]],
   ['reset_5fpin_3',['RESET_PIN',['../class_g_p_i_o__base.html#a122831b066435b112c88c45ead0d585c',1,'GPIO_base']]],
   ['reset_5fpin_5fpcal9722_4',['RESET_PIN_PCAL9722',['../class_p_c_a_l9722.html#a93cf8e03c196f0077e3e9e99dc5ee1d8',1,'PCAL9722']]],
-  ['rs_5fdis_5',['rs_dis',['../class_i2_c__device.html#a4b1c4e0952fc5c875ee845de98f2c35b',1,'I2C_device']]]
+  ['rs_5fdis_5',['rs_dis',['../class_i2_c__device.html#a4b1c4e0952fc5c875ee845de98f2c35b',1,'I2C_device']]],
+  ['rx_5fring_5fbuf_5fsize_6',['RX_RING_BUF_SIZE',['../class_serial.html#a575b797eaf71500e105dd96e116f669d',1,'Serial']]]
 ];
