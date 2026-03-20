@@ -124,7 +124,7 @@ var searchData=
   ['cmd_5fwgen_5fstart_121',['CMD_WGEN_START',['../struct_a_f_e___traits_3_01_n_a_f_e33352___base_01_4.html#af858e51e59ac934d2432c129c16e0a48a61f100f0171a5db8beeff0720ec86c36',1,'AFE_Traits&lt; NAFE33352_Base &gt;::CMD_WGEN_START'],['../class_n_a_f_e33352___base.html#a19102166dd5a7a77e200fc25832e449ca91c3d5a3a26c2c3e944c9f58c3afbd6d',1,'NAFE33352_Base::CMD_WGEN_START']]],
   ['cmd_5fwgen_5fstop_122',['CMD_WGEN_STOP',['../struct_a_f_e___traits_3_01_n_a_f_e33352___base_01_4.html#af858e51e59ac934d2432c129c16e0a48a61c7adc286a343519442ccc89b57a8cd',1,'AFE_Traits&lt; NAFE33352_Base &gt;::CMD_WGEN_STOP'],['../class_n_a_f_e33352___base.html#a19102166dd5a7a77e200fc25832e449ca06545894acc47b9b50f05e6dac705947',1,'NAFE33352_Base::CMD_WGEN_STOP']]],
   ['cntl_123',['CNTL',['../_l_e_d_driver_8h.html#a2d5783d2dc241118f8bccb9069911207a30bb8938a7018f6411d63334b352c645',1,'LEDDriver.h']]],
-  ['code_124',['Sample code',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]],
+  ['code_124',['Sample code',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]],
   ['coeff_5findex_125',['coeff_index',['../struct_n_a_f_e13388___base_1_1__ref__points.html#a0113dfdfbac3ef46d49604c1f3ceff78',1,'NAFE13388_Base::_ref_points']]],
   ['coeff_5fv_126',['coeff_V',['../class_a_f_e__base.html#a8b48a815db11e4725e4ee3be52dcc7c9',1,'AFE_base']]],
   ['com0_5f07_5f00_127',['COM0_07_00',['../class_p_c_a8561.html#a1f1e6911093f3dc92a7cb0b45d5355b2a2aedd12a736790863b99fe741286b9b0',1,'PCA8561']]],
