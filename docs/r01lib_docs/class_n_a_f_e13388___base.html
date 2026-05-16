@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.40.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -844,7 +844,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructor to create a <a class="el" href="class_a_f_e__base.html">AFE_base</a> instance </p>
+<p>Constructor to create an <a class="el" href="class_n_a_f_e13388___base.html">NAFE13388_Base</a> instance </p>
 
 <p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8cpp_source.html#l00201">201</a> of file <a class="el" href="_a_f_e___n_x_p_8cpp_source.html">AFE_NXP.cpp</a>.</p>
 
@@ -915,11 +915,11 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Register bit operation</p>
-<p>overwrite bits i a register </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Overwrite bits in a register </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="#a606cd23de868686c41d54cbc40587b23">reg</a></td><td>register specified by <a class="el" href="#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> or <a class="el" href="#a8da94b56680ae6228400f123970f1828">Register24</a> member </td></tr>
     <tr><td class="paramname">mask</td><td>mask bits </td></tr>
-    <tr><td class="paramname"><a class="el" href="#a606cd23de868686c41d54cbc40587b23">reg</a></td><td>value to over write </td></tr>
+    <tr><td class="paramname">value</td><td>value to overwrite </td></tr>
   </table>
   </dd>
 </dl>
@@ -1135,7 +1135,7 @@ template&lt;typename T&gt; </div>
 <p><a class="el" href="#a93d87b82239122d04d021048a9f5060d">Command</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">com</td><td>"Comand" type or uint16_t value </td></tr>
+    <tr><td class="paramname">com</td><td>"Command" type or uint16_t value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1237,7 +1237,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Gain and offset coefficient customization</p>
-<p>Sets gain and offset coefficients with given target ADC read-out values at two reference voltaeg points </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Sets gain and offset coefficients with given target ADC read-out values at two reference voltage points </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ref</td><td>struct to define the target coefficient index and two reference poins and reference pre-calibrated coeffs </td></tr>
   </table>
@@ -1368,8 +1368,8 @@ template&lt;typename T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Read part_number</p>
-<dl class="section return"><dt>Returns</dt><dd>0x13388B40 </dd></dl>
+<p>Read part number</p>
+<dl class="section return"><dt>Returns</dt><dd>part number read from PN2, PN1 and PN0 registers (e.g. 0x13388B40) </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8cpp_source.html#l00460">460</a> of file <a class="el" href="_a_f_e___n_x_p_8cpp_source.html">AFE_NXP.cpp</a>.</p>
 
@@ -1629,7 +1629,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Read register</p>
-<p>Reads register. Register width is selected by reg type (<a class="el" href="#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> ot <a class="el" href="#a8da94b56680ae6228400f123970f1828">Register24</a>) </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Reads register. Register width is selected by reg type (<a class="el" href="#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> or <a class="el" href="#a8da94b56680ae6228400f123970f1828">Register24</a>) </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="#a606cd23de868686c41d54cbc40587b23">reg</a></td><td>register specified by <a class="el" href="#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> member </td></tr>
   </table>
@@ -1670,7 +1670,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Write register</p>
-<p>Writes register. Register width is selected by reg type (<a class="el" href="#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> ot <a class="el" href="#a8da94b56680ae6228400f123970f1828">Register24</a>) </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Writes register. Register width is selected by reg type (<a class="el" href="#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> or <a class="el" href="#a8da94b56680ae6228400f123970f1828">Register24</a>) </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="#a606cd23de868686c41d54cbc40587b23">reg</a></td><td>register specified by <a class="el" href="#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> member </td></tr>
   </table>
@@ -1706,7 +1706,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Read register</p>
-<p>Reads register. Register width is selected by reg type (<a class="el" href="#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> ot <a class="el" href="#a8da94b56680ae6228400f123970f1828">Register24</a>) </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Reads register. Register width is selected by reg type (<a class="el" href="#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> or <a class="el" href="#a8da94b56680ae6228400f123970f1828">Register24</a>) </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="#a606cd23de868686c41d54cbc40587b23">reg</a></td><td>register specified by <a class="el" href="#a8da94b56680ae6228400f123970f1828">Register24</a> member </td></tr>
   </table>
@@ -1747,7 +1747,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Write register</p>
-<p>Writes register. Register width is selected by reg type (<a class="el" href="#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> ot <a class="el" href="#a8da94b56680ae6228400f123970f1828">Register24</a>) </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Writes register. Register width is selected by reg type (<a class="el" href="#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> or <a class="el" href="#a8da94b56680ae6228400f123970f1828">Register24</a>) </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="#a606cd23de868686c41d54cbc40587b23">reg</a></td><td>register specified by <a class="el" href="#a8da94b56680ae6228400f123970f1828">Register24</a> member </td></tr>
   </table>
@@ -1806,7 +1806,7 @@ template&lt;typename T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Read rivision number</p>
+<p>Read revision number</p>
 <dl class="section return"><dt>Returns</dt><dd>PN0 register value &amp; 0xF </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_a_f_e___n_x_p_8cpp_source.html#l00465">465</a> of file <a class="el" href="_a_f_e___n_x_p_8cpp_source.html">AFE_NXP.cpp</a>.</p>

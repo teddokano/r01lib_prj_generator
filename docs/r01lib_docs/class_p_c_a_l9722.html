@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.40.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -348,7 +348,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constractor</p>
+<p>Constructor</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">interface</td><td><a class="el" href="class_i2_c.html">I2C</a> instance </td></tr>
@@ -385,7 +385,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Destractor </p>
+<p>Destructor </p>
 
 <p class="definition">Definition at line <a class="el" href="_g_p_i_o___n_x_p_8cpp_source.html#l00312">312</a> of file <a class="el" href="_g_p_i_o___n_x_p_8cpp_source.html">GPIO_NXP.cpp</a>.</p>
 
@@ -415,11 +415,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Device/board initialization</p>
-<p>This method is needed to initialize Arduino-shield type evaluation boards from NXP. This method takes one argument of "PCAL6534::ARDUINO_SHIELD" to set RESET and ADDRESS pins.</p>
-<p>If the devoce is used as it self, this method doesn't need to be called.</p>
+<p>This method is needed to initialize Arduino-shield type evaluation boards from NXP. This method takes one argument of "PCAL9722::ARDUINO_SHIELD" to set RESET and ADDRESS pins.</p>
+<p>If the device is used as it self, this method doesn't need to be called.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">env</td><td>This argument can be given as "PCAL6534::NONE" ot "PCAL6534::ARDUINO_SHIELD" </td></tr>
+    <tr><td class="paramname">env</td><td>This argument can be given as "PCAL9722::NONE" or "PCAL9722::ARDUINO_SHIELD" </td></tr>
   </table>
   </dd>
 </dl>

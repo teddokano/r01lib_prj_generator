@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.40.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -144,7 +144,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_digital_in_out.html">DigitalInOut</a> class</p>
-<p>A class for operating GPIO easy </p>
+<p>A class for easy GPIO pin operations </p>
 
 <p class="definition">Definition at line <a class="el" href="io_8h_source.html#l00793">793</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
@@ -223,9 +223,9 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pin_num</td><td>pin number </td></tr>
-    <tr><td class="paramname"><a class="el" href="#a6042e4468e550347265bda8db2325be4">direction</a></td><td>(option) direction setting </td></tr>
-    <tr><td class="paramname"><a class="el" href="#a76be5769a0ae1e0ca854213ddca005a4">value</a></td><td>(option) default value for output </td></tr>
-    <tr><td class="paramname">pin_mode</td><td>(option) PullUp, PullDown, PullNone, OpenDrain </td></tr>
+    <tr><td class="paramname"><a class="el" href="#a6042e4468e550347265bda8db2325be4">direction</a></td><td>(optional) direction setting </td></tr>
+    <tr><td class="paramname"><a class="el" href="#a76be5769a0ae1e0ca854213ddca005a4">value</a></td><td>(optional) default value for output </td></tr>
+    <tr><td class="paramname">pin_mode</td><td>(optional) PullUp, PullDown, PullNone, OpenDrain </td></tr>
   </table>
   </dd>
 </dl>
@@ -258,7 +258,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Destractor </p>
+<p>Destructor </p>
 
 <p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00493">493</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
 
@@ -308,7 +308,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pin direction to set as in </p>
+<p>Pin direction to set as input </p>
 
 <p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00523">523</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
 
@@ -487,10 +487,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pin output seting</p>
+<p>Pin output setting</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="#a76be5769a0ae1e0ca854213ddca005a4">value</a></td><td>setting output </td></tr>
+    <tr><td class="paramname"><a class="el" href="#a76be5769a0ae1e0ca854213ddca005a4">value</a></td><td>value to output </td></tr>
   </table>
   </dd>
 </dl>

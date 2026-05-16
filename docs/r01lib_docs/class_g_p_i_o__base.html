@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.40.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -212,7 +212,7 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constractor</p>
+<p>Constructor</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">interface</td><td><a class="el" href="class_i2_c.html">I2C</a> instance </td></tr>
@@ -263,7 +263,7 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constractor</p>
+<p>Constructor</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">interface</td><td><a class="el" href="class_i2_c.html">I2C</a> instance </td></tr>
@@ -303,7 +303,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Destractor </p>
+<p>Destructor </p>
 
 <p class="definition">Definition at line <a class="el" href="_g_p_i_o___n_x_p_8cpp_source.html#l00039">39</a> of file <a class="el" href="_g_p_i_o___n_x_p_8cpp_source.html">GPIO_NXP.cpp</a>.</p>
 
@@ -334,10 +334,10 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Device/board initialization</p>
 <p>This method is needed to initialize Arduino-shield type evaluation boards from NXP. This method takes one argument of "GPIO_base::ARDUINO_SHIELD" to set RESET and ADDRESS pins.</p>
-<p>If the devoce is used as it self, this method doesn't need to be called.</p>
+<p>If the device is used as it self, this method doesn't need to be called.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">env</td><td>This argument can be given as "GPIO_base::NONE" ot "GPIO_base::ARDUINO_SHIELD" </td></tr>
+    <tr><td class="paramname">env</td><td>This argument can be given as "GPIO_base::NONE" or "GPIO_base::ARDUINO_SHIELD" </td></tr>
   </table>
   </dd>
 </dl>
@@ -618,7 +618,7 @@ Static Private Attributes</h2></td></tr>
 <p>Single port register access function using word of '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>'</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">w</td><td>Accsess word. This should be choosen from <a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
+    <tr><td class="paramname">w</td><td>Access word. This should be chosen from '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
     <tr><td class="paramname">port_num</td><td>Option, to specify port number </td></tr>
   </table>
   </dd>
@@ -653,7 +653,7 @@ Static Private Attributes</h2></td></tr>
 <p>All port register access function using word of '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>'</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">w</td><td>Accsess word. This should be choosen from <a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
+    <tr><td class="paramname">w</td><td>Access word. This should be chosen from '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
     <tr><td class="paramname">vp</td><td>Pointer to an array of values. The array should have 'n_ports' length </td></tr>
   </table>
   </dd>
@@ -688,7 +688,7 @@ Static Private Attributes</h2></td></tr>
 <p>Single port 16 bit register access function using word of '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>'</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">w</td><td>Accsess word. This should be choosen from <a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
+    <tr><td class="paramname">w</td><td>Access word. This should be chosen from '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
     <tr><td class="paramname">port_num</td><td>Option, to specify port number </td></tr>
   </table>
   </dd>
@@ -723,7 +723,7 @@ Static Private Attributes</h2></td></tr>
 <p>All port 16 bit register access function using word of '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>'</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">w</td><td>Accsess word. This should be choosen from <a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
+    <tr><td class="paramname">w</td><td>Access word. This should be chosen from '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
     <tr><td class="paramname">vp</td><td>Pointer to an array of values. The array should have 'n_ports' length </td></tr>
   </table>
   </dd>
@@ -758,7 +758,7 @@ Static Private Attributes</h2></td></tr>
 <p>All port register access function using word of '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>'</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">w</td><td>Accsess word. This should be choosen from <a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
+    <tr><td class="paramname">w</td><td>Access word. This should be chosen from '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
     <tr><td class="paramname">vp</td><td>Pointer to an array of values. The array should have 'n_ports' length </td></tr>
   </table>
   </dd>
@@ -797,7 +797,7 @@ Static Private Attributes</h2></td></tr>
 <p>Single port register access function using word of '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>'</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">w</td><td>Accsess word. This should be choosen from <a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
+    <tr><td class="paramname">w</td><td>Access word. This should be chosen from '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
     <tr><td class="paramname">value</td><td>Value to be written into a register </td></tr>
     <tr><td class="paramname">port_num</td><td>Option, to specify port number </td></tr>
   </table>
@@ -832,7 +832,7 @@ Static Private Attributes</h2></td></tr>
 <p>All port 16 bit register access function using word of '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>'</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">w</td><td>Accsess word. This should be choosen from <a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
+    <tr><td class="paramname">w</td><td>Access word. This should be chosen from '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
     <tr><td class="paramname">vp</td><td>Pointer to an array of values. The array should have 'n_ports' length </td></tr>
   </table>
   </dd>
@@ -871,7 +871,7 @@ Static Private Attributes</h2></td></tr>
 <p>Single port 16 bit register access function using word of '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>'</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">w</td><td>Accsess word. This should be choosen from <a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
+    <tr><td class="paramname">w</td><td>Access word. This should be chosen from '<a class="el" href="_g_p_i_o___n_x_p_8h.html#a2d5783d2dc241118f8bccb9069911207">access_word</a>' </td></tr>
     <tr><td class="paramname">value</td><td>Value to be written into a register </td></tr>
     <tr><td class="paramname">port_num</td><td>Option, to specify port number </td></tr>
   </table>

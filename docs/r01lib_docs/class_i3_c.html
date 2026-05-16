@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.40.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.0</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -190,7 +190,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_i3_c.html">I3C</a> class</p>
-<p>A class for demonstrating <a class="el" href="class_i3_c.html">I3C</a> bus </p>
+<p>A class for <a class="el" href="class_i3_c.html">I3C</a> bus operations </p>
 
 <p class="definition">Definition at line <a class="el" href="i3c_8h_source.html#l00045">45</a> of file <a class="el" href="i3c_8h_source.html">i3c.h</a>.</p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
@@ -298,9 +298,9 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">sda</td><td>pin number to connect SDA </td></tr>
     <tr><td class="paramname">scl</td><td>pin number to connect SCL </td></tr>
-    <tr><td class="paramname">i2c_freq</td><td>(option) define default scl frequency while <a class="el" href="class_i2_c.html">I2C</a> operation </td></tr>
-    <tr><td class="paramname">i3c_od_freq</td><td>(option) define default scl frequency while <a class="el" href="class_i3_c.html">I3C</a> open-drain operation </td></tr>
-    <tr><td class="paramname">i3c_pp_freq</td><td>(option) define default scl frequency while <a class="el" href="class_i3_c.html">I3C</a> push-pull operation </td></tr>
+    <tr><td class="paramname">i2c_freq</td><td>(optional) SCL frequency in Hz for <a class="el" href="class_i2_c.html">I2C</a> operation </td></tr>
+    <tr><td class="paramname">i3c_od_freq</td><td>(optional) SCL frequency in Hz for <a class="el" href="class_i3_c.html">I3C</a> open-drain operation </td></tr>
+    <tr><td class="paramname">i3c_pp_freq</td><td>(optional) SCL frequency in Hz for <a class="el" href="class_i3_c.html">I3C</a> push-pull operation </td></tr>
   </table>
   </dd>
 </dl>
@@ -333,7 +333,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Destractor to freeing <a class="el" href="class_i3_c.html">I3C</a> resource </p>
+<p>Destructor to free <a class="el" href="class_i3_c.html">I3C</a> resource </p>
 
 <p class="definition">Definition at line <a class="el" href="i3c_8cpp_source.html#l00104">104</a> of file <a class="el" href="i3c_8cpp_source.html">i3c.cpp</a>.</p>
 
@@ -564,7 +564,7 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">address_list</td><td>new address list to be assigned </td></tr>
     <tr><td class="paramname">list_length</td><td>address list length </td></tr>
-    <tr><td class="paramname">device_list</td><td>pointer to i3c_device_info_t array which is dealeared as static array in <a class="el" href="class_i3_c.html">I3C</a> driver </td></tr>
+    <tr><td class="paramname">device_list</td><td>pointer to i3c_device_info_t array which is declared as static array in <a class="el" href="class_i3_c.html">I3C</a> driver </td></tr>
   </table>
   </dd>
 </dl>
@@ -608,9 +608,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Frequency settings</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i2c_freq</td><td>(option) define default scl frequency while <a class="el" href="class_i2_c.html">I2C</a> operation </td></tr>
-    <tr><td class="paramname">i3c_od_freq</td><td>(option) define default scl frequency while <a class="el" href="class_i3_c.html">I3C</a> open-drain operation </td></tr>
-    <tr><td class="paramname">i3c_pp_freq</td><td>(option) define default scl frequency while <a class="el" href="class_i3_c.html">I3C</a> push-pull operation</td></tr>
+    <tr><td class="paramname">i2c_freq</td><td>(optional) SCL frequency in Hz for <a class="el" href="class_i2_c.html">I2C</a> operation </td></tr>
+    <tr><td class="paramname">i3c_od_freq</td><td>(optional) SCL frequency in Hz for <a class="el" href="class_i3_c.html">I3C</a> open-drain operation </td></tr>
+    <tr><td class="paramname">i3c_pp_freq</td><td>(optional) SCL frequency in Hz for <a class="el" href="class_i3_c.html">I3C</a> push-pull operation</td></tr>
   </table>
   </dd>
 </dl>
@@ -853,7 +853,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">targ</td><td>target address </td></tr>
-    <tr><td class="paramname">dp</td><td>data to write </td></tr>
+    <tr><td class="paramname">dp</td><td>data buffer for read </td></tr>
     <tr><td class="paramname">length</td><td>data length </td></tr>
     <tr><td class="paramname">stop</td><td>(option) generate STOP condition: "false" to make repeated-start in next transaction </td></tr>
   </table>
@@ -1070,7 +1070,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>device scan device scan result will be shown on the screen scan range can be specified and last parameter</p>
+<p>device scan device scan result will be shown on the screen scan range can be specified by start and last parameters</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">last</td><td>scan last address </td></tr>
