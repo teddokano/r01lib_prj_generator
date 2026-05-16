@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.39.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.1</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -121,7 +121,11 @@ Static Private Attributes</h2></td></tr>
 <tr class="memitem:aa32429f734d18f18f254ee408e630542" id="r_aa32429f734d18f18f254ee408e630542"><td class="memItemLeft">static constexpr uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#aa32429f734d18f18f254ee408e630542">auto_increment</a> = 0x80</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>GPIO <a class="el" href="class_s_p_i.html">SPI</a> device abstracting class</p>
+<p>This class provides common methods for all GPIO <a class="el" href="class_s_p_i.html">SPI</a> devices</p>
+<dl class="section author"><dt>Author</dt><dd>Tedd OKANO</dd></dl>
+<p>Released under the MIT license </p>
+
 <p class="definition">Definition at line <a class="el" href="_g_p_i_o___s_p_i_8h_source.html#l00024">24</a> of file <a class="el" href="_g_p_i_o___s_p_i_8h_source.html">GPIO_SPI.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6ab53188d2115e2861e02fc879d94364" name="a6ab53188d2115e2861e02fc879d94364"></a>
@@ -179,7 +183,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Destructor of <a class="el" href="class_i2_c__device.html">I2C_device</a> </p>
+<p>Destructor of <a class="el" href="class_g_p_i_o___s_p_i.html">GPIO_SPI</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="_g_p_i_o___s_p_i_8cpp_source.html#l00013">13</a> of file <a class="el" href="_g_p_i_o___s_p_i_8cpp_source.html">GPIO_SPI.cpp</a>.</p>
 
@@ -299,7 +303,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Register read, 16 bit</p>
-<p>This 16 bit access may ot be common but it's useful for sensor devices</p>
+<p>This 16 bit access may not be common but it's useful for sensor devices</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">reg</td><td>register index/address/pointer </td></tr>
@@ -604,7 +608,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Register write, 16 bit</p>
-<p>This 16 bit access may ot be common but it's useful for sensor devices</p>
+<p>This 16 bit access may not be common but it's useful for sensor devices</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">reg</td><td>register index/address/pointer </td></tr>
@@ -651,10 +655,10 @@ Static Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">reg</td><td>register index/address/pointer </td></tr>
+    <tr><td class="paramname">val</td><td>data value </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>data value </dd></dl>
 
 <p>Implements <a class="el" href="class_serial__device.html#a56c6a0363007eea71d7e94743693b5b6">Serial_device</a>.</p>
 

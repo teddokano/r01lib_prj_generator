@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['sample_20code_0',['Sample code',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]]
+  ['pairs_0',['Supported targets and pin pairs',['../_serial_8h.html#autotoc_md0',1,'']]],
+  ['pin_20pairs_1',['Supported targets and pin pairs',['../_serial_8h.html#autotoc_md0',1,'']]]
 ];

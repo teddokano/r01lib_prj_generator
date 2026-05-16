@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.39.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.1</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -144,11 +144,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a4b1c4e0952fc5c875ee845de98f2c35b" id="r_a4b1c4e0952fc5c875ee845de98f2c35b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4b1c4e0952fc5c875ee845de98f2c35b">rs_dis</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>GPIO <a class="el" href="class_s_p_i.html">SPI</a> device abstracting class</p>
-<p>This class provides common methods for all <a class="el" href="class_i2_c.html">I2C</a> devices</p>
-<dl class="section author"><dt>Author</dt><dd>Tedd OKANO</dd></dl>
-<p>Released under the MIT license License</p>
-<p><a class="el" href="class_i2_c__device.html">I2C_device</a> class</p>
+<div class="textblock"><p><a class="el" href="class_i2_c__device.html">I2C_device</a> class</p>
 <p>A base class for devices which supports <a class="el" href="class_i2_c.html">I2C</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="_i2_c__device_8h_source.html#l00047">47</a> of file <a class="el" href="_i2_c__device_8h_source.html">I2C_device.h</a>.</p>
@@ -188,7 +184,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i2_c__device_8cpp_source.html#l00016">16</a> of file <a class="el" href="_i2_c__device_8cpp_source.html">I2C_device.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00221">i2c</a>, <a class="el" href="_i2_c__device_8h_source.html#l00222">i2c_addr</a>, <a class="el" href="_i2_c__device_8cpp_source.html#l00024">repeated_start_enable()</a>, and <a class="el" href="_i2_c__device_8h_source.html#l00224">rs_dis</a>.</p>
+<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00218">i2c</a>, <a class="el" href="_i2_c__device_8h_source.html#l00219">i2c_addr</a>, <a class="el" href="_i2_c__device_8cpp_source.html#l00024">repeated_start_enable()</a>, and <a class="el" href="_i2_c__device_8h_source.html#l00221">rs_dis</a>.</p>
 
 </div>
 </div>
@@ -239,7 +235,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i2_c__device_8cpp_source.html#l00134">134</a> of file <a class="el" href="_i2_c__device_8cpp_source.html">I2C_device.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00222">i2c_addr</a>.</p>
+<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00219">i2c_addr</a>.</p>
 
 </div>
 </div>
@@ -267,7 +263,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i2_c__device_8cpp_source.html#l00139">139</a> of file <a class="el" href="_i2_c__device_8cpp_source.html">I2C_device.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i2_c__device_8cpp_source.html#l00134">address()</a>, and <a class="el" href="_i2_c__device_8h_source.html#l00222">i2c_addr</a>.</p>
+<p class="reference">References <a class="el" href="_i2_c__device_8cpp_source.html#l00134">address()</a>, and <a class="el" href="_i2_c__device_8h_source.html#l00219">i2c_addr</a>.</p>
 
 </div>
 </div>
@@ -419,7 +415,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i2_c__device_8cpp_source.html#l00129">129</a> of file <a class="el" href="_i2_c__device_8cpp_source.html">I2C_device.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00221">i2c</a>, and <a class="el" href="_i2_c__device_8h_source.html#l00222">i2c_addr</a>.</p>
+<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00218">i2c</a>, and <a class="el" href="_i2_c__device_8h_source.html#l00219">i2c_addr</a>.</p>
 
 </div>
 </div>
@@ -446,7 +442,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Register read, 16 bit</p>
-<p>This 16 bit access may ot be common but it's useful for sensor devices</p>
+<p>This 16 bit access may not be common but it's useful for sensor devices</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">reg</td><td>register index/address/pointer </td></tr>
@@ -532,12 +528,10 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">reg</td><td>register index/address/pointer </td></tr>
-    <tr><td class="paramname">data</td><td>pointer to data buffer </td></tr>
-    <tr><td class="paramname">size</td><td>data size </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>read data size </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>read data </dd></dl>
 
 <p>Implements <a class="el" href="class_serial__device.html#a074d09ee47e0b2debde327f9a6b1cd5c">Serial_device</a>.</p>
 
@@ -545,7 +539,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i2_c__device_8cpp_source.html#l00071">71</a> of file <a class="el" href="_i2_c__device_8cpp_source.html">I2C_device.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00224">rs_dis</a>, <a class="el" href="_i2_c__device_8cpp_source.html#l00039">rx()</a>, and <a class="el" href="_i2_c__device_8cpp_source.html#l00034">tx()</a>.</p>
+<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00221">rs_dis</a>, <a class="el" href="_i2_c__device_8cpp_source.html#l00039">rx()</a>, and <a class="el" href="_i2_c__device_8cpp_source.html#l00034">tx()</a>.</p>
 
 </div>
 </div>
@@ -597,7 +591,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i2_c__device_8cpp_source.html#l00065">65</a> of file <a class="el" href="_i2_c__device_8cpp_source.html">I2C_device.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00224">rs_dis</a>, <a class="el" href="_i2_c__device_8cpp_source.html#l00039">rx()</a>, and <a class="el" href="_i2_c__device_8cpp_source.html#l00034">tx()</a>.</p>
+<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00221">rs_dis</a>, <a class="el" href="_i2_c__device_8cpp_source.html#l00039">rx()</a>, and <a class="el" href="_i2_c__device_8cpp_source.html#l00034">tx()</a>.</p>
 
 </div>
 </div>
@@ -683,8 +677,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">reg</td><td>register index/address/pointer </td></tr>
-    <tr><td class="paramname">data</td><td>pointer to data buffer </td></tr>
-    <tr><td class="paramname">size</td><td>data size </td></tr>
+    <tr><td class="paramname">data</td><td>data to write </td></tr>
   </table>
   </dd>
 </dl>
@@ -724,7 +717,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i2_c__device_8cpp_source.html#l00024">24</a> of file <a class="el" href="_i2_c__device_8cpp_source.html">I2C_device.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00224">rs_dis</a>.</p>
+<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00221">rs_dis</a>.</p>
 
 </div>
 </div>
@@ -758,7 +751,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i2_c__device_8cpp_source.html#l00039">39</a> of file <a class="el" href="_i2_c__device_8cpp_source.html">I2C_device.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00221">i2c</a>, and <a class="el" href="_i2_c__device_8h_source.html#l00222">i2c_addr</a>.</p>
+<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00218">i2c</a>, and <a class="el" href="_i2_c__device_8h_source.html#l00219">i2c_addr</a>.</p>
 
 </div>
 </div>
@@ -788,7 +781,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>scan (class method) thsi is a class-method to scan devices</p>
+<p>scan (class method) this is a class method to scan devices</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">target_i2c</td><td><a class="el" href="class_i2_c.html">I2C</a> instance </td></tr>
@@ -799,7 +792,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i2_c__device_8cpp_source.html#l00029">29</a> of file <a class="el" href="_i2_c__device_8cpp_source.html">I2C_device.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00397">I2C::scan()</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00400">I2C::scan()</a>.</p>
 
 </div>
 </div>
@@ -831,7 +824,7 @@ Private Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">data</td><td>pointer to data buffer </td></tr>
     <tr><td class="paramname">size</td><td>data size </td></tr>
-    <tr><td class="paramname">stop</td><td>option: generating STOP-condition after transaction. Defailt: true </td></tr>
+    <tr><td class="paramname">stop</td><td>(optional) generate STOP-condition after transaction. Default: true </td></tr>
   </table>
   </dd>
 </dl>
@@ -839,7 +832,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i2_c__device_8cpp_source.html#l00034">34</a> of file <a class="el" href="_i2_c__device_8cpp_source.html">I2C_device.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00221">i2c</a>, and <a class="el" href="_i2_c__device_8h_source.html#l00222">i2c_addr</a>.</p>
+<p class="reference">References <a class="el" href="_i2_c__device_8h_source.html#l00218">i2c</a>, and <a class="el" href="_i2_c__device_8h_source.html#l00219">i2c_addr</a>.</p>
 
 </div>
 </div>
@@ -870,7 +863,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Register write, 16 bit</p>
-<p>This 16 bit access may ot be common but it's useful for sensor devices</p>
+<p>This 16 bit access may not be common but it's useful for sensor devices</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">reg</td><td>register index/address/pointer </td></tr>
@@ -919,10 +912,10 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">reg</td><td>register index/address/pointer </td></tr>
+    <tr><td class="paramname">val</td><td>data value to write </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>data value </dd></dl>
 
 <p>Implements <a class="el" href="class_serial__device.html#a56c6a0363007eea71d7e94743693b5b6">Serial_device</a>.</p>
 
@@ -955,7 +948,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i2_c__device_8h_source.html#l00221">221</a> of file <a class="el" href="_i2_c__device_8h_source.html">I2C_device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i2_c__device_8h_source.html#l00218">218</a> of file <a class="el" href="_i2_c__device_8h_source.html">I2C_device.h</a>.</p>
 
 </div>
 </div>
@@ -979,7 +972,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i2_c__device_8h_source.html#l00222">222</a> of file <a class="el" href="_i2_c__device_8h_source.html">I2C_device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i2_c__device_8h_source.html#l00219">219</a> of file <a class="el" href="_i2_c__device_8h_source.html">I2C_device.h</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +996,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i2_c__device_8h_source.html#l00224">224</a> of file <a class="el" href="_i2_c__device_8h_source.html">I2C_device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i2_c__device_8h_source.html#l00221">221</a> of file <a class="el" href="_i2_c__device_8h_source.html">I2C_device.h</a>.</p>
 
 </div>
 </div>

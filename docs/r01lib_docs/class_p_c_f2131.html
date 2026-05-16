@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.39.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.1</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -225,7 +225,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_p_c_f2131.html">PCF2131</a> class</p>
-<p>A base class for <a class="el" href="class_p_c_f2131.html">PCF2131</a> Implementing register operation with abstarcted interface </p>
+<p>A base class for <a class="el" href="class_p_c_f2131.html">PCF2131</a> Implementing register operation with abstracted interface </p>
 
 <p class="definition">Definition at line <a class="el" href="_r_t_c___n_x_p_8h_source.html#l00206">206</a> of file <a class="el" href="_r_t_c___n_x_p_8h_source.html">RTC_NXP.h</a>.</p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
@@ -529,7 +529,7 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">digit</td><td>to specify which parameter to set: SECOND, MINUTE, HOUR, DAY, WEEKDAY in 'enum <a class="el" href="class_r_t_c___n_x_p.html#aa11396067a7c0e240e169d4862539866">alarm_setting</a>' </td></tr>
     <tr><td class="paramname">val</td><td>Setting value. Set 0x80 to disabling </td></tr>
-    <tr><td class="paramname">int_sel</td><td>Interrupt output selector. ) for INT_A, 1 for INT_B </td></tr>
+    <tr><td class="paramname">int_sel</td><td>Interrupt output selector. 0 for INT_A, 1 for INT_B </td></tr>
   </table>
   </dd>
 </dl>
@@ -626,7 +626,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initializer Clears penginf interrupt </p>
+<p>Initializer Clears pending interrupt </p>
 
 <p>Implements <a class="el" href="class_r_t_c___n_x_p.html#a0ecd5bc4bc1fad16abb6c6b682c2480f">RTC_NXP</a>.</p>
 
@@ -745,7 +745,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sel</td><td>choose DISABLE, EVERY_SECOND or EVERY_MINUTE in 'enum <a class="el" href="#afb07387c482fa41981cf77fe11bec637">periodic_int_select</a>' </td></tr>
-    <tr><td class="paramname">int_sel</td><td>Interrupt output selector. ) for INT_A, 1 for INT_B </td></tr>
+    <tr><td class="paramname">int_sel</td><td>Interrupt output selector. 0 for INT_A, 1 for INT_B </td></tr>
   </table>
   </dd>
 </dl>
@@ -884,7 +884,7 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">num</td><td>timestamp number: 1~4 </td></tr>
     <tr><td class="paramname">ts_setting</td><td>event recording option. Choose LAST or FIRST in 'enum <a class="el" href="#a406a44b72f3996bf10c760e745408840">timestanp_setting</a>' </td></tr>
-    <tr><td class="paramname">int_sel</td><td>Interrupt output selector. ) for INT_A, 1 for INT_B </td></tr>
+    <tr><td class="paramname">int_sel</td><td>Interrupt output selector. 0 for INT_A, 1 for INT_B </td></tr>
   </table>
   </dd>
 </dl>

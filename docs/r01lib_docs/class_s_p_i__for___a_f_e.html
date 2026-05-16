@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.39.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.1</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -103,13 +103,13 @@ Inheritance diagram for SPI_for_AFE:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae2b6c61f32b125dff51df4d8ec573211" id="r_ae2b6c61f32b125dff51df4d8ec573211"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae2b6c61f32b125dff51df4d8ec573211">SPI_for_AFE</a> (<a class="el" href="class_s_p_i.html">SPI</a> &amp;spi, bool <a class="el" href="#a20b99fe3bc7f3461b734ced3894ea663">dev_ad</a>)</td></tr>
 <tr class="memitem:a0ffb083afba16f2861baa8e6677050d8" id="r_a0ffb083afba16f2861baa8e6677050d8"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a0ffb083afba16f2861baa8e6677050d8">~SPI_for_AFE</a> ()</td></tr>
-<tr class="memitem:a3063f4bf133088e6c239a446310686f5" id="r_a3063f4bf133088e6c239a446310686f5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3063f4bf133088e6c239a446310686f5">txrx</a> (uint8_t *data, int size)</td></tr>
-<tr class="memitem:ada6b0981fde1c39986131127ff6d31c7" id="r_ada6b0981fde1c39986131127ff6d31c7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ada6b0981fde1c39986131127ff6d31c7">write_r16</a> (uint16_t reg)</td></tr>
-<tr class="memitem:a1731ceb792edb2cb9e41e855876453a1" id="r_a1731ceb792edb2cb9e41e855876453a1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1731ceb792edb2cb9e41e855876453a1">write_r16</a> (uint16_t reg, uint16_t val)</td></tr>
-<tr class="memitem:a615896216d6ed8e74ff4ddba188a0541" id="r_a615896216d6ed8e74ff4ddba188a0541"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a615896216d6ed8e74ff4ddba188a0541">read_r16</a> (uint16_t reg)</td></tr>
-<tr class="memitem:a4ae6013d2ce7a6e31de735d422aeef7e" id="r_a4ae6013d2ce7a6e31de735d422aeef7e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4ae6013d2ce7a6e31de735d422aeef7e">write_r24</a> (uint16_t reg, uint32_t val)</td></tr>
+<tr class="memitem:a3063f4bf133088e6c239a446310686f5" id="r_a3063f4bf133088e6c239a446310686f5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a3063f4bf133088e6c239a446310686f5">txrx</a> (uint8_t *data, int size)</td></tr>
+<tr class="memitem:ada6b0981fde1c39986131127ff6d31c7" id="r_ada6b0981fde1c39986131127ff6d31c7"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ada6b0981fde1c39986131127ff6d31c7">write_r16</a> (uint16_t reg)</td></tr>
+<tr class="memitem:a1731ceb792edb2cb9e41e855876453a1" id="r_a1731ceb792edb2cb9e41e855876453a1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1731ceb792edb2cb9e41e855876453a1">write_r16</a> (uint16_t reg, uint16_t val)</td></tr>
+<tr class="memitem:a615896216d6ed8e74ff4ddba188a0541" id="r_a615896216d6ed8e74ff4ddba188a0541"><td class="memItemLeft">virtual uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a615896216d6ed8e74ff4ddba188a0541">read_r16</a> (uint16_t reg)</td></tr>
+<tr class="memitem:a4ae6013d2ce7a6e31de735d422aeef7e" id="r_a4ae6013d2ce7a6e31de735d422aeef7e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4ae6013d2ce7a6e31de735d422aeef7e">write_r24</a> (uint16_t reg, uint32_t val)</td></tr>
 <tr class="memitem:a25aa79d7c6d233ae9a55626a1b3de5be" id="r_a25aa79d7c6d233ae9a55626a1b3de5be"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#a25aa79d7c6d233ae9a55626a1b3de5be">read_r24</a> (uint16_t reg)</td></tr>
-<tr class="memitem:a9533b87a2fa75bc3fc06a3c46a22785e" id="r_a9533b87a2fa75bc3fc06a3c46a22785e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9533b87a2fa75bc3fc06a3c46a22785e">burst</a> (uint32_t *data, int length, int width=3)</td></tr>
+<tr class="memitem:a9533b87a2fa75bc3fc06a3c46a22785e" id="r_a9533b87a2fa75bc3fc06a3c46a22785e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9533b87a2fa75bc3fc06a3c46a22785e">burst</a> (uint32_t *data, int length, int width=3)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -128,7 +128,7 @@ Static Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>NXP Analog Front End class library for MCX</p>
 <dl class="section author"><dt>Author</dt><dd>Tedd OKANO</dd></dl>
-<p>Copyright: 2023 - 2024 Tedd OKANO Released under the MIT license </p>
+<p>Copyright: 2023 - 2026 Tedd OKANO Released under the MIT license </p>
 
 <p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8h_source.html#l00015">15</a> of file <a class="el" href="_s_p_i__for___a_f_e_8h_source.html">SPI_for_AFE.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -193,6 +193,9 @@ Static Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SPI_for_AFE::burst </td>
@@ -210,6 +213,11 @@ Static Private Attributes</h2></td></tr>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span><span class="paramdefsep"> = </span><span class="paramdefval">3</span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00086">86</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
@@ -277,6 +285,9 @@ Static Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">uint16_t SPI_for_AFE::read_r16 </td>
@@ -285,6 +296,11 @@ Static Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Register read, 16 bit</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -335,6 +351,9 @@ Static Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SPI_for_AFE::txrx </td>
@@ -347,6 +366,11 @@ Static Private Attributes</h2></td></tr>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Send data</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -356,6 +380,8 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="class_n_a_f_e33352___base.html#acf732f5fc6f6b1aaf2993e58f64ec7ba">NAFE33352_Base</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html#l00020">20</a> of file <a class="el" href="_s_p_i__for___a_f_e_8cpp_source.html">SPI_for_AFE.cpp</a>.</p>
 
@@ -368,6 +394,9 @@ Static Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SPI_for_AFE::write_r16 </td>
@@ -376,8 +405,13 @@ Static Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Register write, 8 bit</p>
+<p>Send command (register address only, no data)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">reg</td><td>register index </td></tr>
@@ -396,6 +430,9 @@ Static Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SPI_for_AFE::write_r16 </td>
@@ -408,6 +445,11 @@ Static Private Attributes</h2></td></tr>
           <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Register write, 16 bit</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -429,6 +471,9 @@ Static Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SPI_for_AFE::write_r24 </td>
@@ -441,6 +486,11 @@ Static Private Attributes</h2></td></tr>
           <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Register write, 24 bit</p>
 <dl class="params"><dt>Parameters</dt><dd>

@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.39.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.1</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -75,6 +75,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_s_p_i-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SPI Class Reference</div></div>
 </div><!--header-->
@@ -98,6 +100,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abd71d3bd1d6a0337de84f03de7a87f19" id="r_abd71d3bd1d6a0337de84f03de7a87f19"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#abd71d3bd1d6a0337de84f03de7a87f19">frequency</a> (uint32_t frequency=<a class="el" href="spi_8h.html#a6254a4e77c7f2f980d5f49538893d0ab">SPI_FREQ</a>)</td></tr>
 <tr class="memitem:ad7f4e6091db10cddd215d29fea9cd5f4" id="r_ad7f4e6091db10cddd215d29fea9cd5f4"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad7f4e6091db10cddd215d29fea9cd5f4">mode</a> (uint8_t mode=0)</td></tr>
 <tr class="memitem:a0d8aeac3e331a93b940e1fc65b7960f8" id="r_a0d8aeac3e331a93b940e1fc65b7960f8"><td class="memItemLeft">virtual status_t&#160;</td><td class="memItemRight"><a class="el" href="#a0d8aeac3e331a93b940e1fc65b7960f8">write</a> (uint8_t *wp, uint8_t *rp, int length)</td></tr>
+<tr class="memitem:abd22b1c3f108c079385a0872daaada56" id="r_abd22b1c3f108c079385a0872daaada56"><td class="memItemLeft">virtual <a class="el" href="class_digital_out.html">DigitalOut</a> *&#160;</td><td class="memItemRight"><a class="el" href="#abd22b1c3f108c079385a0872daaada56">cs_manual_control</a> (bool flag)</td></tr>
 <tr class="inherit_header pub_methods_class_obj"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_obj')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_obj.html">Obj</a></td></tr>
 <tr class="memitem:a963b6bbaf9c2b6c3c401ac02131744fa inherit pub_methods_class_obj" id="r_a963b6bbaf9c2b6c3c401ac02131744fa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_obj.html#a963b6bbaf9c2b6c3c401ac02131744fa">Obj</a> (bool done=false)</td></tr>
 <tr class="memitem:a71f4773f4d79208c5bce501f05659425 inherit pub_methods_class_obj" id="r_a71f4773f4d79208c5bce501f05659425"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_obj.html#a71f4773f4d79208c5bce501f05659425">~Obj</a> ()</td></tr>
@@ -105,6 +108,14 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad2f260501cc43fb5063f31882b57d8dd" id="r_ad2f260501cc43fb5063f31882b57d8dd"><td class="memItemLeft">status_t&#160;</td><td class="memItemRight"><a class="el" href="#ad2f260501cc43fb5063f31882b57d8dd">last_status</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a09a3eeba6e7ea900e0e0056804287a2c" id="r_a09a3eeba6e7ea900e0e0056804287a2c"><td class="memItemLeft"><a class="el" href="class_digital_out.html">DigitalOut</a>&#160;</td><td class="memItemRight"><a class="el" href="#a09a3eeba6e7ea900e0e0056804287a2c">chip_select</a></td></tr>
+<tr class="memitem:adc4075526ca6eb3ceb2f721defab48e9" id="r_adc4075526ca6eb3ceb2f721defab48e9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#adc4075526ca6eb3ceb2f721defab48e9">manual_cs_control</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
 <tr class="memitem:a8c66f4b0497cf5edce3e6f4882f529b6" id="r_a8c66f4b0497cf5edce3e6f4882f529b6"><td class="memItemLeft">lpspi_master_config_t&#160;</td><td class="memItemRight"><a class="el" href="#a8c66f4b0497cf5edce3e6f4882f529b6">masterConfig</a></td></tr>
 <tr class="memitem:ab7d5a6739e756c916e7c0d92e0d2a346" id="r_ab7d5a6739e756c916e7c0d92e0d2a346"><td class="memItemLeft">LPSPI_Type *&#160;</td><td class="memItemRight"><a class="el" href="#ab7d5a6739e756c916e7c0d92e0d2a346">unit_base</a></td></tr>
 <tr class="memitem:a1db76776302a20b94f8a867825b440c3" id="r_a1db76776302a20b94f8a867825b440c3"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a1db76776302a20b94f8a867825b440c3">master_clk_freq</a></td></tr>
@@ -112,7 +123,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_s_p_i.html">SPI</a> class</p>
-<p>A class for demonstrating <a class="el" href="class_s_p_i.html">SPI</a> bus </p>
+<p>A class for <a class="el" href="class_s_p_i.html">SPI</a> bus operations </p>
 
 <p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00031">31</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -147,17 +158,17 @@ Public Attributes</h2></td></tr>
 <p>Create a <a class="el" href="class_s_p_i.html">SPI</a> instance with specified pins</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mosi</td><td>(option) pin number to connect MOSI </td></tr>
-    <tr><td class="paramname">miso</td><td>(option) pin number to connect MISO </td></tr>
-    <tr><td class="paramname">sclk</td><td>(option) pin number to connect SCLK </td></tr>
-    <tr><td class="paramname">cs</td><td>(option) pin number to connect CS </td></tr>
+    <tr><td class="paramname">mosi</td><td>(optional) pin number to connect MOSI </td></tr>
+    <tr><td class="paramname">miso</td><td>(optional) pin number to connect MISO </td></tr>
+    <tr><td class="paramname">sclk</td><td>(optional) pin number to connect SCLK </td></tr>
+    <tr><td class="paramname">cs</td><td>(optional) pin number to connect CS </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="spi_8cpp_source.html#l00141">141</a> of file <a class="el" href="spi_8cpp_source.html">spi.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8cpp_source.html#l00146">146</a> of file <a class="el" href="spi_8cpp_source.html">spi.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="spi_8cpp_source.html#l00215">frequency()</a>, <a class="el" href="spi_8h_source.html#l00087">master_clk_freq</a>, <a class="el" href="spi_8h_source.html#l00088">master_pcs_4_xfer</a>, <a class="el" href="spi_8h_source.html#l00083">masterConfig</a>, <a class="el" href="spi_8cpp_source.html#l00227">mode()</a>, <a class="el" href="obj_8cpp_source.html#l00013">Obj::Obj()</a>, <a class="el" href="mcu_8cpp_source.html#l00228">panic()</a>, <a class="el" href="io_8cpp_source.html#l00535">DigitalInOut::pin_mux()</a>, <a class="el" href="spi_8h_source.html#l00021">SPI_FREQ</a>, and <a class="el" href="spi_8h_source.html#l00084">unit_base</a>.</p>
+<p class="reference">References <a class="el" href="spi_8h_source.html#l00083">chip_select</a>, <a class="el" href="spi_8cpp_source.html#l00221">frequency()</a>, <a class="el" href="spi_8h_source.html#l00084">manual_cs_control</a>, <a class="el" href="spi_8h_source.html#l00094">master_clk_freq</a>, <a class="el" href="spi_8h_source.html#l00095">master_pcs_4_xfer</a>, <a class="el" href="spi_8h_source.html#l00090">masterConfig</a>, <a class="el" href="spi_8cpp_source.html#l00233">mode()</a>, <a class="el" href="obj_8cpp_source.html#l00013">Obj::Obj()</a>, <a class="el" href="mcu_8cpp_source.html#l00228">panic()</a>, <a class="el" href="io_8cpp_source.html#l00535">DigitalInOut::pin_mux()</a>, <a class="el" href="spi_8h_source.html#l00021">SPI_FREQ</a>, and <a class="el" href="spi_8h_source.html#l00091">unit_base</a>.</p>
 
 </div>
 </div>
@@ -183,15 +194,51 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Destractor to freeing <a class="el" href="class_s_p_i.html">SPI</a> resource </p>
+<p>Destructor to free <a class="el" href="class_s_p_i.html">SPI</a> resource </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8cpp_source.html#l00210">210</a> of file <a class="el" href="spi_8cpp_source.html">spi.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8cpp_source.html#l00216">216</a> of file <a class="el" href="spi_8cpp_source.html">spi.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="spi_8h_source.html#l00084">unit_base</a>.</p>
+<p class="reference">References <a class="el" href="spi_8h_source.html#l00091">unit_base</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="abd22b1c3f108c079385a0872daaada56" name="abd22b1c3f108c079385a0872daaada56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd22b1c3f108c079385a0872daaada56">&#9670;&#160;</a></span>cs_manual_control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_digital_out.html">DigitalOut</a> * SPI::cs_manual_control </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>flag</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Manual CS control setting</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flag</td><td>manual setting = true, auto control = false </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="spi_8cpp_source.html#l00256">256</a> of file <a class="el" href="spi_8cpp_source.html">spi.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="spi_8h_source.html#l00083">chip_select</a>.</p>
+
+</div>
+</div>
 <a id="abd71d3bd1d6a0337de84f03de7a87f19" name="abd71d3bd1d6a0337de84f03de7a87f19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd71d3bd1d6a0337de84f03de7a87f19">&#9670;&#160;</a></span>frequency()</h2>
 
@@ -217,14 +264,14 @@ Public Attributes</h2></td></tr>
 <p>Frequency settings</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="#abd71d3bd1d6a0337de84f03de7a87f19">frequency</a></td><td>(option) define default SCLK frequency </td></tr>
+    <tr><td class="paramname"><a class="el" href="#abd71d3bd1d6a0337de84f03de7a87f19">frequency</a></td><td>(optional) SCLK frequency in Hz </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="spi_8cpp_source.html#l00215">215</a> of file <a class="el" href="spi_8cpp_source.html">spi.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8cpp_source.html#l00221">221</a> of file <a class="el" href="spi_8cpp_source.html">spi.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="spi_8cpp_source.html#l00215">frequency()</a>, <a class="el" href="spi_8h_source.html#l00087">master_clk_freq</a>, <a class="el" href="spi_8h_source.html#l00083">masterConfig</a>, and <a class="el" href="spi_8h_source.html#l00084">unit_base</a>.</p>
+<p class="reference">References <a class="el" href="spi_8cpp_source.html#l00221">frequency()</a>, <a class="el" href="spi_8h_source.html#l00094">master_clk_freq</a>, <a class="el" href="spi_8h_source.html#l00090">masterConfig</a>, and <a class="el" href="spi_8h_source.html#l00091">unit_base</a>.</p>
 
 </div>
 </div>
@@ -258,9 +305,9 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="spi_8cpp_source.html#l00227">227</a> of file <a class="el" href="spi_8cpp_source.html">spi.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8cpp_source.html#l00233">233</a> of file <a class="el" href="spi_8cpp_source.html">spi.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="spi_8h_source.html#l00087">master_clk_freq</a>, <a class="el" href="spi_8h_source.html#l00083">masterConfig</a>, <a class="el" href="spi_8cpp_source.html#l00227">mode()</a>, and <a class="el" href="spi_8h_source.html#l00084">unit_base</a>.</p>
+<p class="reference">References <a class="el" href="spi_8h_source.html#l00094">master_clk_freq</a>, <a class="el" href="spi_8h_source.html#l00090">masterConfig</a>, <a class="el" href="spi_8cpp_source.html#l00233">mode()</a>, and <a class="el" href="spi_8h_source.html#l00091">unit_base</a>.</p>
 
 </div>
 </div>
@@ -305,13 +352,37 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="spi_8cpp_source.html#l00236">236</a> of file <a class="el" href="spi_8cpp_source.html">spi.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8cpp_source.html#l00242">242</a> of file <a class="el" href="spi_8cpp_source.html">spi.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="spi_8h_source.html#l00088">master_pcs_4_xfer</a>, and <a class="el" href="spi_8h_source.html#l00084">unit_base</a>.</p>
+<p class="reference">References <a class="el" href="spi_8h_source.html#l00095">master_pcs_4_xfer</a>, and <a class="el" href="spi_8h_source.html#l00091">unit_base</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a09a3eeba6e7ea900e0e0056804287a2c" name="a09a3eeba6e7ea900e0e0056804287a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09a3eeba6e7ea900e0e0056804287a2c">&#9670;&#160;</a></span>chip_select</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_digital_out.html">DigitalOut</a> SPI::chip_select</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00083">83</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+
+</div>
+</div>
 <a id="ad2f260501cc43fb5063f31882b57d8dd" name="ad2f260501cc43fb5063f31882b57d8dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad2f260501cc43fb5063f31882b57d8dd">&#9670;&#160;</a></span>last_status</h2>
 
@@ -325,7 +396,31 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>variable for reporting last state </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00074">74</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00080">80</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+
+</div>
+</div>
+<a id="adc4075526ca6eb3ceb2f721defab48e9" name="adc4075526ca6eb3ceb2f721defab48e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc4075526ca6eb3ceb2f721defab48e9">&#9670;&#160;</a></span>manual_cs_control</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SPI::manual_cs_control</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00084">84</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -334,14 +429,22 @@ Public Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">uint32_t SPI::master_clk_freq</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00087">87</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00094">94</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -350,14 +453,22 @@ Public Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">uint32_t SPI::master_pcs_4_xfer</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00088">88</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00095">95</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -366,14 +477,22 @@ Public Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">lpspi_master_config_t SPI::masterConfig</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00083">83</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00090">90</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -382,14 +501,22 @@ Public Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">LPSPI_Type* SPI::unit_base</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00084">84</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00091">91</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>

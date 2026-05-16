@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.39.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.1</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -190,7 +190,7 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="abeb89b1b7e6b4e18506e651ace6de5a0a8890dcb075905a113b151da20c085939" name="abeb89b1b7e6b4e18506e651ace6de5a0a8890dcb075905a113b151da20c085939"></a>Thyst&#160;</td><td class="fielddoc"><p>Thyst register </p>
 </td></tr>
-<tr><td class="fieldname"><a id="abeb89b1b7e6b4e18506e651ace6de5a0a191457f7a4d68220c69525bb76879515" name="abeb89b1b7e6b4e18506e651ace6de5a0a191457f7a4d68220c69525bb76879515"></a>Tos&#160;</td><td class="fielddoc"><p>Tos registe </p>
+<tr><td class="fieldname"><a id="abeb89b1b7e6b4e18506e651ace6de5a0a191457f7a4d68220c69525bb76879515" name="abeb89b1b7e6b4e18506e651ace6de5a0a191457f7a4d68220c69525bb76879515"></a>Tos&#160;</td><td class="fielddoc"><p>Tos register </p>
 </td></tr>
 </table>
 
@@ -217,10 +217,10 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create a <a class="el" href="class_p_c_t2075.html">PCT2075</a> instance connected to specified <a class="el" href="class_i2_c.html">I2C</a> pins with specified address</p>
+<p>Create a <a class="el" href="classtest___l_m75_b.html">test_LM75B</a> instance connected to specified <a class="el" href="class_i2_c.html">I2C</a> pins with specified address</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">wire</td><td>TwoWire instance </td></tr>
+    <tr><td class="paramname">interface</td><td><a class="el" href="class_i2_c.html">I2C</a> instance </td></tr>
     <tr><td class="paramname">i2c_address</td><td>I2C-bus address (default: (0x90&gt;&gt;1)) </td></tr>
   </table>
   </dd>
@@ -246,7 +246,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Destructor of <a class="el" href="class_p_c_t2075.html">PCT2075</a> </p>
+<p>Destructor of <a class="el" href="classtest___l_m75_b.html">test_LM75B</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="test___l_m75_b_8cpp_source.html#l00015">15</a> of file <a class="el" href="test___l_m75_b_8cpp_source.html">test_LM75B.cpp</a>.</p>
 
@@ -270,7 +270,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Set OS operation mode</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">flag</td><td>use <a class="el" href="class_temp_sensor.html#a04ed17a63cb73f086579970c6b7daa69ab4199759877d837f231fb22a03860279">PCT2075::COMPARATOR</a> or <a class="el" href="class_temp_sensor.html#a04ed17a63cb73f086579970c6b7daa69a9285a209072a37c7ce5c6dc0530bc72e">PCT2075::INTERRUPT</a> values </td></tr>
+    <tr><td class="paramname">flag</td><td>use <a class="el" href="#aee2753cd76e582c42cad5c415898bb99aa7b1b3ad885f4f9437dada550050a5a6">test_LM75B::COMPARATOR</a> or <a class="el" href="#aee2753cd76e582c42cad5c415898bb99abc493134fbdf85abb3f0d2c58057f02a">test_LM75B::INTERRUPT</a> values </td></tr>
   </table>
   </dd>
 </dl>
@@ -323,7 +323,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Set Overtemperature shutdown threshold (Tos) and hysteresis (Thyst) in degree Celsius [°C]</p>
-<p>This method takes 2 values and higher value will set as the threshold (Tos) and . another will be the hysteresis (Thyst)</p>
+<p>This method takes 2 values and higher value will set as the threshold (Tos) and another will be the hysteresis (Thyst)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">v0</td><td>a value in degree Celsius </td></tr>

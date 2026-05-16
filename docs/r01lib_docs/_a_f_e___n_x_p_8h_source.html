@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.39.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.1</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -583,7 +583,7 @@ $(function() {
 <div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>    <span class="keyword">virtual</span> uint16_t    <a class="code hl_function" href="class_n_a_f_e13388___base.html#a606cd23de868686c41d54cbc40587b23">reg</a>( <a class="code hl_enumeration" href="class_n_a_f_e13388___base.html#ae88e748f942fa5e9787d1180602ea9fb">Register16</a> r );</div>
 <div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span></div>
 <div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>    <span class="keyword">virtual</span> uint32_t    <a class="code hl_function" href="class_n_a_f_e13388___base.html#a606cd23de868686c41d54cbc40587b23">reg</a>( <a class="code hl_enumeration" href="class_n_a_f_e13388___base.html#a8da94b56680ae6228400f123970f1828">Register24</a> r );</div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>    </div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span></div>
 <div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="foldopen" id="foldopen00716" data-start="{" data-end="}">
 <div class="line"><a id="l00716" name="l00716"></a><span class="lineno"><a class="line" href="class_n_a_f_e13388___base.html#a37a6b3d08ed47a7629e08efab1b26a9b">  716</a></span>    uint32_t    <a class="code hl_function" href="class_n_a_f_e13388___base.html#a37a6b3d08ed47a7629e08efab1b26a9b">bit_op</a>( T rg, uint32_t mask, uint32_t value )</div>
@@ -594,11 +594,11 @@ $(function() {
 <div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>        v   |= value &amp; ~mask;</div>
 <div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span> </div>
 <div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>        <a class="code hl_function" href="class_n_a_f_e13388___base.html#a606cd23de868686c41d54cbc40587b23">reg</a>( rg, v );</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>        </div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span> </div>
 <div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>        <span class="keywordflow">return</span> v;</div>
 <div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>    }</div>
 </div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>    </div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span></div>
 <div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>    uint32_t    <a class="code hl_function" href="class_n_a_f_e13388___base.html#adcd5acf1c43214088e4bd27cad530d86">part_number</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span></div>
 <div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>    uint8_t <a class="code hl_function" href="class_n_a_f_e13388___base.html#a786a25371c240115283be6e9f8e68b35">revision_number</a>( <span class="keywordtype">void</span> );</div>
@@ -606,7 +606,7 @@ $(function() {
 <div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>    uint64_t    <a class="code hl_function" href="class_n_a_f_e13388___base.html#aa0710c1e4ae93399e2593d150e360b76">serial_number</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span></div>
 <div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>    <span class="keywordtype">float</span>   <a class="code hl_function" href="class_n_a_f_e13388___base.html#af22fdbf78a0ee02146ef67c367439694">temperature</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>    </div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span></div>
 <div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>    <span class="keywordtype">void</span>    <a class="code hl_function" href="class_n_a_f_e13388___base.html#a13f23cec7c8780a786747bb1404dd73d">gain_offset_coeff</a>( <span class="keyword">const</span> <a class="code hl_typedef" href="class_n_a_f_e13388___base.html#a3e3e7332b8d54a8cbcf17951ac8282cd">ref_points</a> &amp;ref );</div>
 <div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span> </div>
 <div class="foldopen" id="foldopen00759" data-start="{" data-end="};">
@@ -737,7 +737,7 @@ $(function() {
 <div class="ttc" id="aclass_a_f_e__base_html_aef3acd6ea2f801fd32f4041662d67fc4"><div class="ttname"><a href="class_a_f_e__base.html#aef3acd6ea2f801fd32f4041662d67fc4">AFE_base::read</a></div><div class="ttdeci">virtual raw_t read(int ch)=0</div></div>
 <div class="ttc" id="aclass_a_f_e__base_html_afb8f89980f53f2c2d638fb879ef73904"><div class="ttname"><a href="class_a_f_e__base.html#afb8f89980f53f2c2d638fb879ef73904">AFE_base::DRDY_by_sequencer_done</a></div><div class="ttdeci">virtual void DRDY_by_sequencer_done(bool flag=true)=0</div></div>
 <div class="ttc" id="aclass_a_f_e__base_html_afebe805e43da330337776aca5fe9cbba"><div class="ttname"><a href="class_a_f_e__base.html#afebe805e43da330337776aca5fe9cbba">AFE_base::total_delay</a></div><div class="ttdeci">double total_delay</div><div class="ttdef"><b>Definition</b> <a href="#l00290">AFE_NXP.h:290</a></div></div>
-<div class="ttc" id="aclass_digital_out_html"><div class="ttname"><a href="class_digital_out.html">DigitalOut</a></div><div class="ttdef"><b>Definition</b> <a href="io_8h_source.html#l00867">io.h:868</a></div></div>
+<div class="ttc" id="aclass_digital_out_html"><div class="ttname"><a href="class_digital_out.html">DigitalOut</a></div><div class="ttdef"><b>Definition</b> <a href="io_8h_source.html#l00882">io.h:883</a></div></div>
 <div class="ttc" id="aclass_interrupt_in_html"><div class="ttname"><a href="class_interrupt_in.html">InterruptIn</a></div><div class="ttdef"><b>Definition</b> <a href="_interrupt_in_8h_source.html#l00027">InterruptIn.h:28</a></div></div>
 <div class="ttc" id="aclass_logical_channel___base_html_a09c5454eb5cd72cd17c02a5d319fde9b"><div class="ttname"><a href="class_logical_channel___base.html#a09c5454eb5cd72cd17c02a5d319fde9b">LogicalChannel_Base::~LogicalChannel_Base</a></div><div class="ttdeci">virtual ~LogicalChannel_Base()</div><div class="ttdef"><b>Definition</b> <a href="#l00314">AFE_NXP.h:314</a></div></div>
 <div class="ttc" id="aclass_logical_channel___base_html_a14bf87022e7147286af932c49aa6bc95"><div class="ttname"><a href="class_logical_channel___base.html#a14bf87022e7147286af932c49aa6bc95">LogicalChannel_Base::operator+</a></div><div class="ttdeci">double operator+(T v)</div><div class="ttdef"><b>Definition</b> <a href="#l00324">AFE_NXP.h:324</a></div></div>

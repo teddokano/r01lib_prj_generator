@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">r01lib<span id="projectnumber">&#160;0.39.0</span>
+   <div id="projectname">r01lib<span id="projectnumber">&#160;0.41.1</span>
    </div>
    <div id="projectbrief">R01 library for abstracting MCUs</div>
   </td>
@@ -153,7 +153,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_i2_c.html">I2C</a> class</p>
-<p>A class for demonstrating <a class="el" href="class_i2_c.html">I2C</a> bus </p>
+<p>A class for <a class="el" href="class_i2_c.html">I2C</a> bus operations </p>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8h_source.html#l00030">30</a> of file <a class="el" href="i2c_8h_source.html">i2c.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
@@ -245,14 +245,14 @@ Private Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">sda</td><td>pin number to connect SDA </td></tr>
     <tr><td class="paramname">scl</td><td>pin number to connect SCL </td></tr>
-    <tr><td class="paramname">no_hw</td><td>(option) flag for <a class="el" href="class_i3_c.html">I3C</a>. <a class="el" href="class_i3_c.html">I3C</a> constructor will set this flag to avoid set hardware for both <a class="el" href="class_i3_c.html">I3C</a> and <a class="el" href="class_i2_c.html">I2C</a> </td></tr>
+    <tr><td class="paramname">no_hw</td><td>(optional) flag for <a class="el" href="class_i3_c.html">I3C</a>: <a class="el" href="class_i3_c.html">I3C</a> constructor sets this to avoid initialising hardware twice </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00050">50</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00243">_scl</a>, <a class="el" href="i2c_8h_source.html#l00242">_sda</a>, <a class="el" href="i2c_8cpp_source.html#l00370">err_callback()</a>, <a class="el" href="i2c_8h_source.html#l00244">err_cb</a>, <a class="el" href="i2c_8cpp_source.html#l00378">err_handling()</a>, <a class="el" href="i2c_8h_source.html#l00239">masterConfig</a>, <a class="el" href="obj_8cpp_source.html#l00013">Obj::Obj()</a>, <a class="el" href="mcu_8cpp_source.html#l00228">panic()</a>, and <a class="el" href="i2c_8h_source.html#l00240">unit_base</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00243">_scl</a>, <a class="el" href="i2c_8h_source.html#l00242">_sda</a>, <a class="el" href="i2c_8cpp_source.html#l00373">err_callback()</a>, <a class="el" href="i2c_8h_source.html#l00244">err_cb</a>, <a class="el" href="i2c_8cpp_source.html#l00381">err_handling()</a>, <a class="el" href="i2c_8h_source.html#l00239">masterConfig</a>, <a class="el" href="obj_8cpp_source.html#l00013">Obj::Obj()</a>, <a class="el" href="mcu_8cpp_source.html#l00228">panic()</a>, and <a class="el" href="i2c_8h_source.html#l00240">unit_base</a>.</p>
 
 </div>
 </div>
@@ -278,7 +278,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Destractor to freeing <a class="el" href="class_i3_c.html">I3C</a> resource </p>
+<p>Destructor to free <a class="el" href="class_i2_c.html">I2C</a> resource </p>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00161">161</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
@@ -323,7 +323,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>method for <a class="el" href="class_i3_c.html">I3C</a> class compatibility (dummy method) Does notheing but clearing data buffer and return kStatus_Success This method is for just make easy device class using <a class="el" href="class_i3_c.html">I3C</a></p>
+<p>method for <a class="el" href="class_i3_c.html">I3C</a> class compatibility (dummy method) Does nothing but clearing data buffer and return kStatus_Success This method is for just make easy device class using <a class="el" href="class_i3_c.html">I3C</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ccc</td><td><a class="el" href="i3c_8h.html#acba81d13b8fe4dc120a844ff5fb37321">CCC</a> command </td></tr>
@@ -336,7 +336,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i3_c.html#a5e40f8c52e13535e7dbaeac917006d55">I3C</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00436">436</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00439">439</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +371,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>method for <a class="el" href="class_i3_c.html">I3C</a> class compatibility (dummy method) Does notheing but return kStatus_Success This method is for just make easy device class using <a class="el" href="class_i3_c.html">I3C</a></p>
+<p>method for <a class="el" href="class_i3_c.html">I3C</a> class compatibility (dummy method) Does nothing but return kStatus_Success This method is for just make easy device class using <a class="el" href="class_i3_c.html">I3C</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ccc</td><td><a class="el" href="i3c_8h.html#acba81d13b8fe4dc120a844ff5fb37321">CCC</a> command </td></tr>
@@ -383,7 +383,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i3_c.html#a783b33fe035ca9adab5a1b9ca267d44b">I3C</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00431">431</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00434">434</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 </div>
 </div>
@@ -417,7 +417,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00370">370</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00373">373</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="i2c_8h_source.html#l00244">err_cb</a>.</p>
 
@@ -458,7 +458,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00378">378</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00381">381</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="i2c_8cpp.html#ab07e3ad824b9ca5467c60f046f1bdfd4">NAK_FLAG</a>.</p>
 
@@ -533,7 +533,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i3_c.html#afb2a2b583e99807f3aae37c754fc20a1">I3C</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00391">391</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00394">394</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00254">write_core()</a>.</p>
 
@@ -571,7 +571,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00179">179</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8h_source.html#l00243">_scl</a>, <a class="el" href="i2c_8h_source.html#l00242">_sda</a>, <a class="el" href="io_8h_source.html#l00787">DigitalInOut::PullNone</a>, and <a class="el" href="io_8h_source.html#l00788">DigitalInOut::PullUp</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8h_source.html#l00243">_scl</a>, <a class="el" href="i2c_8h_source.html#l00242">_sda</a>, <a class="el" href="io_8h_source.html#l00802">DigitalInOut::PullNone</a>, and <a class="el" href="io_8h_source.html#l00803">DigitalInOut::PullUp</a>.</p>
 
 </div>
 </div>
@@ -611,11 +611,11 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>read transactiond (multiple byte data)</p>
+<p>read transaction (multiple byte data)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">targ</td><td>target address </td></tr>
-    <tr><td class="paramname">dp</td><td>data to write </td></tr>
+    <tr><td class="paramname">dp</td><td>data buffer for read </td></tr>
     <tr><td class="paramname">length</td><td>data length </td></tr>
     <tr><td class="paramname">stop</td><td>(option) generate STOP condition: "false" to make repeated-start in next transaction </td></tr>
   </table>
@@ -627,7 +627,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00198">198</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00291">read_core()</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00294">read_core()</a>.</p>
 
 </div>
 </div>
@@ -657,7 +657,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>read transaction (single byte data) provideds interface for register read returns a single byte data status can be checked by last_status variable</p>
+<p>read transaction (single byte data) provides interface for register read returns a single byte data status can be checked by last_status variable</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">targ</td><td>target address </td></tr>
@@ -667,7 +667,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>data </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00361">361</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00364">364</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="i2c_8h_source.html#l00227">last_status</a>, and <a class="el" href="i2c_8cpp_source.html#l00198">read()</a>.</p>
 
@@ -710,7 +710,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00291">291</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00294">294</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="i2c_8h_source.html#l00240">unit_base</a>.</p>
 
@@ -742,7 +742,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Register read (single byte data) provideds interface for register read returns a single byte data status can be checked by last_status variable</p>
+<p>Register read (single byte data) provides interface for register read returns a single byte data status can be checked by last_status variable</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">targ</td><td>target address </td></tr>
@@ -752,7 +752,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>read data </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00350">350</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00353">353</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="i2c_8h_source.html#l00227">last_status</a>, <a class="el" href="i2c_8h_source.html#l00041">NO_STOP</a>, <a class="el" href="i2c_8cpp_source.html#l00198">read()</a>, and <a class="el" href="i2c_8cpp_source.html#l00187">write()</a>.</p>
 
@@ -794,7 +794,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Register read (multiple byte data) provideds interface for register read</p>
+<p>Register read (multiple byte data) provides interface for register read</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">targ</td><td>target address </td></tr>
@@ -806,7 +806,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>status_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00340">340</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00343">343</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="i2c_8h_source.html#l00227">last_status</a>, <a class="el" href="i2c_8h_source.html#l00041">NO_STOP</a>, <a class="el" href="i2c_8cpp_source.html#l00198">read()</a>, and <a class="el" href="i2c_8cpp_source.html#l00187">write()</a>.</p>
 
@@ -848,7 +848,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Register write (multiple byte data) provideds interface for register write</p>
+<p>Register write (multiple byte data) provides interface for register write</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">targ</td><td>target address </td></tr>
@@ -860,7 +860,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>status_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00318">318</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00321">321</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="i2c_8h_source.html#l00227">last_status</a>, <a class="el" href="i2c_8h_source.html#l00028">REG_RW_BUFFER_SIZE</a>, and <a class="el" href="i2c_8cpp_source.html#l00187">write()</a>.</p>
 
@@ -897,7 +897,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Register write (single byte data) provideds interface for register write</p>
+<p>Register write (single byte data) provides interface for register write</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">targ</td><td>target address </td></tr>
@@ -908,7 +908,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>status_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00330">330</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00333">333</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00187">write()</a>.</p>
 
@@ -936,7 +936,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>device scan device scan result will be shown on the screen scan range can be specified and last parameter</p>
+<p>device scan device scan result will be shown on the screen scan range can be specified by start and last parameters</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">last</td><td>scan last address </td></tr>
@@ -946,9 +946,9 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i3_c.html#a53d4307fd001c7811dfffaca446fc73d">I3C</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00426">426</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00429">429</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00397">scan()</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00400">scan()</a>.</p>
 
 </div>
 </div>
@@ -989,9 +989,9 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i3_c.html#a068fcc71387ac49b3bfd59a6b8b4eea6">I3C</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00403">403</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00406">406</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00397">scan()</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00400">scan()</a>.</p>
 
 </div>
 </div>
@@ -1037,9 +1037,9 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i3_c.html#ab9249f4b2ec4b06383109e5f97166402">I3C</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00397">397</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00400">400</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00391">ping()</a>.</p>
+<p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00394">ping()</a>.</p>
 
 </div>
 </div>
@@ -1079,7 +1079,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>write transactiond (multiple byte data)</p>
+<p>write transaction (multiple byte data)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">targ</td><td>target address </td></tr>
@@ -1130,7 +1130,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>write transactiond (single byte data)</p>
+<p>write transaction (single byte data)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">targ</td><td>target address </td></tr>
@@ -1141,7 +1141,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>status_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00356">356</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="i2c_8cpp_source.html#l00359">359</a> of file <a class="el" href="i2c_8cpp_source.html">i2c.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="i2c_8cpp_source.html#l00187">write()</a>.</p>
 
